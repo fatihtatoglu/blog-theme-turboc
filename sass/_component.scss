@@ -1,0 +1,97 @@
+// Variables
+$horizontal-line-border: $black;
+$message-box-border: $bright-white;
+$message-box-info-bg: $blue;
+$message-box-info-fg: $aqua;
+$message-box-warn-bg: $blue;
+$message-box-warn-fg: $light-yellow;
+$message-box-notice-bg: $blue;
+$message-box-notice-fg: $light-aqua;
+$message-box-error-bg: $blue;
+$message-box-error-fg: $light-red;
+
+
+// Styles
+ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+
+    padding-left: 16px;
+
+    display: block;
+}
+
+ul {
+    list-style-type: square;
+    list-style-position: inside;
+
+    padding-left: 16px;
+
+    display: block;
+}
+
+ul li,
+ol li {
+    display: list-item;
+}
+
+ul li:before,
+ol li:before {
+    content: "";
+    display: inline-block;
+    margin-left: -8px;
+}
+
+img {
+    max-width: 100%;
+
+    margin: 5px auto;
+
+    display: block;
+}
+
+hr {
+    margin: 5px auto;
+
+    display: block;
+
+    border: 2px solid $horizontal-line-border;
+}
+
+div.info-box,
+div.warn-box,
+div.notice-box,
+div.error-box {
+    font-weight: $text-bold-font-weight;
+
+    margin: 12px 8px;
+    padding: 5px 10px;
+
+    display: block;
+
+    border: double 4px $message-box-border;
+}
+
+div.info-box {
+    color: $message-box-info-fg;
+
+    background-color: $message-box-info-bg;
+}
+
+div.warn-box {
+    color: $message-box-warn-fg;
+
+    background-color: $message-box-warn-bg;
+}
+
+div.notice-box {
+    color: $message-box-notice-fg;
+
+    background-color: $message-box-notice-bg;
+}
+
+div.error-box {
+    color: $message-box-error-fg;
+
+    background-color: $message-box-error-bg;
+}

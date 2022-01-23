@@ -1,0 +1,27 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "Simple retro style blog.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fatihtatoglu/blog.git"
+  },
+  "contributors": [
+    "Fatih Tatoğlu <https://github.com/fatihtatoglu>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fatihtatoglu/blog/issues"
+  },
+  "homepage": "https://github.com/fatihtatoglu/blog#readme",
+  "devDependencies": {
+    "clean-css": "^5.2.2",
+    "node-sass": "^7.0.1"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  },
+  "scripts": {
+    "compile-styles": "node-sass --output-style compact --source-map true --source-map-contents true sass/main.scss css/main.css"
+  }
+}

@@ -1,0 +1,54 @@
+$black:         rgba(0,0,0,1);
+$blue:          rgba(0,0,169,1);
+$green:         rgba(0,168,0,1);
+$aqua:          rgba(0,170,168,1);
+$red:           rgba(169,0,0,1);
+$purple:        rgba(169,1,169,1);
+$yellow:        rgba(168,85,0,1);
+$white:         rgba(170,170,170,1);
+$gray:          rgba(85,85,85,1);
+$light-blue:    rgba(85,84,254,1);
+$light-green:   rgba(85,253,85,1);
+$light-aqua:    rgba(85,255,253,1);
+$light-red:     rgba(254,84,84,1);
+$light-purple:  rgba(254,86,254,1);
+$light-yellow:  rgba(254,255,85,1);
+$bright-white:  rgba(255,255,255,1);
+
+$shadow: rgba(0,0,0,0.8);
+
+.bg-transparent     { background-color: transparent; }
+.bg-black           { background-color: $black; }
+.bg-blue            { background-color: $blue; }
+.bg-green           { background-color: $green; }
+.bg-aqua            { background-color: $aqua; }
+.bg-red             { background-color: $red; }
+.bg-purple          { background-color: $purple; }
+.bg-yellow          { background-color: $yellow; }
+.bg-white           { background-color: $white; }
+.bg-gray            { background-color: $gray; }
+.bg-light_blue      { background-color: $light-blue; }
+.bg-light_green     { background-color: $light-green; }
+.bg-light_aqua      { background-color: $light-aqua; }
+.bg-light_red       { background-color: $light-red; }
+.bg-light_purple    { background-color: $light-purple; }
+.bg-light_yellow    { background-color: $light-yellow; }
+.bg-bright_white    { background-color: $bright-white; }
+
+.fg-transparent     { color: transparent; }
+.fg-black           { color: $black; }
+.fg-blue            { color: $blue; }
+.fg-green           { color: $green; }
+.fg-aqua            { color: $aqua; }
+.fg-red             { color: $red; }
+.fg-purple          { color: $purple; }
+.fg-yellow          { color: $yellow; }
+.fg-white           { color: $white; }
+.fg-gray            { color: $gray; }
+.fg-light_blue      { color: $light-blue; }
+.fg-light_green     { color: $light-green; }
+.fg-light_aqua      { color: $light-aqua; }
+.fg-light_red       { color: $light-red; }
+.fg-light_purple    { color: $light-purple; }
+.fg-light_yellow    { color: $light-yellow; }
+.fg-bright_white    { color: $bright-white; }

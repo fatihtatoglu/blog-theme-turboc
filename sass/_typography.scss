@@ -1,0 +1,234 @@
+// Variables
+$html-font-size: 1px;
+$font-family : 'Roboto Mono',
+monospace;
+$text-font-weight: 400;
+$text-bold-font-weight: 700;
+$text-line-height: 1.5;
+$text-size: 16rem;
+
+$text-active-bg: $aqua;
+$text-active-fg: $black;
+$text-selected-bg: $white;
+$text-selected-fg: $black;
+$text-keyword-active-bg: $aqua;
+$text-keyword-active-fg: $light-yellow;
+$text-keyword-selected-bg: $blue;
+$text-keyword-selected-fg: $light-yellow;
+$text-heading-bg: $aqua;
+$text-heading-fg: $black;
+$text-heading-border: $black;
+$text-quotation-bg: $blue;
+$text-quotation-fg: $aqua;
+$text-quotation-border: $light-yellow;
+
+
+// Guidances
+.color-box.typo pre.active {
+    background-color: $text-active-bg;
+
+    color: $text-active-fg;
+}
+
+.color-box.typo pre.selected {
+    background-color: $text-selected-bg;
+
+    color: $text-selected-fg;
+}
+
+.color-box.typo pre.keyword {
+    background-color: $text-keyword-active-bg;
+
+    color: $text-keyword-active-fg;
+}
+
+.color-box.typo pre.keyword-selected {
+    background-color: $text-keyword-selected-bg;
+
+    color: $text-keyword-selected-fg;
+}
+
+.color-box.typo pre.heading {
+    background-color: $text-heading-bg;
+
+    color: $text-heading-fg;
+}
+
+
+// Styles
+html {
+    font-size: $html-font-size;
+    /*for using REM units*/
+}
+
+body {
+    font-size: $text-size;
+    font-weight: $text-font-weight;
+    font-family: $font-family;
+    color: $text-active-fg;
+
+    background-color: $text-active-bg;
+
+    line-height: $text-line-height;
+}
+
+h1 {
+    font-size: 16rem;
+    font-weight: $text-bold-font-weight;
+    line-height: 1.2;
+    color: $text-heading-fg;
+    text-transform: uppercase;
+
+    background-color: $text-heading-bg;
+
+    margin: 12px 8px;
+    padding: 3px 8px;
+
+    border-bottom: $text-heading-border solid 7px;
+
+    display: table;
+
+    cursor: default;
+}
+
+h2 {
+    font-size: 16rem;
+    font-weight: $text-bold-font-weight;
+    line-height: 1.2;
+    color: $text-heading-fg;
+
+    background-color: $text-heading-bg;
+
+    margin: 12px 8px;
+    padding: 3px 9px;
+
+    border-top: $text-heading-border solid 10px;
+    border-bottom: $text-heading-border solid 7px;
+
+    display: table;
+
+    cursor: default;
+}
+
+h3 {
+    font-size: 16rem;
+    font-weight: $text-bold-font-weight;
+    line-height: 1.2;
+    color: $text-heading-fg;
+
+    background-color: $text-heading-bg;
+
+    margin: 12px 8px;
+    padding: 10px;
+
+    border-bottom: $text-heading-border solid 7px;
+
+    display: table;
+
+    cursor: default;
+}
+
+h4 {
+    font-size: 16rem;
+    font-weight: $text-bold-font-weight;
+    line-height: 1.2;
+    color: $text-heading-fg;
+
+    background-color: $text-heading-bg;
+
+    margin: 12px 8px;
+    padding: 10px;
+
+    border-top: $text-heading-border solid 1px;
+    border-bottom: $text-heading-border solid 1px;
+    border-left: $text-heading-border solid 2px;
+    border-right: $text-heading-border solid 2px;
+
+    display: table;
+
+    cursor: default;
+}
+
+p {
+    font-size: 16rem;
+    font-weight: $text-font-weight;
+
+    background-color: $text-active-bg;
+    color: $text-active-fg;
+
+    margin: 10px 0px;
+}
+
+b,
+strong {
+    font-weight: $text-bold-font-weight;
+}
+
+strong {
+    text-decoration: underline;
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+em {
+    text-decoration: underline;
+}
+
+a:link,
+a:visited {
+    background-color: $text-keyword-active-bg;
+
+    color: $text-keyword-active-fg;
+}
+
+a:focus,
+a:active {
+    background-color: $text-keyword-selected-bg;
+
+    color: $text-keyword-selected-fg;
+
+    outline: none;
+}
+
+address,
+time {
+    font-style: italic;
+
+    display: inline-block;
+}
+
+blockquote {
+    background-color: $text-quotation-bg;
+
+    margin: 12px 8px;
+    padding: 0px;
+
+    display: block;
+
+    border-left: 7px solid $text-quotation-border;
+}
+
+blockquote p {
+    font-style: italic;
+    color: $text-quotation-fg;
+
+    background-color: $text-quotation-bg;
+
+    margin: 0px 10px;
+    padding: 0px;
+}
+
+::-moz-selection {
+    color: $text-selected-fg;
+
+    background-color: $text-selected-bg;
+}
+
+::selection {
+    color: $text-selected-fg;
+
+    background: $text-selected-bg;
+}

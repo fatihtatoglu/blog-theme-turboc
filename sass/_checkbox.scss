@@ -1,0 +1,168 @@
+// Variables
+$checkbox-active-bg: $aqua;
+$checkbox-active-fg: $black;
+$checkbox-active-firstletter-bg: $aqua;
+$checkbox-active-firstletter-fg: $light-yellow;
+$checkbox-selected-bg: $aqua;
+$checkbox-selected-fg: $bright-white;
+$checkbox-selected-firstletter-bg: $aqua;
+$checkbox-selected-firstletter-fg: $light-yellow;
+$checkbox-disabled-bg: $aqua;
+$checkbox-disabled-fg: $gray;
+
+
+// Guidances
+.color-box.checkbox pre.active {
+    background-color: $checkbox-active-bg;
+
+    color: $checkbox-active-fg;
+}
+
+.color-box.checkbox pre.active::first-letter {
+    background-color: $checkbox-active-firstletter-bg;
+
+    color: $checkbox-active-firstletter-fg;
+}
+
+.color-box.checkbox pre.selected {
+    background-color: $checkbox-selected-bg;
+
+    color: $checkbox-selected-fg;
+}
+
+.color-box.checkbox pre.selected::first-letter {
+    background-color: $checkbox-selected-firstletter-bg;
+
+    color: $checkbox-selected-firstletter-fg;
+}
+
+.color-box.checkbox pre.disabled {
+    background-color: $checkbox-disabled-bg;
+
+    color: $checkbox-disabled-fg;
+}
+
+.color-box.checkbox pre.disabled::first-letter {
+    background-color: $checkbox-disabled-bg;
+    
+    color: $checkbox-disabled-fg;
+}
+
+
+// Styles
+input[type=checkbox],
+input[type=radio] {
+    line-height: 1.1;
+
+    width: 30px;
+}
+
+input[type=checkbox]::after,
+input[type=radio]::after {
+    font-weight: $text-bold-font-weight;
+    color: $checkbox-active-fg;
+    line-height: 1.1;
+
+    background-color: $checkbox-active-bg;
+
+    width: 30px;
+    margin: -2px -3px;
+
+    display: inline-block;
+
+    cursor: pointer;
+}
+
+input[type=checkbox]::after {
+    content: "[ ]";
+}
+
+input[type=checkbox]:checked::after {
+    content: "[X]";
+}
+
+input[type=radio]::after {
+    content: "( )";
+}
+
+input[type=radio]:checked::after {
+    content: "(●)";
+
+    letter-spacing: 0.4rem;
+}
+
+input[type=checkbox]+label,
+input[type=radio]+label {
+    color: $checkbox-active-fg;
+    line-height: 1.1;
+    font-weight: $text-bold-font-weight;
+
+    background-color: $checkbox-active-bg;
+
+    margin-bottom: 0px;
+    margin-left: -7px;
+
+    display: inline-block;
+    vertical-align: middle;
+
+    cursor: pointer;
+}
+
+input[type=radio]+label
+{
+    vertical-align: bottom;
+}
+
+input[type=checkbox]+label[for]::first-letter,
+input[type=radio]+label[for]::first-letter {
+    color: $checkbox-active-firstletter-fg;
+
+    background-color: $checkbox-active-firstletter-bg;
+}
+
+input[type=checkbox]+label:active,
+input[type=checkbox]:active+label,
+input[type=checkbox]:focus+label,
+input[type=radio]+label:active,
+input[type=radio]:active+label,
+input[type=radio]:focus+label {
+    color: $checkbox-selected-fg;
+
+    background-color: $checkbox-selected-bg;
+}
+
+input[type=checkbox]+label:active::first-letter,
+input[type=checkbox]:active+label::first-letter,
+input[type=checkbox]:focus+label::first-letter,
+input[type=radio]+label:active::first-letter,
+input[type=radio]:active+label::first-letter,
+input[type=radio]:focus+label::first-letter {
+    color: $checkbox-selected-firstletter-fg;
+
+    background-color: $checkbox-selected-firstletter-bg;
+}
+
+input[type=checkbox]:active::after,
+input[type=checkbox]:focus::after,
+input[type=radio]:active::after,
+input[type=radio]:focus::after {
+    color: $checkbox-selected-fg;
+
+    background-color: $checkbox-selected-bg;
+}
+
+input[type=checkbox]:disabled,
+input[type=checkbox]:disabled::after,
+input[type=checkbox]:disabled+label,
+input[type=checkbox]:disabled+label::first-letter,
+input[type=radio]:disabled,
+input[type=radio]:disabled::after,
+input[type=radio]:disabled+label,
+input[type=radio]:disabled+label::first-letter {
+    color: $checkbox-disabled-fg;
+    font-weight: $text-bold-font-weight;
+
+    background-color: $checkbox-disabled-bg;
+
+    cursor: default;
+}

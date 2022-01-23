@@ -1,0 +1,138 @@
+// Variables
+$button-selected-fg: $bright-white;
+$button-selected-bg: $green;
+$button-selected-letter: $light-yellow;
+$button-default-fg: $light-aqua;
+$button-default-bg: $green;
+$button-default-letter: $light-yellow;
+$button-active-fg: $black;
+$button-active-bg: $green;
+$button-active-letter: $light-yellow;
+$button-disabled-fg: $gray;
+$button-disabled-bg: $white;
+
+
+// Guidances
+.color-box.button pre.selected {
+    background-color: $button-selected-bg;
+    
+    color: $button-selected-fg;
+}
+
+.color-box.button pre.selected::first-letter {
+    color: $button-selected-letter
+}
+
+.color-box.button pre.default {
+    background-color: $button-default-bg;
+
+    color: $button-default-fg;
+}
+
+.color-box.button pre.default::first-letter {
+    color: $button-default-letter;
+}
+
+.color-box.button pre.active {
+    background-color: $button-active-bg;
+
+    color: $button-active-fg;
+}
+
+.color-box.button pre.active::first-letter {
+    color: $button-active-letter;
+}
+
+.color-box.button pre.disabled {
+    background-color: $button-disabled-bg;
+
+    color: $button-disabled-fg;
+}
+
+
+// Styles
+button,
+a.tc-btn {
+    background-color: $button-active-bg;
+
+    color: $button-active-fg;
+
+    font-weight: $text-bold-font-weight;
+    line-height: 1;
+
+    margin: 10px;
+    padding: 4px 15px 8px 15px;
+    min-width: 132px;
+
+    -webkit-box-shadow: 10px 10px 0px 0px $shadow;
+    -moz-box-shadow: 10px 10px 0px 0px $shadow;
+    box-shadow: 10px 10px 0px 0px $shadow;
+}
+
+a.tc-btn,
+a.tc-btn:link {
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: $button-active-fg;
+
+    text-align: center;
+}
+
+a.tc-btn:active,
+a.tc-btn:link:active,
+a.tc-btn:visited:active {
+    background-color: $button-selected-bg;
+
+    color: $button-selected-fg;
+}
+
+button:active,
+a.tc-btn:active {
+    margin-left: 20px;
+    margin-right: 0px;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+button:disabled,
+a.tc-btn.disabled {
+    background-color: $button-disabled-bg;
+    color: $button-disabled-fg;
+
+    cursor: default;
+}
+
+a.tc-btn.disabled {
+    pointer-events: none;
+}
+
+button.default,
+a.tc-btn.default {
+    background-color: $button-default-bg;
+    color: $button-default-fg;
+}
+
+button:focus,
+a.tc-btn:focus {
+    background-color: $button-selected-bg;
+    color: $button-selected-fg;
+}
+
+button:focus-visible,
+a.tc-btn:focus-visible {
+    outline: none;
+}
+
+button u,
+a.tc-btn u {
+    text-decoration: none;
+}
+
+button[accesskey] u,
+a.tc-btn[accesskey] u {
+    color: $button-default-letter;
+}

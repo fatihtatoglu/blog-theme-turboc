@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+
+    <style>
+        .box {
+            width: 50px;
+
+            padding: 16px 5px;
+
+            margin: 0px;
+
+            display: inline-block;
+
+            border: 1px solid black;
+
+            text-align: center;
+
+            font-size: 10rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <span class="site-name">Turbo C Theme - Color Matrix</span>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">-</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#" list="browsers">Contact</a></li>
+            <li class="disabled"><a href="#">Disabled</a></li>
+            <li class="active"><a href="#">About</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <article>
+            <header>
+                <h1>Color Matrix</h1>
+            </header>
+
+            <div id="pnlMatrix"></div>
+
+
+
+            <script>
+
+                var colors = [
+                    "black",
+                    "blue",
+                    "green",
+                    "aqua",
+                    "red",
+                    "purple",
+                    "yellow",
+                    "white",
+                    "gray",
+                    "light_blue",
+                    "light_green",
+                    "light_aqua",
+                    "light_red",
+                    "light_purple",
+                    "light_yellow",
+                    "bright_white"
+                ];
+
+                var $pnlMatrix = document.getElementById("pnlMatrix");
+
+                for (var i = 0; i < colors.length; i++) {
+
+                    var h2 = document.createElement("h2");
+                    h2.innerHTML = "Backgroun Color: " + colors[i];
+
+                    $pnlMatrix.appendChild(h2);
+
+                    for (var j = 0; j < colors.length; j++) {
+
+                        var bgColor = colors[i];
+                        var fgColor = colors[j];
+                        var text = colors[j] + "<br>" + colors[i];
+
+                        createBox($pnlMatrix, text, bgColor, fgColor);
+                    }
+                }
+
+                function createBox(parent, text, bgColor, fgColor) {
+                    var div = document.createElement("div");
+                    div.classList.add("color-box");
+                    div.setAttribute("title", "bg: " + bgColor + " | fg: " + fgColor);
+
+                    var pre = document.createElement("pre");
+                    pre.classList.add("bg-" + bgColor);
+                    pre.classList.add("fg-" + fgColor);
+                    pre.innerHTML = "TEXT TEXT";
+                    div.appendChild(pre);
+
+                    parent.appendChild(div);
+                }
+
+            </script>
+        </article>
+
+    </main>
+
+    <footer>
+        <span class="credits">By <a href="https://github.com/fatihtatoglu" target="_new" rel="external"
+                title="Developed by Fatih Tatoğlu">Fatih
+                Tatoğlu</a> - 2022</span>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+
+    <style>
+        select,
+        input[type=text] {
+            min-width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <span class="site-name">Turbo C Theme - Selectbox</span>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">-</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#" list="browsers">Contact</a></li>
+            <li class="disabled"><a href="#">Disabled</a></li>
+            <li class="active"><a href="#">About</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <article>
+            <header>
+                <h1>Selectbox</h1>
+            </header>
+
+            <h2>Colors</h2>
+
+            <p>Color options of the selectbox. For details, you can hold your mouse cursor on <strong>TEXT</strong>
+                content.</p>
+
+            <div class="color-box selectbox" title="active: Selectbox'ın itemdeki item'ın hali.">
+                <pre class="active">TEXT TEXT</pre>
+                <pre class="active">TEXT TEXT</pre>
+            </div>
+
+            <div class="color-box selectbox" title="default: Selectbox'ın içindeki item seçildiğindeki hali.">
+                <pre class="default">TEXT TEXT</pre>
+                <pre class="default">TEXT TEXT</pre>
+            </div>
+
+            <div class="color-box selectbox" title="selected: Selectbox içindeki bir itema focuslandığındaki hali.">
+                <pre class="selected">TEXT TEXT</pre>
+                <pre class="selected">TEXT TEXT</pre>
+            </div>
+
+            <div class="color-box selectbox" title="disabled: Selectbox kullanılmadığında atanacak.">
+                <pre class="disabled">TEXT TEXT</pre>
+                <pre class="disabled">TEXT TEXT</pre>
+            </div>
+
+            <h2>Normal Selectbox</h2>
+
+            <select size="4">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+                <option value="subaru">Subaru</option>
+                <option value="toyota">Toyota</option>
+                <option value="bmw">BMW</option>
+                <option value="ford">Ford</option>
+                <option value="renault">Renault</option>
+                <option value="honda">Honda</option>
+                <option value="mazda">Mazda</option>
+            </select>
+
+            <h2>Normal Selectbox With Disabled Option</h2>
+
+            <select size="4">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes" disabled>Mercedes</option>
+                <option value="audi">Audi</option>
+                <option value="subaru">Subaru</option>
+                <option value="toyota">Toyota</option>
+                <option value="bmw">BMW</option>
+                <option value="ford">Ford</option>
+                <option value="renault">Renault</option>
+                <option value="honda">Honda</option>
+                <option value="mazda">Mazda</option>
+            </select>
+
+            <h2>Multiple Selectbox</h2>
+
+            <select size="4" multiple>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+                <option value="subaru">Subaru</option>
+                <option value="toyota">Toyota</option>
+                <option value="bmw">BMW</option>
+                <option value="ford">Ford</option>
+                <option value="renault">Renault</option>
+                <option value="honda">Honda</option>
+                <option value="mazda">Mazda</option>
+            </select>
+
+            <h2>Disabled Selectbox</h2>
+
+            <select size="4" disabled>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+                <option value="subaru">Subaru</option>
+                <option value="toyota">Toyota</option>
+                <option value="bmw">BMW</option>
+                <option value="ford">Ford</option>
+                <option value="renault">Renault</option>
+                <option value="honda">Honda</option>
+                <option value="mazda">Mazda</option>
+            </select>
+
+        </article>
+
+    </main>
+
+    <footer>
+        <span class="credits">By <a href="https://github.com/fatihtatoglu" target="_new" rel="external"
+                title="Developed by Fatih Tatoğlu">Fatih
+                Tatoğlu</a> - 2022</span>
+    </footer>
+
+</body>
+
+</html>

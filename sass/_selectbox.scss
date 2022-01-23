@@ -1,0 +1,128 @@
+// Variables
+$selectbox-active-bg: $aqua;
+$selectbox-active-fg: $black;
+$selectbox-default-bg: $aqua;
+$selectbox-default-fg: $light-yellow;
+$selectbox-selected-bg: $green;
+$selectbox-selected-fg: $bright-white;
+$selectbox-disabled-bg: $aqua;
+$selectbox-disabled-fg: $gray;
+$selectbox-scrollbar-bg-1: $aqua;
+$selectbox-scrollbar-bg-2: $blue;
+$selectbox-scrollbar-thumb-border: $aqua;
+$selectbox-scrollbar-thumb-bg: $blue;
+$selectbox-scrollbar-arrow-bg: $blue;
+$selectbox-scrollbar-arrow-fg: $aqua;
+
+// Guidances
+.color-box.selectbox pre.active {
+    background-color: $selectbox-active-bg;
+
+    color: $selectbox-active-fg
+}
+
+.color-box.selectbox pre.default {
+    background-color: $selectbox-default-bg;
+
+    color: $selectbox-default-fg;
+}
+
+.color-box.selectbox pre.selected {
+    background-color: $selectbox-selected-bg;
+
+    color: $selectbox-selected-fg;
+}
+
+.color-box.selectbox pre.disabled {
+    background-color: $selectbox-disabled-bg;
+
+    color: $selectbox-disabled-fg;
+}
+
+
+// Styles
+select {
+    line-height: 1.1;
+
+    background-color: $selectbox-scrollbar-arrow-bg;
+
+    border: none;
+
+    outline: none;
+}
+
+option {
+    font-weight: $text-bold-font-weight;
+    line-height: 1.1;
+
+    background-color: $selectbox-active-bg;
+
+    color: $selectbox-active-fg;
+
+    cursor: pointer;
+}
+
+select option:checked {
+    color: $selectbox-default-fg;
+
+    background: $selectbox-default-bg linear-gradient(0deg, $selectbox-default-bg 0%, $selectbox-default-bg 100%);
+}
+
+select:focus option:checked {
+    color: $selectbox-selected-fg;
+
+    background: $selectbox-selected-bg linear-gradient(0deg, $selectbox-selected-bg 0%, $selectbox-selected-bg 100%);
+}
+
+select:disabled {
+    overflow: hidden;
+}
+
+select:disabled option,
+select option:disabled {
+    color: $selectbox-disabled-fg;
+
+    background: $selectbox-disabled-bg linear-gradient(0deg, $selectbox-disabled-bg 0%, $selectbox-disabled-bg 100%);
+
+    cursor: default;
+}
+
+select::-webkit-scrollbar {
+    width: 16rem;
+}
+
+select::-webkit-scrollbar-track {
+    background-color: $selectbox-scrollbar-bg-1;
+    opacity: 1;
+    background-image: repeating-linear-gradient(45deg, $selectbox-scrollbar-bg-2 25%, transparent 25%, transparent 75%, $selectbox-scrollbar-bg-2 75%, $selectbox-scrollbar-bg-2), repeating-linear-gradient(45deg, $selectbox-scrollbar-bg-2 25%, $selectbox-scrollbar-bg-1 25%, $selectbox-scrollbar-bg-1 75%, $selectbox-scrollbar-bg-2 75%, $selectbox-scrollbar-bg-2);
+    background-position: 0 0, 2px 2px;
+    background-size: 4px 4px;
+}
+
+select::-webkit-scrollbar-thumb {
+    background-color: $selectbox-scrollbar-thumb-bg;
+    border: $selectbox-scrollbar-thumb-border solid 4px;
+}
+
+select::-webkit-scrollbar-button:vertical {
+    height: 16px;
+    width: 8px;
+}
+
+@if $selectbox-scrollbar-arrow-fg==$aqua {
+    select::-webkit-scrollbar-button:vertical:decrement {
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAYAAABmBXS+AAAAAXNSR0IArs4c6QAAAD1JREFUKFNjZEAHq5b/ZwiLZEQWRuEwgBTAAJJCEhUhm4JmGsIkgoqwKUAyDWISUYowwgFVANV3OBQTpQgA9UIVC8Bjp68AAAAASUVORK5CYII=);
+        background-repeat: no-repeat;
+        background-position-x: 4px;
+        background-position-y: 2px;
+        background-size: 8px 16px;
+    }
+
+    select::-webkit-scrollbar-button:vertical:increment {
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAYAAABmBXS+AAAAAXNSR0IArs4c6QAAAD9JREFUKFNjZACBVcv/g2lsICySkZF4RbhMC4sEGwIxiWhF6AqhpqCaRLQimEIkUzBNwhEKCIfjDChk3+FRBAD1QhULt999SAAAAABJRU5ErkJggg==);
+        background-repeat: no-repeat;
+        background-position-x: 4px;
+        background-position-y: 3px;
+        background-size: 8px 16px;
+    }
+}
