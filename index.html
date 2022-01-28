@@ -91,6 +91,25 @@
                 title="Developed by Fatih Tatoğlu">Fatih
                 Tatoğlu</a> - 2022</span>
     </footer>
+
+    <script>
+        var menuitems = document.querySelectorAll("nav>ul>li");
+        menuitems.forEach(function (item) {
+
+            var subMenu = item.querySelector("div.sub-menu");
+            if (subMenu) {
+                item.addEventListener("mouseover", function () {
+                    subMenu.style.display = "block";
+                });
+
+                item.addEventListener("mouseleave", function () {
+                    subMenu.style.display = "none";
+                });
+            }
+        });
+
+    </script>
+
 </body>
 
 </html>

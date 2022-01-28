@@ -187,6 +187,24 @@
     </footer>
 
     <script>
+        var menuitems = document.querySelectorAll("nav>ul>li");
+        menuitems.forEach(function (item) {
+
+            var subMenu = item.querySelector("div.sub-menu");
+            if (subMenu) {
+                item.addEventListener("mouseover", function () {
+                    subMenu.style.display = "block";
+                });
+
+                item.addEventListener("mouseleave", function () {
+                    subMenu.style.display = "none";
+                });
+            }
+        });
+
+    </script>
+
+    <script>
         $btnOpenDialog = document.getElementById("btnOpenDialog");
 
         $pnlDialog = document.getElementById("pnlDialog");
