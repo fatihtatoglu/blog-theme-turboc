@@ -1,5 +1,7 @@
 // Variables
-$site-width: 960px;
+$site-width: 900px;
+$site-width-large: 1024px;
+$site-width-small: 640px;
 
 $body-bg: $white;
 $body-bg-pattern: $blue;
@@ -18,7 +20,7 @@ $footer-margin-bottom: 10px;
 $footer-bg: $aqua;
 $footer-fg: $black;
 
-$footer-credits-margin-top: (stripUnit($footer-height) - (stripUnit($text-size) * $text-line-height )) / 2;
+$footer-credits-margin-top: (stripUnit($footer-height) - (stripUnit($text-size) * $text-line-height)) / 2;
 
 $main-height: $header-margin-top+$header-height+$header-margin-bottom+$nav-height+$footer-margin-top+$footer-height+$footer-margin-bottom;
 $main-bg: $aqua;
@@ -109,7 +111,6 @@ main {
     margin: 0px auto;
     padding: 7px 3px;
 }
-
 
 article {
     color: $article-fg;

@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="./css/main.css">
 
+    <script src="./js/main.js"></script>
+
     <style>
         input[type=text],
         input[type=password],
@@ -38,9 +40,9 @@
                         <li><a href="#">Light Theme</a></li>
                         <li><a href="#">Dark Theme</a></li>
                         <li role="separator"></li>
-                        <li><a href="#">Small Page Width</a></li>
-                        <li><a href="#">Medium Page Width</a></li>
-                        <li><a href="#">Large Page Width</a></li>
+                        <li><a id="lnkSmallTheme" href="#">Small Page Width</a></li>
+                        <li><a id="lnkMediumTheme" href="#">Medium Page Width</a></li>
+                        <li><a id="lnkLargeTheme" href="#">Large Page Width</a></li>
                     </ul>
                 </div>
             </li>
@@ -455,24 +457,6 @@
                 title="Developed by Fatih Tatoğlu">Fatih
                 Tatoğlu</a> - 2022</span>
     </footer>
-
-    <script>
-        var menuitems = document.querySelectorAll("nav>ul>li");
-        menuitems.forEach(function (item) {
-
-            var subMenu = item.querySelector("div.sub-menu");
-            if (subMenu) {
-                item.addEventListener("mouseover", function () {
-                    subMenu.style.display = "block";
-                });
-
-                item.addEventListener("mouseleave", function () {
-                    subMenu.style.display = "none";
-                });
-            }
-        });
-
-    </script>
 
 </body>
 

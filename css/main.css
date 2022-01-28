@@ -303,15 +303,15 @@ input[type=checkbox]:disabled, input[type=checkbox]:disabled::after, input[type=
 
 body { background-color: #aaaaaa; background-image: radial-gradient(circle, #0000a9 25%, transparent 10%), radial-gradient(circle, #0000a9 25%, transparent 10%); background-size: 6px 6px; background-position: 0 0, 3px 3px; }
 
-header { color: black; background-color: #00aaa8; height: 70px; width: 960px; margin: 20px auto 0px auto; padding: 5px 10px; display: block; }
+header { color: black; background-color: #00aaa8; height: 70px; width: 900px; margin: 20px auto 0px auto; padding: 5px 10px; display: block; }
 
 header span.site-name { font-size: 16rem; font-weight: 700; line-height: 1.2; color: black; text-transform: uppercase; background-color: #00aaa8; margin: 12px 8px; padding: 3px 8px; border-bottom: black solid 7px; display: table; cursor: default; }
 
-footer { color: black; text-align: center; background-color: #00aaa8; height: 50px; width: 960px; padding: 0px; margin: 15px auto 10px auto; }
+footer { color: black; text-align: center; background-color: #00aaa8; height: 50px; width: 900px; padding: 0px; margin: 15px auto 10px auto; }
 
 footer span.credits { display: inline-block; margin: 13px 0px; }
 
-main { background-color: #00aaa8; min-height: calc(100vh - 189px); width: 960px; margin: 0px auto; padding: 7px 3px; }
+main { background-color: #00aaa8; min-height: calc(100vh - 189px); width: 900px; margin: 0px auto; padding: 7px 3px; }
 
 article { color: black; background-color: #00aaa8; position: relative; border-left-width: 2px; border-right-width: 2px; min-height: 150px; padding: 10px 3px; border: 4px double white; }
 
@@ -377,7 +377,7 @@ div.field-group-row > div.field-group.right { text-align: right; }
 
 .color-box.menu pre.disabled.selected { background-color: black; color: #555555; }
 
-nav { background-color: #aaaaaa; width: 960px; margin: 0px auto; }
+nav { background-color: #aaaaaa; width: 900px; margin: 0px auto; }
 
 nav ul { padding: 0px; margin: 0px; list-style: none; display: table; }
 
@@ -415,9 +415,9 @@ nav ul li div.sub-menu ul li a { margin: 0px; padding: 3px 8px; min-width: 150px
 
 div.dialog { background-color: transparent; position: fixed; top: 0; bottom: 0; left: 0; right: 0; display: none; }
 
-div.dialog div.dialog-box { background-color: #aaaaaa; position: relative; margin: 100px auto; padding: 5px 1px 8px 2px; display: block; width: 480px; -webkit-box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 0.8); -moz-box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 0.8); box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 0.8); }
+div.dialog div.dialog-box { background-color: #aaaaaa; position: relative; margin: 100px auto; padding: 5px 1px 8px 2px; display: block; width: 450px; -webkit-box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 0.8); -moz-box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 0.8); box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 0.8); }
 
-div.dialog.large div.dialog-box { width: 720px; }
+div.dialog.large div.dialog-box { width: 675px; }
 
 div.dialog div.dialog-box div.dialog-content { background-color: #aaaaaa; padding: 21px 17px; border: 4px double white; }
 
@@ -435,5 +435,10 @@ div.dialog div.dialog-box div.dialog-content > main > p { color: black; }
 div.dialog div.dialog-box div.dialog-content > main p, div.dialog div.dialog-box div.dialog-content > main label, div.dialog div.dialog-box div.dialog-content > main label::first-letter { background-color: #aaaaaa; }
 
 div.dialog div.dialog-box div.dialog-content footer { text-align: center; color: black; background-color: #aaaaaa; }
+
+/* Themes */
+body.theme-small header, body.theme-small main, body.theme-small footer, body.theme-small nav { width: 640px; }
+
+body.theme-large header, body.theme-large main, body.theme-large footer, body.theme-large nav { width: 1024px; }
 
 /*# sourceMappingURL=main.css.map */
