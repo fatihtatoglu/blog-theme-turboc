@@ -72,13 +72,9 @@ nav ul {
 }
 
 nav ul li {
-    background-color: $menu-normal-bg;
-
     padding: 0px 0px;
 
     display: inline-block;
-
-    position: relative;
 }
 
 nav ul li::before {
@@ -166,11 +162,6 @@ nav ul li div.sub-menu {
     position: absolute;
 
     z-index: 2;
-}
-
-nav ul li a:active+div.sub-menu,
-nav ul li a:focus+div.sub-menu {
-    display: block;
 }
 
 nav ul li div.sub-menu ul {

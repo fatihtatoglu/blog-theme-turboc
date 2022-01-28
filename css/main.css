@@ -381,7 +381,7 @@ nav { background-color: #aaaaaa; width: 960px; margin: 0px auto; }
 
 nav ul { padding: 0px; margin: 0px; list-style: none; display: table; }
 
-nav ul li { background-color: #aaaaaa; padding: 0px 0px; display: inline-block; position: relative; }
+nav ul li { padding: 0px 0px; display: inline-block; }
 
 nav ul li::before { display: none; }
 
@@ -398,8 +398,6 @@ nav ul li.disabled a:link, nav ul li.disabled a:visited, nav ul li.disabled a:ho
 nav ul li.disabled a:focus, nav ul li.disabled a:active, nav ul li.disabled a:hover, nav ul li.disabled a:focus::first-letter, nav ul li.disabled a:active::first-letter, nav ul li.disabled a:hover::first-letter { color: #555555; background-color: black; cursor: default; }
 
 nav ul li div.sub-menu { background-color: #aaaaaa; margin: 0px; padding: 7px 11px; display: none; position: absolute; z-index: 2; }
-
-nav ul li a:active + div.sub-menu, nav ul li a:focus + div.sub-menu { display: block; }
 
 nav ul li div.sub-menu ul { padding-bottom: 7px; padding-top: 8px; border: 2px solid black; border-top-width: 1px; border-bottom-width: 1px; }
 
