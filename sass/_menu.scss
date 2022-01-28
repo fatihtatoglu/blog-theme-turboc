@@ -86,7 +86,8 @@ nav ul li::before {
 }
 
 nav ul li a:link,
-nav ul li a:visited {
+nav ul li a:visited,
+nav ul li a:hover {
     color: $menu-normal-fg;
     font-weight: $text-bold-font-weight;
 
@@ -98,7 +99,8 @@ nav ul li a:visited {
 }
 
 nav ul li a:link::first-letter,
-nav ul li a:visited::first-letter {
+nav ul li a:visited::first-letter,
+nav ul li a:hover::first-letter {
     color: $menu-normal-firstletter-fg;
 
     background-color: $menu-normal-firstletter-bg;
@@ -106,8 +108,10 @@ nav ul li a:visited::first-letter {
 
 nav ul li a:focus,
 nav ul li a:active,
+nav ul li a:hover,
 nav ul li.active a:link,
-nav ul li.active a:visited {
+nav ul li.active a:visited,
+nav ul li.active a:hover {
     color: $menu-selected-fg;
 
     background-color: $menu-selected-bg;
@@ -115,8 +119,10 @@ nav ul li.active a:visited {
 
 nav ul li a:focus::first-letter,
 nav ul li a:active::first-letter,
+nav ul li a:hover::first-letter,
 nav ul li.active a:link::first-letter,
-nav ul li.active a:visited::first-letter {
+nav ul li.active a:visited::first-letter,
+nav ul li.active a:hover::first-letter {
     color: $menu-selected-firstletter-fg;
 
     background-color: $menu-selected-firstletter-bg;
@@ -124,20 +130,28 @@ nav ul li.active a:visited::first-letter {
 
 nav ul li.disabled a:link,
 nav ul li.disabled a:visited,
+nav ul li.disabled a:hover,
 nav ul li.disabled a:link::first-letter,
-nav ul li.disabled a:visited::first-letter {
+nav ul li.disabled a:visited::first-letter,
+nav ul li.disabled a:hover::first-letter {
     color: $menu-disabled-fg;
 
     background-color: $menu-disabled-bg;
+
+    cursor: default;
 }
 
 nav ul li.disabled a:focus,
 nav ul li.disabled a:active,
+nav ul li.disabled a:hover,
 nav ul li.disabled a:focus::first-letter,
-nav ul li.disabled a:active::first-letter {
+nav ul li.disabled a:active::first-letter,
+nav ul li.disabled a:hover::first-letter {
     color: $menu-disabled-selected-fg;
 
     background-color: $menu-disabled-selected-bg;
+
+    cursor: default;
 }
 
 nav ul li div.sub-menu {
