@@ -7,6 +7,18 @@ $form-label-focus-bg: $form-label-bg;
 $form-label-focus-fg: $bright-white;
 
 
+@if $darkMode==true {
+    $form-label-bg: $black;
+    $form-label-fg: $white;
+
+    $form-label-firstletter-bg: $form-label-bg;
+    $form-label-firstletter-fg: $light-yellow;
+
+    $form-label-focus-bg: $form-label-bg;
+    $form-label-focus-fg: $bright-white;
+}
+
+
 // Styles
 div.field-group {
     display: flex;

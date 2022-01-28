@@ -15,7 +15,11 @@ $light-purple:  rgba(254,86,254,1);
 $light-yellow:  rgba(254,255,85,1);
 $bright-white:  rgba(255,255,255,1);
 
-$shadow: rgba(0,0,0,0.8);
+$shadow: rgba(0,0,0,0.75);
+
+@if $darkMode==true {
+    $shadow: rgba(255,255,255,0.75);
+}
 
 .bg-transparent     { background-color: transparent; }
 .bg-black           { background-color: $black; }

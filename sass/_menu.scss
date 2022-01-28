@@ -15,6 +15,24 @@ $menu-disabled-selected-bg: $black;
 $menu-disabled-selected-fg: $menu-disabled-fg;
 
 
+@if $darkMode==true {
+    $menu-bg: $black;
+    $menu-border: $white;
+    $menu-normal-bg: $black;
+    $menu-normal-fg: $white;
+    $menu-normal-firstletter-bg: $black;
+    $menu-normal-firstletter-fg: $red;
+    $menu-selected-bg: $green;
+    $menu-selected-fg: $black;
+    $menu-selected-firstletter-bg: $green;
+    $menu-selected-firstletter-fg: $red;
+    $menu-disabled-bg: $black;
+    $menu-disabled-fg: $gray;
+    $menu-disabled-selected-bg: $black;
+    $menu-disabled-selected-fg: $menu-disabled-fg;
+}
+
+
 // Guidances
 .color-box.menu pre.normal {
     background-color: $menu-normal-bg;

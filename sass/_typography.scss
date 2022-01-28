@@ -22,6 +22,28 @@ $text-quotation-bg: $blue;
 $text-quotation-fg: $aqua;
 $text-quotation-border: $light-yellow;
 
+@if $darkMode==true {
+    $text-active-bg: $black;
+    $text-active-fg: $white;
+
+    $text-selected-bg: $gray;
+    $text-selected-fg: $white;
+
+    $text-keyword-active-bg: $black;
+    $text-keyword-active-fg: $light-yellow;
+
+    $text-keyword-selected-bg: $gray;
+    $text-keyword-selected-fg: $light-yellow;
+
+    $text-heading-bg: $black;
+    $text-heading-fg: $white;
+    $text-heading-border: $white;
+
+    $text-quotation-bg: $gray;
+    $text-quotation-fg: $bright-white;
+    $text-quotation-border: $yellow;
+}
+
 
 // Guidances
 .color-box.typo pre.active {

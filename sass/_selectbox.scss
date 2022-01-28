@@ -14,6 +14,30 @@ $selectbox-scrollbar-thumb-bg: $blue;
 $selectbox-scrollbar-arrow-bg: $blue;
 $selectbox-scrollbar-arrow-fg: $aqua;
 
+
+@if $darkMode==true {
+    $selectbox-active-bg: $black;
+    $selectbox-active-fg: $bright-white;
+
+    $selectbox-default-bg: $black;
+    $selectbox-default-fg: $light-yellow;
+
+    $selectbox-selected-bg: $green;
+    $selectbox-selected-fg: $bright-white;
+
+    $selectbox-disabled-bg: $black;
+    $selectbox-disabled-fg: $gray;
+
+    $selectbox-scrollbar-bg-1: $black;
+    $selectbox-scrollbar-bg-2: $gray;
+
+    $selectbox-scrollbar-thumb-border: $gray;
+    $selectbox-scrollbar-thumb-bg: $aqua;
+    $selectbox-scrollbar-arrow-bg: $gray;
+    $selectbox-scrollbar-arrow-fg: $aqua;
+}
+
+
 // Guidances
 .color-box.selectbox pre.active {
     background-color: $selectbox-active-bg;

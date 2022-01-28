@@ -11,6 +11,25 @@ $message-box-error-bg: $blue;
 $message-box-error-fg: $light-red;
 
 
+@if $darkMode==true {
+    $horizontal-line-border: $white;
+
+    $message-box-border: $bright-white; 
+
+    $message-box-info-bg: $gray;
+    $message-box-info-fg: $blue;
+
+    $message-box-warn-bg: $gray;
+    $message-box-warn-fg: $light-yellow;
+
+    $message-box-notice-bg: $gray;
+    $message-box-notice-fg: $light-aqua;
+
+    $message-box-error-bg: $gray;
+    $message-box-error-fg: $light-red;
+}
+
+
 // Styles
 ol {
     list-style-type: decimal;

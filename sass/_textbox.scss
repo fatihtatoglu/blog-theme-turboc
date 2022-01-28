@@ -15,6 +15,29 @@ $textbox-scrollbar-arrow-bg: $blue;
 $textbox-scrollbar-arrow-fg: $aqua;
 
 
+@if $darkMode==true {
+    $textbox-normal-fg: $light-aqua;
+    $textbox-normal-bg: $gray;
+
+    $textbox-volatile-fg: $bright-white;
+    $textbox-volatile-bg: $black;
+
+    $textbox-selected-fg: $bright-white;
+    $textbox-selected-bg: $gray;
+
+    $textbox-disabled-fg: $gray;
+    $textbox-disabled-bg: $white;
+
+    $textbox-scrollbar-bg-1: $black;
+    $textbox-scrollbar-bg-2: $gray;
+    
+    $textbox-scrollbar-thumb-border: $gray;
+    $textbox-scrollbar-thumb-bg: $aqua;
+    $textbox-scrollbar-arrow-bg: $gray;
+    $textbox-scrollbar-arrow-fg: $aqua;
+}
+
+
 // Guidances
 .color-box.textbox pre.normal {
     background-color: $textbox-normal-bg;
@@ -65,6 +88,8 @@ textarea {
 
 textarea {
     background-color: $textbox-scrollbar-arrow-bg;
+
+    resize: none;
 }
 
 input[type=text]:focus,
@@ -163,7 +188,7 @@ textarea::-webkit-scrollbar-track {
 
 textarea::-webkit-scrollbar-thumb {
     background-color: $textbox-scrollbar-thumb-bg;
-    
+
     border: $textbox-scrollbar-thumb-border solid 4px;
 }
 

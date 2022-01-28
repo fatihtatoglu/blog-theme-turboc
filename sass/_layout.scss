@@ -24,12 +24,31 @@ $footer-credits-margin-top: (stripUnit($footer-height) - (stripUnit($text-size) 
 
 $main-height: $header-margin-top+$header-height+$header-margin-bottom+$nav-height+$footer-margin-top+$footer-height+$footer-margin-bottom;
 $main-bg: $aqua;
-$main-bg-pattern: $blue;
 
 $article-bg: $main-bg;
 $article-fg: $black;
 $article-header-fg: $bright-white;
 $article-header-border: $bright-white;
+
+
+@if $darkMode==true {
+    $body-bg: $black;
+    $body-bg-pattern: $gray;
+
+    $header-bg: $black;
+    $header-fg: $white;
+
+    $footer-bg: $black;
+    $footer-fg: $white;
+
+    $main-bg: $black;
+
+    $article-bg: $main-bg;
+    $article-fg: $white;
+
+    $article-header-fg: $bright-white;
+    $article-header-border: $bright-white;
+}
 
 
 // Guidances

@@ -143,19 +143,19 @@ blockquote p { font-style: italic; color: #00aaa8; background-color: #0000a9; ma
 /* Buttons */
 .color-box.button pre.selected { background-color: #00a800; color: white; }
 
-.color-box.button pre.selected::first-letter { color: #feff55; }
+.color-box.button pre.selected::first-letter { background-color: #00a800; color: #feff55; }
 
 .color-box.button pre.default { background-color: #00a800; color: #55fffd; }
 
-.color-box.button pre.default::first-letter { color: #feff55; }
+.color-box.button pre.default::first-letter { background-color: #00a800; color: #feff55; }
 
 .color-box.button pre.active { background-color: #00a800; color: black; }
 
-.color-box.button pre.active::first-letter { color: #feff55; }
+.color-box.button pre.active::first-letter { background-color: #00a800; color: #feff55; }
 
 .color-box.button pre.disabled { background-color: #aaaaaa; color: #555555; }
 
-button, a.tc-btn { background-color: #00a800; color: black; font-weight: 700; line-height: 1; margin: 10px; padding: 4px 15px 8px 15px; min-width: 132px; -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.8); -moz-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.8); box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.8); }
+button, a.tc-btn { background-color: #00a800; color: black; font-weight: 700; line-height: 1; margin: 10px; padding: 4px 15px 8px 15px; min-width: 132px; -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75); -moz-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75); box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75); }
 
 a.tc-btn, a.tc-btn:link { display: inline-block; text-decoration: none; color: black; text-align: center; }
 
@@ -175,7 +175,7 @@ button:focus-visible, a.tc-btn:focus-visible { outline: none; }
 
 button u, a.tc-btn u { text-decoration: none; }
 
-button[accesskey] u, a.tc-btn[accesskey] u { color: #feff55; }
+button[accesskey] u, a.tc-btn[accesskey] u { color: #feff55; background-color: #00a800; }
 
 /* Textbox */
 .color-box.textbox pre.normal { background-color: #0000a9; color: #55fffd; }
@@ -188,7 +188,7 @@ button[accesskey] u, a.tc-btn[accesskey] u { color: #feff55; }
 
 input[type=text], input[type=password], input[type=email], input[type=tel], input[type=number], textarea { color: #55fffd; font-weight: 700; line-height: 1.1; background-color: #0000a9; border: none; outline: none; padding: 3px 8px; margin: 3px 0px; }
 
-textarea { background-color: #0000a9; }
+textarea { background-color: #0000a9; resize: none; }
 
 input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=tel]:focus, input[type=number]:focus, textarea:focus { color: white; background-color: #0000a9; }
 
@@ -415,7 +415,7 @@ nav ul li div.sub-menu ul li a { margin: 0px; padding: 3px 8px; min-width: 150px
 
 div.dialog { background-color: transparent; position: fixed; top: 0; bottom: 0; left: 0; right: 0; display: none; }
 
-div.dialog div.dialog-box { background-color: #aaaaaa; position: relative; margin: 100px auto; padding: 5px 1px 8px 2px; display: block; width: 450px; -webkit-box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 0.8); -moz-box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 0.8); box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 0.8); }
+div.dialog div.dialog-box { background-color: #aaaaaa; position: relative; margin: 100px auto; padding: 5px 1px 8px 2px; display: block; width: 450px; -webkit-box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 0.75); -moz-box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 0.75); box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 0.75); }
 
 div.dialog.large div.dialog-box { width: 675px; }
 

@@ -1,26 +1,55 @@
 // Variables
 $button-selected-fg: $bright-white;
 $button-selected-bg: $green;
-$button-selected-letter: $light-yellow;
+$button-selected-letter-fg: $light-yellow;
+$button-selected-letter-bg: $green;
 $button-default-fg: $light-aqua;
 $button-default-bg: $green;
-$button-default-letter: $light-yellow;
+$button-default-letter-fg: $light-yellow;
+$button-default-letter-bg: $green;
 $button-active-fg: $black;
 $button-active-bg: $green;
-$button-active-letter: $light-yellow;
+$button-active-letter-fg: $light-yellow;
+$button-active-letter-bg: $green;
 $button-disabled-fg: $gray;
 $button-disabled-bg: $white;
+
+
+@if $darkMode==true {
+    $button-selected-fg: $bright-white;
+    $button-selected-bg: $gray;
+
+    $button-selected-letter-fg: $light-yellow;
+    $button-selected-letter-bg: $gray;
+
+    $button-default-fg: $light-aqua;
+    $button-default-bg: $gray;
+
+    $button-default-letter-fg: $light-yellow;
+    $button-default-letter-bg: $gray;
+
+    $button-active-fg: $black;
+    $button-active-bg: $gray;
+
+    $button-active-letter-fg: $light-yellow;
+    $button-active-letter-bg: $gray;
+    
+    $button-disabled-fg: $gray;
+    $button-disabled-bg: $white;
+}
 
 
 // Guidances
 .color-box.button pre.selected {
     background-color: $button-selected-bg;
-    
+
     color: $button-selected-fg;
 }
 
 .color-box.button pre.selected::first-letter {
-    color: $button-selected-letter
+    background-color: $button-selected-letter-bg;
+
+    color: $button-selected-letter-fg;
 }
 
 .color-box.button pre.default {
@@ -30,7 +59,9 @@ $button-disabled-bg: $white;
 }
 
 .color-box.button pre.default::first-letter {
-    color: $button-default-letter;
+    background-color: $button-default-letter-bg;
+
+    color: $button-default-letter-fg;
 }
 
 .color-box.button pre.active {
@@ -40,7 +71,9 @@ $button-disabled-bg: $white;
 }
 
 .color-box.button pre.active::first-letter {
-    color: $button-active-letter;
+    background-color: $button-active-letter-bg;
+
+    color: $button-active-letter-fg;
 }
 
 .color-box.button pre.disabled {
@@ -134,5 +167,7 @@ a.tc-btn u {
 
 button[accesskey] u,
 a.tc-btn[accesskey] u {
-    color: $button-default-letter;
+    color: $button-default-letter-fg;
+
+    background-color: $button-default-letter-bg;
 }

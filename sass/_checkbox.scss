@@ -11,6 +11,24 @@ $checkbox-disabled-bg: $aqua;
 $checkbox-disabled-fg: $gray;
 
 
+@if $darkMode==true {
+    $checkbox-active-bg: $black;
+    $checkbox-active-fg: $white;
+
+    $checkbox-active-firstletter-bg: $black;
+    $checkbox-active-firstletter-fg: $light-yellow;
+
+    $checkbox-selected-bg: $black;
+    $checkbox-selected-fg: $bright-white;
+
+    $checkbox-selected-firstletter-bg: $black;
+    $checkbox-selected-firstletter-fg: $light-yellow;
+
+    $checkbox-disabled-bg: $black;
+    $checkbox-disabled-fg: $gray;
+}
+
+
 // Guidances
 .color-box.checkbox pre.active {
     background-color: $checkbox-active-bg;
@@ -44,7 +62,7 @@ $checkbox-disabled-fg: $gray;
 
 .color-box.checkbox pre.disabled::first-letter {
     background-color: $checkbox-disabled-bg;
-    
+
     color: $checkbox-disabled-fg;
 }
 
@@ -108,8 +126,7 @@ input[type=radio]+label {
     cursor: pointer;
 }
 
-input[type=radio]+label
-{
+input[type=radio]+label {
     vertical-align: bottom;
 }
 

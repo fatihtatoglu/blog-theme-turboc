@@ -9,6 +9,21 @@ $dialog-icon-fg: $light-green;
 $dialog-width: $site-width * 0.5;
 $dialog-large-width: $site-width * 0.75;
 
+
+@if $darkMode==true {
+    $dialog-border: $bright-white;
+
+    $dialog-title-bg: $black;
+    $dialog-title-fg: $bright-white;
+
+    $dialog-text-bg: $black;
+    $dialog-text-fg: $white;
+
+    $dialog-icon-bg: $black;
+    $dialog-icon-fg: $light-green;
+}
+
+
 // Guidances
 .color-box.dialog-guide pre.title {
     background-color: $dialog-title-bg;
