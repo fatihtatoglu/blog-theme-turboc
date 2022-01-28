@@ -1,0 +1,171 @@
+// Variables
+$menu-bg: $white;
+$menu-border: $black;
+$menu-normal-bg: $white;
+$menu-normal-fg: $black;
+$menu-normal-firstletter-bg: $white;
+$menu-normal-firstletter-fg: $red;
+$menu-selected-bg: $green;
+$menu-selected-fg: $black;
+$menu-selected-firstletter-bg: $green;
+$menu-selected-firstletter-fg: $red;
+$menu-disabled-bg: $white;
+$menu-disabled-fg: $gray;
+$menu-disabled-selected-bg: $black;
+$menu-disabled-selected-fg: $menu-disabled-fg;
+
+
+// Guidances
+.color-box.menu pre.normal {
+    background-color: $menu-normal-bg;
+
+    color: $menu-normal-fg;
+}
+
+.color-box.menu pre.normal.firstletter {
+    background-color: $menu-normal-firstletter-bg;
+
+    color: $menu-normal-firstletter-fg;
+}
+
+.color-box.menu pre.selected {
+    background-color: $menu-selected-bg;
+
+    color: $menu-selected-fg;
+}
+
+.color-box.menu pre.selected.firstletter {
+    background-color: $menu-selected-firstletter-bg;
+
+    color: $menu-selected-firstletter-fg;
+}
+
+.color-box.menu pre.disabled {
+    background-color: $menu-disabled-bg;
+
+    color: $menu-disabled-fg;
+}
+
+.color-box.menu pre.disabled.selected {
+    background-color: $menu-disabled-selected-bg;
+
+    color: $menu-disabled-selected-fg;
+}
+
+
+// Styles
+nav {
+    background-color: $menu-bg;
+
+    width: $site-width;
+
+    margin: 0px auto;
+}
+
+nav ul {
+    padding: 0px;
+    margin: 0px;
+
+    list-style: none;
+
+    display: table;
+}
+
+nav ul li {
+    background-color: $menu-normal-bg;
+
+    padding: 0px 0px;
+
+    display: inline-block;
+
+    position: relative;
+}
+
+nav ul li::before {
+    display: none;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+    color: $menu-normal-fg;
+    font-weight: $text-bold-font-weight;
+
+    background-color: $menu-normal-bg;
+
+    padding: 0px 9px;
+
+    display: block;
+}
+
+nav ul li a:link::first-letter,
+nav ul li a:visited::first-letter {
+    color: $menu-normal-firstletter-fg;
+
+    background-color: $menu-normal-firstletter-bg;
+}
+
+nav ul li a:focus,
+nav ul li a:active,
+nav ul li.active a:link,
+nav ul li.active a:visited {
+    color: $menu-selected-fg;
+
+    background-color: $menu-selected-bg;
+}
+
+nav ul li a:focus::first-letter,
+nav ul li a:active::first-letter,
+nav ul li.active a:link::first-letter,
+nav ul li.active a:visited::first-letter {
+    color: $menu-selected-firstletter-fg;
+
+    background-color: $menu-selected-firstletter-bg;
+}
+
+nav ul li.disabled a:link,
+nav ul li.disabled a:visited,
+nav ul li.disabled a:link::first-letter,
+nav ul li.disabled a:visited::first-letter {
+    color: $menu-disabled-fg;
+
+    background-color: $menu-disabled-bg;
+}
+
+nav ul li.disabled a:focus,
+nav ul li.disabled a:active,
+nav ul li.disabled a:focus::first-letter,
+nav ul li.disabled a:active::first-letter {
+    color: $menu-disabled-selected-fg;
+
+    background-color: $menu-disabled-selected-bg;
+}
+
+nav ul li ul {
+
+    background-color: red;
+
+    margin: 0px;
+    padding: 3px;
+
+    border: 2px solid blue;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+
+    opacity: 0;
+
+    position: absolute;
+
+    z-index: 2;
+}
+
+nav ul li a:active+ul,
+nav ul li a:focus+ul {
+    opacity: 1;
+}
+
+nav ul li ul li {
+
+    background-color: purple;
+
+    padding: 3px 8px;
+}

@@ -1,5 +1,5 @@
 // Variables
-$site-width: 700px;
+$site-width: 960px;
 
 $body-bg: $white;
 $body-bg-pattern: $blue;
@@ -9,19 +9,6 @@ $header-margin-top: 20px;
 $header-margin-bottom: 0px;
 $header-bg: $aqua;
 $header-fg: $black;
-
-$menu-bg: $white;
-$menu-border: $black;
-$menu-normal-bg: $white;
-$menu-normal-fg: $black;
-$menu-normal-firstletter-bg: $white;
-$menu-normal-firstletter-fg: $red;
-$menu-selected-bg: $green;
-$menu-selected-fg: $black;
-$menu-selected-firstletter-bg: $green;
-$menu-selected-firstletter-fg: $red;
-$menu-disabled-bg: $white;
-$menu-disabled-fg: $gray;
 
 $nav-height: stripUnit($text-size) * $text-line-height;
 
@@ -48,36 +35,6 @@ $article-header-border: $bright-white;
     background-color: $header-bg;
 
     color: $header-fg;
-}
-
-.color-box.layout pre.menu.normal {
-    background-color: $menu-normal-bg;
-
-    color: $menu-normal-fg;
-}
-
-.color-box.layout pre.menu.normal.firstletter {
-    background-color: $menu-normal-firstletter-bg;
-
-    color: $menu-normal-firstletter-fg;
-}
-
-.color-box.layout pre.menu.selected {
-    background-color: $menu-selected-bg;
-
-    color: $menu-selected-fg;
-}
-
-.color-box.layout pre.menu.selected.firstletter {
-    background-color: $menu-selected-firstletter-bg;
-
-    color: $menu-selected-firstletter-fg;
-}
-
-.color-box.layout pre.menu.disabled {
-    background-color: $menu-disabled-bg;
-
-    color: $menu-disabled-fg;
 }
 
 
@@ -123,83 +80,6 @@ header span.site-name {
     display: table;
 
     cursor: default;
-}
-
-nav {
-    background-color: $menu-bg;
-
-    width: $site-width;
-
-    margin: 0px auto;
-}
-
-nav ul {
-    padding: 0px;
-    margin: 0px;
-
-    list-style: none;
-
-    display: table;
-}
-
-nav ul li {
-    background-color: $menu-normal-bg;
-
-    padding: 0px 0px;
-
-    display: inline-block;
-}
-
-nav ul li::before {
-    display: none;
-}
-
-nav ul li a:link,
-nav ul li a:visited {
-    color: $menu-normal-fg;
-    font-weight: $text-bold-font-weight;
-
-    background-color: $menu-normal-bg;
-
-    padding: 0px 9px;
-
-    display: block;
-}
-
-nav ul li a:link::first-letter,
-nav ul li a:visited::first-letter {
-    color: $menu-normal-firstletter-fg;
-
-    background-color: $menu-normal-firstletter-bg;
-}
-
-nav ul li a:focus,
-nav ul li a:active,
-nav ul li.active a:link,
-nav ul li.active a:visited {
-    color: $menu-selected-fg;
-
-    background-color: $menu-selected-bg;
-}
-
-nav ul li a:focus::first-letter,
-nav ul li a:active::first-letter,
-nav ul li.active a:link::first-letter,
-nav ul li.active a:visited::first-letter {
-    color: $menu-selected-firstletter-fg;
-
-    background-color: $menu-selected-firstletter-bg;
-}
-
-nav ul li.disabled a:link,
-nav ul li.disabled a:visited,
-nav ul li.disabled a:link::first-letter,
-nav ul li.disabled a:visited::first-letter {
-    color: $menu-disabled-fg;
-
-    background-color: $menu-disabled-bg;
-
-    pointer-events: none;
 }
 
 footer {

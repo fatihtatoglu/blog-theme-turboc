@@ -301,45 +301,17 @@ input[type=checkbox]:disabled, input[type=checkbox]:disabled::after, input[type=
 /* Layout */
 .color-box.layout pre.header { background-color: #00aaa8; color: black; }
 
-.color-box.layout pre.menu.normal { background-color: #aaaaaa; color: black; }
-
-.color-box.layout pre.menu.normal.firstletter { background-color: #aaaaaa; color: #a90000; }
-
-.color-box.layout pre.menu.selected { background-color: #00a800; color: black; }
-
-.color-box.layout pre.menu.selected.firstletter { background-color: #00a800; color: #a90000; }
-
-.color-box.layout pre.menu.disabled { background-color: #aaaaaa; color: #555555; }
-
 body { background-color: #aaaaaa; background-image: radial-gradient(circle, #0000a9 25%, transparent 10%), radial-gradient(circle, #0000a9 25%, transparent 10%); background-size: 6px 6px; background-position: 0 0, 3px 3px; }
 
-header { color: black; background-color: #00aaa8; height: 70px; width: 700px; margin: 20px auto 0px auto; padding: 5px 10px; display: block; }
+header { color: black; background-color: #00aaa8; height: 70px; width: 960px; margin: 20px auto 0px auto; padding: 5px 10px; display: block; }
 
 header span.site-name { font-size: 16rem; font-weight: 700; line-height: 1.2; color: black; text-transform: uppercase; background-color: #00aaa8; margin: 12px 8px; padding: 3px 8px; border-bottom: black solid 7px; display: table; cursor: default; }
 
-nav { background-color: #aaaaaa; width: 700px; margin: 0px auto; }
-
-nav ul { padding: 0px; margin: 0px; list-style: none; display: table; }
-
-nav ul li { background-color: #aaaaaa; padding: 0px 0px; display: inline-block; }
-
-nav ul li::before { display: none; }
-
-nav ul li a:link, nav ul li a:visited { color: black; font-weight: 700; background-color: #aaaaaa; padding: 0px 9px; display: block; }
-
-nav ul li a:link::first-letter, nav ul li a:visited::first-letter { color: #a90000; background-color: #aaaaaa; }
-
-nav ul li a:focus, nav ul li a:active, nav ul li.active a:link, nav ul li.active a:visited { color: black; background-color: #00a800; }
-
-nav ul li a:focus::first-letter, nav ul li a:active::first-letter, nav ul li.active a:link::first-letter, nav ul li.active a:visited::first-letter { color: #a90000; background-color: #00a800; }
-
-nav ul li.disabled a:link, nav ul li.disabled a:visited, nav ul li.disabled a:link::first-letter, nav ul li.disabled a:visited::first-letter { color: #555555; background-color: #aaaaaa; pointer-events: none; }
-
-footer { color: black; text-align: center; background-color: #00aaa8; height: 50px; width: 700px; padding: 0px; margin: 15px auto 10px auto; }
+footer { color: black; text-align: center; background-color: #00aaa8; height: 50px; width: 960px; padding: 0px; margin: 15px auto 10px auto; }
 
 footer span.credits { display: inline-block; margin: 13px 0px; }
 
-main { background-color: #00aaa8; min-height: calc(100vh - 189px); width: 700px; margin: 0px auto; padding: 7px 3px; }
+main { background-color: #00aaa8; min-height: calc(100vh - 189px); width: 960px; margin: 0px auto; padding: 7px 3px; }
 
 article { color: black; background-color: #00aaa8; position: relative; border-left-width: 2px; border-right-width: 2px; min-height: 150px; padding: 10px 3px; border: 4px double white; }
 
@@ -379,9 +351,9 @@ div.field-group input[type=text], div.field-group input[type=password], div.fiel
 
 div.field-group label { color: black; font-weight: 700; line-height: 1; background-color: #00aaa8; margin: 0px; }
 
-div.field-group label::first-letter { color: #feff55; }
+div.field-group label::first-letter { color: #feff55; background-color: #00aaa8; }
 
-div.field-group *:not(label):focus + label { color: white; }
+div.field-group *:not(label):focus + label { color: white; background-color: #00aaa8; }
 
 div.field-group-row { margin-bottom: 16px; display: flex; flex-direction: row; flex-flow: column wrap; }
 
@@ -392,5 +364,43 @@ div.field-group-row > div.field-group.left { text-align: left; }
 div.field-group-row > div.field-group.center { text-align: center; }
 
 div.field-group-row > div.field-group.right { text-align: right; }
+
+.color-box.menu pre.normal { background-color: #aaaaaa; color: black; }
+
+.color-box.menu pre.normal.firstletter { background-color: #aaaaaa; color: #a90000; }
+
+.color-box.menu pre.selected { background-color: #00a800; color: black; }
+
+.color-box.menu pre.selected.firstletter { background-color: #00a800; color: #a90000; }
+
+.color-box.menu pre.disabled { background-color: #aaaaaa; color: #555555; }
+
+.color-box.menu pre.disabled.selected { background-color: black; color: #555555; }
+
+nav { background-color: #aaaaaa; width: 960px; margin: 0px auto; }
+
+nav ul { padding: 0px; margin: 0px; list-style: none; display: table; }
+
+nav ul li { background-color: #aaaaaa; padding: 0px 0px; display: inline-block; position: relative; }
+
+nav ul li::before { display: none; }
+
+nav ul li a:link, nav ul li a:visited { color: black; font-weight: 700; background-color: #aaaaaa; padding: 0px 9px; display: block; }
+
+nav ul li a:link::first-letter, nav ul li a:visited::first-letter { color: #a90000; background-color: #aaaaaa; }
+
+nav ul li a:focus, nav ul li a:active, nav ul li.active a:link, nav ul li.active a:visited { color: black; background-color: #00a800; }
+
+nav ul li a:focus::first-letter, nav ul li a:active::first-letter, nav ul li.active a:link::first-letter, nav ul li.active a:visited::first-letter { color: #a90000; background-color: #00a800; }
+
+nav ul li.disabled a:link, nav ul li.disabled a:visited, nav ul li.disabled a:link::first-letter, nav ul li.disabled a:visited::first-letter { color: #555555; background-color: #aaaaaa; }
+
+nav ul li.disabled a:focus, nav ul li.disabled a:active, nav ul li.disabled a:focus::first-letter, nav ul li.disabled a:active::first-letter { color: #555555; background-color: black; }
+
+nav ul li ul { background-color: red; margin: 0px; padding: 3px; border: 2px solid blue; border-top-width: 1px; border-bottom-width: 1px; opacity: 0; position: absolute; z-index: 2; }
+
+nav ul li a:active + ul, nav ul li a:focus + ul { opacity: 1; }
+
+nav ul li ul li { background-color: purple; padding: 3px 8px; }
 
 /*# sourceMappingURL=main.css.map */

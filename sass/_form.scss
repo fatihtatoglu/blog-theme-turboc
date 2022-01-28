@@ -1,3 +1,13 @@
+// Variables
+$form-label-bg: $aqua;
+$form-label-fg: $black;
+$form-label-firstletter-bg: $form-label-bg;
+$form-label-firstletter-fg: $light-yellow;
+$form-label-focus-bg: $form-label-bg;
+$form-label-focus-fg: $bright-white;
+
+
+// Styles
 div.field-group {
     display: flex;
     flex-direction: column;
@@ -22,21 +32,25 @@ div.field-group select {
 }
 
 div.field-group label {
-    color: $black;
+    color: $form-label-fg;
     font-weight: $text-bold-font-weight;
     line-height: 1;
 
-    background-color: $aqua;
+    background-color: $form-label-bg;
 
     margin: 0px;
 }
 
 div.field-group label::first-letter {
-    color: $light-yellow;
+    color: $form-label-firstletter-fg;
+
+    background-color: $form-label-firstletter-bg;
 }
 
 div.field-group *:not(label):focus+label {
-    color: $bright-white;
+    color: $form-label-focus-fg;
+
+    background-color: $form-label-focus-bg;
 }
 
 div.field-group-row {
@@ -46,7 +60,6 @@ div.field-group-row {
     flex-direction: row;
 
     flex-flow: column wrap;
-
 }
 
 div.field-group-row>div.field-group {
