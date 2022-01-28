@@ -403,4 +403,33 @@ nav ul li a:active + ul, nav ul li a:focus + ul { opacity: 1; }
 
 nav ul li ul li { background-color: purple; padding: 3px 8px; }
 
+.color-box.dialog-guide pre.title { background-color: #aaaaaa; color: white; }
+
+.color-box.dialog-guide pre.text { background-color: #aaaaaa; color: black; }
+
+.color-box.dialog-guide pre.icon { background-color: #aaaaaa; color: #55fd55; }
+
+div.dialog { background-color: transparent; position: fixed; top: 0; bottom: 0; left: 0; right: 0; display: none; }
+
+div.dialog div.dialog-box { background-color: #aaaaaa; position: relative; margin: 100px auto; padding: 5px 1px 8px 2px; display: block; width: 480px; -webkit-box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 0.8); -moz-box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 0.8); box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 0.8); }
+
+div.dialog.large div.dialog-box { width: 720px; }
+
+div.dialog div.dialog-box div.dialog-content { background-color: #aaaaaa; padding: 21px 17px; border: 4px double white; }
+
+/* Reset Default Styles */
+div.dialog div.dialog-box div.dialog-content header, div.dialog div.dialog-box div.dialog-content main, div.dialog div.dialog-box div.dialog-content footer { width: 100%; min-height: inherit; height: inherit; margin: 0px; padding: 0px; }
+
+div.dialog div.dialog-box div.dialog-content > header { display: inline; position: absolute; top: 0px; left: 0px; margin: 0px; padding: 0px; width: 100%; height: inherit; line-height: 1; text-align: center; background-color: transparent; }
+
+div.dialog div.dialog-box div.dialog-content > header > span { color: white; line-height: 1; text-transform: capitalize; background-color: #aaaaaa; padding: 0px 8px; margin: 0px; display: inline-block; border: none; }
+
+div.dialog div.dialog-box div.dialog-content main { color: black; background-color: #aaaaaa; }
+
+div.dialog div.dialog-box div.dialog-content > main > p { color: black; }
+
+div.dialog div.dialog-box div.dialog-content > main p, div.dialog div.dialog-box div.dialog-content > main label, div.dialog div.dialog-box div.dialog-content > main label::first-letter { background-color: #aaaaaa; }
+
+div.dialog div.dialog-box div.dialog-content footer { text-align: center; color: black; background-color: #aaaaaa; }
+
 /*# sourceMappingURL=main.css.map */
