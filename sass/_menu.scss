@@ -140,32 +140,51 @@ nav ul li.disabled a:active::first-letter {
     background-color: $menu-disabled-selected-bg;
 }
 
-nav ul li ul {
+nav ul li div.sub-menu {
 
-    background-color: red;
+    background-color: $menu-bg;
 
     margin: 0px;
-    padding: 3px;
+    padding: 7px 11px;
 
-    border: 2px solid blue;
-    border-top-width: 1px;
-    border-bottom-width: 1px;
-
-    opacity: 0;
+    display: none;
 
     position: absolute;
 
     z-index: 2;
 }
 
-nav ul li a:active+ul,
-nav ul li a:focus+ul {
-    opacity: 1;
+nav ul li a:active+div.sub-menu,
+nav ul li a:focus+div.sub-menu {
+    display: block;
 }
 
-nav ul li ul li {
+nav ul li div.sub-menu ul {
+    padding-bottom: 7px;
+    padding-top: 8px;
 
-    background-color: purple;
+    border: 2px solid $menu-border;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+}
 
+nav ul li div.sub-menu ul li {
+    margin: 0px 3px;
+
+    display: block;
+}
+
+nav ul li div.sub-menu ul li[role=separator] {
+    width: 100%;
+
+    margin: 7px 0px 8px 0px;
+
+    border-bottom: 1px solid $menu-border;
+}
+
+nav ul li div.sub-menu ul li a {
+    margin: 0px;
     padding: 3px 8px;
+
+    min-width: 150px;
 }

@@ -8,94 +8,6 @@
     <title>Blog</title>
 
     <link rel="stylesheet" href="./css/main.css">
-
-    <style>
-        ul#fth {
-
-            background-color: rgba(170,170,170,1);
-
-            margin: 0px;
-            /* padding: 3px; */
-            padding: 0px;
-
-            border: 2px solid blue;
-            border-top-width: 1px;
-            border-bottom-width: 1px;
-
-            opacity: 1;
-            /* 0 olacak production da */
-
-            /*position: absolute;*/
-            position: relative;
-
-            z-index: 2;
-
-            display: inline-block;
-
-            list-style: none;
-        }
-
-        /* ul#fth::before {
-            content: "";
-            display: block;
-            background-color: red;
-            position: absolute;
-            width: calc(100% + 4px);
-            z-index: -1;
-            height: calc(100% + 2px);
-            top: -1px;
-            left: -2px;
-        } */
-
-        ul#fth::after {
-            content: "";
-            display: block;
-            background-color: rgba(170,170,170,1);
-            position: absolute;
-            top: -8px;
-            left: -13px;
-            width: calc(100% + 26px);
-            height: calc(100% + 17px);
-            z-index: -2;
-        }
-
-        ul#fth li {
-
-            background-color: rgba(170,170,170,1);
-
-            margin: 0px;
-            padding: 0px 3px;
-        }
-
-        ul#fth li::before {
-            content: none;
-        }
-
-        ul#fth li[role=separator] {
-            margin: 0px;
-            padding: 0px;
-            border-bottom: 1px solid blue;
-
-            margin-top: 8px;
-            margin-bottom: 7px;
-        }
-
-        ul#fth li:first-child {
-            padding-top: 8px;
-        }
-
-        ul#fth li:last-child {
-            padding-bottom: 7px;
-        }
-
-        ul#fth li a {
-            display: block;
-
-            padding: 3px 8px;
-
-            background-color: rgba(170,170,170,1);
-        }
-    </style>
 </head>
 
 <body>
@@ -108,26 +20,36 @@
             <li>
                 <a href="#">-</a>
 
-                <ul>
-                    <li><a href="#">Menu Item 1.1</a></li>
-                    <li role="separator"></li>
-                    <li><a href="#">Menu Item 1.2.1</a></li>
-                    <li><a href="#">Menu Item 1.2.2</a></li>
-                    <li><a href="#">Menu Item 1.2.3</a></li>
-                </ul>
+                <div class="sub-menu">
+                    <ul>
+                        <li><a href="#">New</a></li>
+                        <li><a href="#">Open...</a></li>
+                        <li><a href="#">Save</a></li>
+                        <li><a href="#">Save as...</a></li>
+                        <li><a href="#">Save all</a></li>
+                        <li role="separator"></li>
+                        <li><a href="#">Change dir...</a></li>
+                        <li><a href="#">Print</a></li>
+                        <li><a href="#">DOS shell</a></li>
+                        <li role="separator"></li>
+                        <li><a href="#">Quit</a></li>
+                    </ul>
+                </div>
             </li>
             <li>
                 <a href="#">Home</a>
 
-                <ul>
-                    <li><a href="#">Menu Item 2.1</a></li>
-                    <li><a href="#">Menu Item 2.2</a></li>
-                    <li><a href="#">Menu Item 2.3</a></li>
-                    <li><a href="#">Menu Item 2.4</a></li>
-                    <li><a href="#">Menu Item 2.5</a></li>
-                    <li class="disabled">Menu Item 2.6</li>
-                    <li><a href="#">Menu Item 2.7</a></li>
-                </ul>
+                <div class="sub-menu">
+                    <ul>
+                        <li><a href="#">Menu Item 2.1</a></li>
+                        <li><a href="#">Menu Item 2.2</a></li>
+                        <li><a href="#">Menu Item 2.3</a></li>
+                        <li><a href="#">Menu Item 2.4</a></li>
+                        <li><a href="#">Menu Item 2.5</a></li>
+                        <li class="disabled"><a href="#">Menu Item 2.6</a></li>
+                        <li><a href="#">Menu Item 2.7</a></li>
+                    </ul>
+                </div>
             </li>
             <li>
                 <a href="#">News</a>
@@ -189,17 +111,6 @@
 
             <h2>Demo</h2>
             <p>For demonstration can be used menu above.</p>
-
-
-
-            <ul id="fth">
-                <li><a href="#">Menu Item 1.1</a></li>
-                <li role="separator"></li>
-                <li><a href="#">Menu Item 1.2.1</a></li>
-                <li><a href="#">Menu Item 1.2.2</a></li>
-                <li><a href="#">Menu Item 1.2.3</a></li>
-            </ul>
-
         </article>
 
     </main>
