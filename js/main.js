@@ -14,6 +14,10 @@ window.onload = function () {
             item.addEventListener("mouseleave", function () {
                 subMenu.style.display = "none";
             });
+
+            subMenu.addEventListener("click", function () {
+                subMenu.style.display = "none";
+            });
         }
     });
 
@@ -42,7 +46,7 @@ window.onload = function () {
     });
 
 
-    
+
 
 
 };
