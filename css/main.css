@@ -319,7 +319,7 @@ article > header { line-height: 1; text-align: center; background-color: transpa
 
 article > header > h1 { color: white; line-height: 1; text-transform: capitalize; background-color: #00aaa8; padding: 0px 8px; margin: 0px; display: inline-block; border: none; }
 
-article footer { text-align: center; background-color: #00aaa8; margin: 0px; padding: 30px 0px 0px 0px; width: 100%; height: inherit; }
+article > footer { text-align: center; background-color: #00aaa8; margin: 0px; padding: 30px 0px 0px 0px; width: 100% !important; height: inherit; }
 
 ol { list-style-type: decimal; list-style-position: inside; padding-left: 16px; display: block; }
 

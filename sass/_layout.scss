@@ -181,7 +181,7 @@ article>header>h1 {
     border: none;
 }
 
-article footer {
+article>footer {
     text-align: center;
 
     background-color: $article-bg;
@@ -189,6 +189,6 @@ article footer {
     margin: 0px;
     padding: 30px 0px 0px 0px;
 
-    width: 100%;
+    width: 100% !important;
     height: inherit;
 }
