@@ -25,22 +25,20 @@ $dialog-large-width: $site-width * 0.75;
 
 
 // Guidances
-.color-box.dialog-guide pre.title {
-    background-color: $dialog-title-bg;
+.color-box.dialog-guide {
+    pre {
+        &.title {
+            @include colorbox($dialog-title-bg, $dialog-title-fg);
+        }
 
-    color: $dialog-title-fg;
-}
+        &.text {
+            @include colorbox($dialog-text-bg, $dialog-text-fg);
+        }
 
-.color-box.dialog-guide pre.text {
-    background-color: $dialog-text-bg;
-
-    color: $dialog-text-fg;
-}
-
-.color-box.dialog-guide pre.icon {
-    background-color: $dialog-icon-bg;
-
-    color: $dialog-icon-fg;
+        &.icon {
+            @include colorbox($dialog-icon-bg, $dialog-icon-fg);
+        }
+    }
 }
 
 

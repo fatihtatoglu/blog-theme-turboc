@@ -34,40 +34,32 @@ $menu-disabled-selected-fg: $menu-disabled-fg;
 
 
 // Guidances
-.color-box.menu pre.normal {
-    background-color: $menu-normal-bg;
+.color-box.menu {
+    pre {
+        &.normal {
+            @include colorbox($menu-normal-bg, $menu-normal-fg);
 
-    color: $menu-normal-fg;
-}
+            &.firstletter {
+                @include colorbox($menu-normal-firstletter-bg, $menu-normal-firstletter-fg);
+            }
+        }
 
-.color-box.menu pre.normal.firstletter {
-    background-color: $menu-normal-firstletter-bg;
+        &.selected {
+            @include colorbox($menu-selected-bg, $menu-selected-fg);
 
-    color: $menu-normal-firstletter-fg;
-}
+            &.firstletter {
+                @include colorbox($menu-selected-firstletter-bg, $menu-selected-firstletter-fg);
+            }
+        }
 
-.color-box.menu pre.selected {
-    background-color: $menu-selected-bg;
+        &.disabled {
+            @include colorbox($menu-disabled-bg, $menu-disabled-fg);
 
-    color: $menu-selected-fg;
-}
-
-.color-box.menu pre.selected.firstletter {
-    background-color: $menu-selected-firstletter-bg;
-
-    color: $menu-selected-firstletter-fg;
-}
-
-.color-box.menu pre.disabled {
-    background-color: $menu-disabled-bg;
-
-    color: $menu-disabled-fg;
-}
-
-.color-box.menu pre.disabled.selected {
-    background-color: $menu-disabled-selected-bg;
-
-    color: $menu-disabled-selected-fg;
+            &.selected {
+                @include colorbox($menu-disabled-selected-bg, $menu-disabled-selected-fg);
+            }
+        }
+    }
 }
 
 

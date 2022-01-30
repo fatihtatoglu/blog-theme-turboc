@@ -89,32 +89,36 @@ fieldset { border-width: 0; padding: 0; margin: 0; }
 
 .fg-bright_white { color: white; }
 
-.color-box { margin: 0px 10px 0px 10px; background-color: #aaaaaa; display: inline-block; }
+.color-box { /* Background */ background-color: #aaaaaa; /* Foreground */ color: black; margin: 0px 10px 0px 10px; display: inline-block; }
 
 .color-box pre { padding: 0px; margin: 0px; font-weight: 700; }
 
 /* Typography */
-.color-box.typo pre.active { background-color: #00aaa8; color: black; }
+.color-box.typo pre.active { /* Background */ background-color: #00aaa8; /* Foreground */ color: black; }
 
-.color-box.typo pre.selected { background-color: #aaaaaa; color: black; }
+.color-box.typo pre.selected { /* Background */ background-color: #aaaaaa; /* Foreground */ color: black; }
 
-.color-box.typo pre.keyword { background-color: #00aaa8; color: #feff55; }
+.color-box.typo pre.keyword { /* Background */ background-color: #00aaa8; /* Foreground */ color: #feff55; }
 
-.color-box.typo pre.keyword-selected { background-color: #0000a9; color: #feff55; }
+.color-box.typo pre.keyword-selected { /* Background */ background-color: #0000a9; /* Foreground */ color: #feff55; }
 
-.color-box.typo pre.heading { background-color: #00aaa8; color: black; }
+.color-box.typo pre.heading { /* Background */ background-color: #00aaa8; /* Foreground */ color: black; }
 
 html { font-size: 1px; /*for using REM units*/ }
 
 body { font-size: 16rem; font-weight: 400; font-family: "Roboto Mono", monospace; color: black; background-color: #00aaa8; line-height: 1.5; }
 
-h1 { font-size: 16rem; font-weight: 700; line-height: 1.2; color: black; text-transform: uppercase; background-color: #00aaa8; margin: 12px 8px; padding: 3px 8px; border-bottom: black solid 7px; display: table; cursor: default; }
+h1, h2, h3, h4 { font-size: 16rem; font-weight: 700; line-height: 1.2; color: black; background-color: #00aaa8; margin: 12px 8px; border-bottom: black solid 7px; display: table; cursor: default; }
 
-h2 { font-size: 16rem; font-weight: 700; line-height: 1.2; color: black; background-color: #00aaa8; margin: 12px 8px; padding: 3px 9px; border-top: black solid 10px; border-bottom: black solid 7px; display: table; cursor: default; }
+h1, h2 { padding: 3px 8px; }
 
-h3 { font-size: 16rem; font-weight: 700; line-height: 1.2; color: black; background-color: #00aaa8; margin: 12px 8px; padding: 10px; border-bottom: black solid 7px; display: table; cursor: default; }
+h3, h4 { padding: 10px; }
 
-h4 { font-size: 16rem; font-weight: 700; line-height: 1.2; color: black; background-color: #00aaa8; margin: 12px 8px; padding: 10px; border-top: black solid 1px; border-bottom: black solid 1px; border-left: black solid 2px; border-right: black solid 2px; display: table; cursor: default; }
+h1 { text-transform: uppercase; }
+
+h2 { border-top: black solid 10px; }
+
+h4 { border-top: black solid 1px; border-bottom: black solid 1px; border-left: black solid 2px; border-right: black solid 2px; }
 
 p { font-size: 16rem; font-weight: 400; background-color: #00aaa8; color: black; margin: 10px 0px; }
 
@@ -141,19 +145,19 @@ blockquote p { font-style: italic; color: #00aaa8; background-color: #0000a9; ma
 ::selection { color: black; background: #aaaaaa; }
 
 /* Buttons */
-.color-box.button pre.selected { background-color: #00a800; color: white; }
+.color-box.button pre.selected { /* Background */ background-color: #00a800; /* Foreground */ color: white; }
 
-.color-box.button pre.selected::first-letter { background-color: #00a800; color: #feff55; }
+.color-box.button pre.selected::first-letter { /* Background */ background-color: #00a800; /* Foreground */ color: #feff55; }
 
-.color-box.button pre.default { background-color: #00a800; color: #55fffd; }
+.color-box.button pre.default { /* Background */ background-color: #00a800; /* Foreground */ color: #55fffd; }
 
-.color-box.button pre.default::first-letter { background-color: #00a800; color: #feff55; }
+.color-box.button pre.default::first-letter { /* Background */ background-color: #00a800; /* Foreground */ color: #feff55; }
 
-.color-box.button pre.active { background-color: #00a800; color: black; }
+.color-box.button pre.active { /* Background */ background-color: #00a800; /* Foreground */ color: black; }
 
-.color-box.button pre.active::first-letter { background-color: #00a800; color: #feff55; }
+.color-box.button pre.active::first-letter { /* Background */ background-color: #00a800; /* Foreground */ color: #feff55; }
 
-.color-box.button pre.disabled { background-color: #aaaaaa; color: #555555; }
+.color-box.button pre.disabled { /* Background */ background-color: #aaaaaa; /* Foreground */ color: #555555; }
 
 button, a.tc-btn { background-color: #00a800; color: black; font-weight: 700; line-height: 1; margin: 10px; padding: 4px 15px 8px 15px; min-width: 132px; -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75); -moz-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75); box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75); }
 
@@ -178,13 +182,13 @@ button u, a.tc-btn u { text-decoration: none; }
 button[accesskey] u, a.tc-btn[accesskey] u { color: #feff55; background-color: #00a800; }
 
 /* Textbox */
-.color-box.textbox pre.normal { background-color: #0000a9; color: #55fffd; }
+.color-box.textbox pre.normal { /* Background */ background-color: #0000a9; /* Foreground */ color: #55fffd; }
 
-.color-box.textbox pre.volatile { background-color: #00a800; color: white; }
+.color-box.textbox pre.volatile { /* Background */ background-color: #00a800; /* Foreground */ color: white; }
 
-.color-box.textbox pre.selected { background-color: #0000a9; color: white; }
+.color-box.textbox pre.selected { /* Background */ background-color: #0000a9; /* Foreground */ color: white; }
 
-.color-box.textbox pre.disabled { background-color: #aaaaaa; color: #555555; }
+.color-box.textbox pre.disabled { /* Background */ background-color: #aaaaaa; /* Foreground */ color: #555555; }
 
 input[type=text], input[type=password], input[type=email], input[type=tel], input[type=number], textarea { color: #55fffd; font-weight: 700; line-height: 1.1; background-color: #0000a9; border: none; outline: none; padding: 3px 8px; margin: 3px 0px; }
 
@@ -227,13 +231,13 @@ textarea::-webkit-scrollbar-button:horizontal:decrement { background: url(data:i
 textarea::-webkit-scrollbar-button:horizontal:increment { background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAADpJREFUKFNjZEAGq5b/ZwiLZEQRg3JQBUEKQQCLYuwKsSjGrRBNMX6FSIqpYCKahyjwNVHhiC2koWIAJBEbCzHyaSkAAAAASUVORK5CYII=); background-repeat: no-repeat; background-position-x: 0px; background-position-y: 1px; background-size: 12px 16px; width: 12rem; }
 
 /* Selectbox */
-.color-box.selectbox pre.active { background-color: #00aaa8; color: black; }
+.color-box.selectbox pre.color-box.selectbox pre.active { /* Background */ background-color: #00aaa8; /* Foreground */ color: black; }
 
-.color-box.selectbox pre.default { background-color: #00aaa8; color: #feff55; }
+.color-box.selectbox pre.default { /* Background */ background-color: #00aaa8; /* Foreground */ color: #feff55; }
 
-.color-box.selectbox pre.selected { background-color: #00a800; color: white; }
+.color-box.selectbox pre.selected { /* Background */ background-color: #00a800; /* Foreground */ color: white; }
 
-.color-box.selectbox pre.disabled { background-color: #00aaa8; color: #555555; }
+.color-box.selectbox pre.disabled { /* Background */ background-color: #00aaa8; /* Foreground */ color: #555555; }
 
 select { line-height: 1.1; background-color: #0000a9; border: none; outline: none; }
 
@@ -260,21 +264,25 @@ select::-webkit-scrollbar-button:vertical:decrement { background: url(data:image
 select::-webkit-scrollbar-button:vertical:increment { background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAYAAABmBXS+AAAAAXNSR0IArs4c6QAAAD9JREFUKFNjZACBVcv/g2lsICySkZF4RbhMC4sEGwIxiWhF6AqhpqCaRLQimEIkUzBNwhEKCIfjDChk3+FRBAD1QhULt999SAAAAABJRU5ErkJggg==); background-repeat: no-repeat; background-position-x: 4px; background-position-y: 3px; background-size: 8px 16px; }
 
 /* Checkbox */
-.color-box.checkbox pre.active { background-color: #00aaa8; color: black; }
+.color-box.checkbox pre.active { /* Background */ background-color: #00aaa8; /* Foreground */ color: black; }
 
-.color-box.checkbox pre.active::first-letter { background-color: #00aaa8; color: #feff55; }
+.color-box.checkbox pre.active::first-letter { /* Background */ background-color: #00aaa8; /* Foreground */ color: #feff55; }
 
-.color-box.checkbox pre.selected { background-color: #00aaa8; color: white; }
+.color-box.checkbox pre.selected { /* Background */ background-color: #00aaa8; /* Foreground */ color: white; }
 
-.color-box.checkbox pre.selected::first-letter { background-color: #00aaa8; color: #feff55; }
+.color-box.checkbox pre.selected::first-letter { /* Background */ background-color: #00aaa8; /* Foreground */ color: #feff55; }
 
-.color-box.checkbox pre.disabled { background-color: #00aaa8; color: #555555; }
+.color-box.checkbox pre.disabled { /* Background */ background-color: #00aaa8; /* Foreground */ color: #555555; }
 
-.color-box.checkbox pre.disabled::first-letter { background-color: #00aaa8; color: #555555; }
+.color-box.checkbox pre.disabled::first-letter { /* Background */ background-color: #00aaa8; /* Foreground */ color: #555555; }
 
 input[type=checkbox], input[type=radio] { line-height: 1.1; width: 30px; }
 
 input[type=checkbox]::after, input[type=radio]::after { font-weight: 700; color: black; line-height: 1.1; background-color: #00aaa8; width: 30px; margin: -2px -3px; display: inline-block; cursor: pointer; }
+
+input[type=checkbox] + label, input[type=radio] + label { color: black; line-height: 1.1; font-weight: 700; background-color: #00aaa8; margin-bottom: 0px; margin-left: -7px; display: inline-block; vertical-align: middle; cursor: pointer; }
+
+input[type=checkbox] + label[for]::first-letter, input[type=radio] + label[for]::first-letter { color: #feff55; background-color: #00aaa8; }
 
 input[type=checkbox]::after { content: "[ ]"; }
 
@@ -284,11 +292,7 @@ input[type=radio]::after { content: "( )"; }
 
 input[type=radio]:checked::after { content: "(●)"; letter-spacing: 0.4rem; }
 
-input[type=checkbox] + label, input[type=radio] + label { color: black; line-height: 1.1; font-weight: 700; background-color: #00aaa8; margin-bottom: 0px; margin-left: -7px; display: inline-block; vertical-align: middle; cursor: pointer; }
-
 input[type=radio] + label { vertical-align: bottom; }
-
-input[type=checkbox] + label[for]::first-letter, input[type=radio] + label[for]::first-letter { color: #feff55; background-color: #00aaa8; }
 
 input[type=checkbox] + label:active, input[type=checkbox]:active + label, input[type=checkbox]:focus + label, input[type=radio] + label:active, input[type=radio]:active + label, input[type=radio]:focus + label { color: white; background-color: #00aaa8; }
 
@@ -299,7 +303,7 @@ input[type=checkbox]:active::after, input[type=checkbox]:focus::after, input[typ
 input[type=checkbox]:disabled, input[type=checkbox]:disabled::after, input[type=checkbox]:disabled + label, input[type=checkbox]:disabled + label::first-letter, input[type=radio]:disabled, input[type=radio]:disabled::after, input[type=radio]:disabled + label, input[type=radio]:disabled + label::first-letter { color: #555555; font-weight: 700; background-color: #00aaa8; cursor: default; }
 
 /* Layout */
-.color-box.layout pre.header { background-color: #00aaa8; color: black; }
+.color-box.layout pre.header { /* Background */ background-color: #00aaa8; /* Foreground */ color: black; }
 
 body { background-color: #aaaaaa; background-image: radial-gradient(circle, #0000a9 25%, transparent 10%), radial-gradient(circle, #0000a9 25%, transparent 10%); background-size: 6px 6px; background-position: 0 0, 3px 3px; }
 
@@ -321,13 +325,15 @@ article > header > h1 { color: white; line-height: 1; text-transform: capitalize
 
 article > footer { text-align: center; background-color: #00aaa8; margin: 0px; padding: 30px 0px 0px 0px; width: 100% !important; height: inherit; }
 
-ol { list-style-type: decimal; list-style-position: inside; padding-left: 16px; display: block; }
+ol, ul { list-style-position: inside; padding-left: 16px; display: block; }
 
-ul { list-style-type: square; list-style-position: inside; padding-left: 16px; display: block; }
+ol li, ul li { display: list-item; }
 
-ul li, ol li { display: list-item; }
+ol li::before, ul li::before { content: ""; display: inline-block; margin-left: -8px; }
 
-ul li:before, ol li:before { content: ""; display: inline-block; margin-left: -8px; }
+ol { list-style-type: decimal; }
+
+ul { list-style-type: square; }
 
 img { max-width: 100%; margin: 5px auto; display: block; }
 
@@ -343,9 +349,9 @@ div.notice-box { color: #55fffd; background-color: #0000a9; }
 
 div.error-box { color: #fe5454; background-color: #0000a9; }
 
-div.field-group { display: flex; flex-direction: column; justify-content: center; }
+div.field-group, div.field-group-row { margin-bottom: 16px; display: flex; flex-direction: column; justify-content: center; }
 
-div.field-group { margin-bottom: 16px; }
+div.field-group { flex-direction: column; justify-content: center; }
 
 div.field-group input[type=text], div.field-group input[type=password], div.field-group input[type=tel], div.field-group input[type=email], div.field-group input[type=number], div.field-group textarea, div.field-group select { order: 2; width: 100%; }
 
@@ -355,7 +361,7 @@ div.field-group label::first-letter { color: #feff55; background-color: #00aaa8;
 
 div.field-group *:not(label):focus + label { color: white; background-color: #00aaa8; }
 
-div.field-group-row { margin-bottom: 16px; display: flex; flex-direction: row; flex-flow: column wrap; }
+div.field-group-row { flex-direction: row; flex-flow: column wrap; }
 
 div.field-group-row > div.field-group { text-align: left; margin: 0px; width: 100%; display: block; }
 
@@ -365,17 +371,17 @@ div.field-group-row > div.field-group.center { text-align: center; }
 
 div.field-group-row > div.field-group.right { text-align: right; }
 
-.color-box.menu pre.normal { background-color: #aaaaaa; color: black; }
+.color-box.menu pre.normal { /* Background */ background-color: #aaaaaa; /* Foreground */ color: black; }
 
-.color-box.menu pre.normal.firstletter { background-color: #aaaaaa; color: #a90000; }
+.color-box.menu pre.normal.firstletter { /* Background */ background-color: #aaaaaa; /* Foreground */ color: #a90000; }
 
-.color-box.menu pre.selected { background-color: #00a800; color: black; }
+.color-box.menu pre.selected { /* Background */ background-color: #00a800; /* Foreground */ color: black; }
 
-.color-box.menu pre.selected.firstletter { background-color: #00a800; color: #a90000; }
+.color-box.menu pre.selected.firstletter { /* Background */ background-color: #00a800; /* Foreground */ color: #a90000; }
 
-.color-box.menu pre.disabled { background-color: #aaaaaa; color: #555555; }
+.color-box.menu pre.disabled { /* Background */ background-color: #aaaaaa; /* Foreground */ color: #555555; }
 
-.color-box.menu pre.disabled.selected { background-color: black; color: #555555; }
+.color-box.menu pre.disabled.selected { /* Background */ background-color: black; /* Foreground */ color: #555555; }
 
 nav { background-color: #aaaaaa; width: 900px; margin: 0px auto; }
 
@@ -407,11 +413,11 @@ nav ul li div.sub-menu ul li[role=separator] { width: 100%; margin: 7px 0px 8px 
 
 nav ul li div.sub-menu ul li a { margin: 0px; padding: 3px 8px; min-width: 150px; }
 
-.color-box.dialog-guide pre.title { background-color: #aaaaaa; color: white; }
+.color-box.dialog-guide pre.title { /* Background */ background-color: #aaaaaa; /* Foreground */ color: white; }
 
-.color-box.dialog-guide pre.text { background-color: #aaaaaa; color: black; }
+.color-box.dialog-guide pre.text { /* Background */ background-color: #aaaaaa; /* Foreground */ color: black; }
 
-.color-box.dialog-guide pre.icon { background-color: #aaaaaa; color: #55fd55; }
+.color-box.dialog-guide pre.icon { /* Background */ background-color: #aaaaaa; /* Foreground */ color: #55fd55; }
 
 div.dialog { background-color: transparent; position: fixed; top: 0; bottom: 0; left: 0; right: 0; display: none; }
 

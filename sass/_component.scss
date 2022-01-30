@@ -14,7 +14,7 @@ $message-box-error-fg: $light-red;
 @if $darkMode==true {
     $horizontal-line-border: $white;
 
-    $message-box-border: $bright-white; 
+    $message-box-border: $bright-white;
 
     $message-box-info-bg: $gray;
     $message-box-info-fg: $blue;
@@ -31,34 +31,31 @@ $message-box-error-fg: $light-red;
 
 
 // Styles
-ol {
-    list-style-type: decimal;
+ol,
+ul {
     list-style-position: inside;
 
     padding-left: 16px;
 
     display: block;
+
+    li {
+        display: list-item;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            margin-left: -8px;
+        }
+    }
+}
+
+ol {
+    list-style-type: decimal;
 }
 
 ul {
     list-style-type: square;
-    list-style-position: inside;
-
-    padding-left: 16px;
-
-    display: block;
-}
-
-ul li,
-ol li {
-    display: list-item;
-}
-
-ul li:before,
-ol li:before {
-    content: "";
-    display: inline-block;
-    margin-left: -8px;
 }
 
 img {

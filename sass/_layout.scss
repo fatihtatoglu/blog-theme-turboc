@@ -52,10 +52,12 @@ $article-header-border: $bright-white;
 
 
 // Guidances
-.color-box.layout pre.header {
-    background-color: $header-bg;
-
-    color: $header-fg;
+.color-box.layout {
+    pre {
+        &.header {
+            @include colorbox($header-bg, $header-fg);
+        }
+    }
 }
 
 

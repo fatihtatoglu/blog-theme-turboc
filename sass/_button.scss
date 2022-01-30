@@ -33,53 +33,43 @@ $button-disabled-bg: $white;
 
     $button-active-letter-fg: $light-yellow;
     $button-active-letter-bg: $gray;
-    
+
     $button-disabled-fg: $gray;
     $button-disabled-bg: $white;
 }
 
 
 // Guidances
-.color-box.button pre.selected {
-    background-color: $button-selected-bg;
+.color-box.button {
+    pre {
+        &.selected {
+            @include colorbox($button-selected-bg, $button-selected-fg);
 
-    color: $button-selected-fg;
-}
+            &::first-letter {
+                @include colorbox($button-selected-letter-bg, $button-selected-letter-fg);
+            }
+        }
 
-.color-box.button pre.selected::first-letter {
-    background-color: $button-selected-letter-bg;
+        &.default {
+            @include colorbox($button-default-bg, $button-default-fg);
 
-    color: $button-selected-letter-fg;
-}
+            &::first-letter {
+                @include colorbox($button-default-letter-bg, $button-default-letter-fg);
+            }
+        }
 
-.color-box.button pre.default {
-    background-color: $button-default-bg;
+        &.active {
+            @include colorbox($button-active-bg, $button-active-fg);
 
-    color: $button-default-fg;
-}
+            &::first-letter {
+                @include colorbox($button-active-letter-bg, $button-active-letter-fg);
+            }
+        }
 
-.color-box.button pre.default::first-letter {
-    background-color: $button-default-letter-bg;
-
-    color: $button-default-letter-fg;
-}
-
-.color-box.button pre.active {
-    background-color: $button-active-bg;
-
-    color: $button-active-fg;
-}
-
-.color-box.button pre.active::first-letter {
-    background-color: $button-active-letter-bg;
-
-    color: $button-active-letter-fg;
-}
-
-.color-box.button pre.disabled {
-    background-color: $button-disabled-bg;
-
-    color: $button-disabled-fg;
+        &.disabled {
+            @include colorbox($button-disabled-bg, $button-disabled-fg);
+        }
+    }
 }
 
 

@@ -1,6 +1,9 @@
-body.theme-small header,
-body.theme-small main,
-body.theme-small footer,
-body.theme-small nav {
-    width: $site-width-small;
+body.theme-small {
+
+    header,
+    main,
+    footer,
+    nav {
+        width: $site-width-small;
+    }
 }

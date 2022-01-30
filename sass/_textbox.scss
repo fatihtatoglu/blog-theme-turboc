@@ -30,7 +30,7 @@ $textbox-scrollbar-arrow-fg: $aqua;
 
     $textbox-scrollbar-bg-1: $black;
     $textbox-scrollbar-bg-2: $gray;
-    
+
     $textbox-scrollbar-thumb-border: $gray;
     $textbox-scrollbar-thumb-bg: $aqua;
     $textbox-scrollbar-arrow-bg: $gray;
@@ -39,28 +39,24 @@ $textbox-scrollbar-arrow-fg: $aqua;
 
 
 // Guidances
-.color-box.textbox pre.normal {
-    background-color: $textbox-normal-bg;
+.color-box.textbox {
+    pre {
+        &.normal {
+            @include colorbox($textbox-normal-bg, $textbox-normal-fg);
+        }
 
-    color: $textbox-normal-fg;
-}
+        &.volatile {
+            @include colorbox($textbox-volatile-bg, $textbox-volatile-fg);
+        }
 
-.color-box.textbox pre.volatile {
-    background-color: $textbox-volatile-bg;
+        &.selected {
+            @include colorbox($textbox-selected-bg, $textbox-selected-fg);
+        }
 
-    color: $textbox-volatile-fg;
-}
-
-.color-box.textbox pre.selected {
-    background-color: $textbox-selected-bg;
-
-    color: $textbox-selected-fg;
-}
-
-.color-box.textbox pre.disabled {
-    background-color: $textbox-disabled-bg;
-
-    color: $textbox-disabled-fg;
+        &.disabled {
+            @include colorbox($textbox-disabled-bg, $textbox-disabled-fg);
+        }
+    }
 }
 
 

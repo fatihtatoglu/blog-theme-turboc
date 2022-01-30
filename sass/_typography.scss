@@ -46,34 +46,28 @@ $text-quotation-border: $light-yellow;
 
 
 // Guidances
-.color-box.typo pre.active {
-    background-color: $text-active-bg;
+.color-box.typo {
+    pre {
+        &.active {
+            @include colorbox($text-active-bg, $text-active-fg);
+        }
 
-    color: $text-active-fg;
-}
+        &.selected {
+            @include colorbox($text-selected-bg, $text-selected-fg);
+        }
 
-.color-box.typo pre.selected {
-    background-color: $text-selected-bg;
+        &.keyword {
+            @include colorbox($text-keyword-active-bg, $text-keyword-active-fg);
+        }
 
-    color: $text-selected-fg;
-}
+        &.keyword-selected {
+            @include colorbox($text-keyword-selected-bg, $text-keyword-selected-fg);
+        }
 
-.color-box.typo pre.keyword {
-    background-color: $text-keyword-active-bg;
-
-    color: $text-keyword-active-fg;
-}
-
-.color-box.typo pre.keyword-selected {
-    background-color: $text-keyword-selected-bg;
-
-    color: $text-keyword-selected-fg;
-}
-
-.color-box.typo pre.heading {
-    background-color: $text-heading-bg;
-
-    color: $text-heading-fg;
+        &.heading {
+            @include colorbox($text-heading-bg, $text-heading-fg);
+        }
+    }
 }
 
 
@@ -94,62 +88,9 @@ body {
     line-height: $text-line-height;
 }
 
-h1 {
-    font-size: 16rem;
-    font-weight: $text-bold-font-weight;
-    line-height: 1.2;
-    color: $text-heading-fg;
-    text-transform: uppercase;
-
-    background-color: $text-heading-bg;
-
-    margin: 12px 8px;
-    padding: 3px 8px;
-
-    border-bottom: $text-heading-border solid 7px;
-
-    display: table;
-
-    cursor: default;
-}
-
-h2 {
-    font-size: 16rem;
-    font-weight: $text-bold-font-weight;
-    line-height: 1.2;
-    color: $text-heading-fg;
-
-    background-color: $text-heading-bg;
-
-    margin: 12px 8px;
-    padding: 3px 9px;
-
-    border-top: $text-heading-border solid 10px;
-    border-bottom: $text-heading-border solid 7px;
-
-    display: table;
-
-    cursor: default;
-}
-
-h3 {
-    font-size: 16rem;
-    font-weight: $text-bold-font-weight;
-    line-height: 1.2;
-    color: $text-heading-fg;
-
-    background-color: $text-heading-bg;
-
-    margin: 12px 8px;
-    padding: 10px;
-
-    border-bottom: $text-heading-border solid 7px;
-
-    display: table;
-
-    cursor: default;
-}
-
+h1,
+h2,
+h3,
 h4 {
     font-size: 16rem;
     font-weight: $text-bold-font-weight;
@@ -159,16 +100,37 @@ h4 {
     background-color: $text-heading-bg;
 
     margin: 12px 8px;
-    padding: 10px;
 
-    border-top: $text-heading-border solid 1px;
-    border-bottom: $text-heading-border solid 1px;
-    border-left: $text-heading-border solid 2px;
-    border-right: $text-heading-border solid 2px;
+    border-bottom: $text-heading-border solid 7px;
 
     display: table;
 
     cursor: default;
+}
+
+h1,
+h2 {
+    padding: 3px 8px;
+}
+
+h3,
+h4 {
+    padding: 10px;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+h2 {
+    border-top: $text-heading-border solid 10px;
+}
+
+h4 {
+    border-top: $text-heading-border solid 1px;
+    border-bottom: $text-heading-border solid 1px;
+    border-left: $text-heading-border solid 2px;
+    border-right: $text-heading-border solid 2px;
 }
 
 p {
@@ -199,20 +161,21 @@ em {
     text-decoration: underline;
 }
 
-a:link,
-a:visited {
-    background-color: $text-keyword-active-bg;
+a {
 
-    color: $text-keyword-active-fg;
-}
+    &:link,
+    &:visited {
+        background-color: $text-keyword-active-bg;
+        color: $text-keyword-active-fg;
+    }
 
-a:focus,
-a:active {
-    background-color: $text-keyword-selected-bg;
+    &:focus,
+    &:active {
+        background-color: $text-keyword-selected-bg;
+        color: $text-keyword-selected-fg;
 
-    color: $text-keyword-selected-fg;
-
-    outline: none;
+        outline: none;
+    }
 }
 
 address,
@@ -231,16 +194,16 @@ blockquote {
     display: block;
 
     border-left: 7px solid $text-quotation-border;
-}
 
-blockquote p {
-    font-style: italic;
-    color: $text-quotation-fg;
+    p {
+        font-style: italic;
+        color: $text-quotation-fg;
 
-    background-color: $text-quotation-bg;
+        background-color: $text-quotation-bg;
 
-    margin: 0px 10px;
-    padding: 0px;
+        margin: 0px 10px;
+        padding: 0px;
+    }
 }
 
 ::-moz-selection {

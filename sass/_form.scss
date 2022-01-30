@@ -20,7 +20,10 @@ $form-label-focus-fg: $bright-white;
 
 
 // Styles
-div.field-group {
+div.field-group,
+div.field-group-row {
+    margin-bottom: 16px;
+
     display: flex;
     flex-direction: column;
 
@@ -28,206 +31,69 @@ div.field-group {
 }
 
 div.field-group {
-    margin-bottom: 16px;
-}
+    flex-direction: column;
 
-div.field-group input[type=text],
-div.field-group input[type=password],
-div.field-group input[type=tel],
-div.field-group input[type=email],
-div.field-group input[type=number],
-div.field-group textarea,
-div.field-group select {
-    order: 2;
+    justify-content: center;
 
-    width: 100%;
-}
+    input[type=text],
+    input[type=password],
+    input[type=tel],
+    input[type=email],
+    input[type=number],
+    textarea,
+    select {
+        order: 2;
 
-div.field-group label {
-    color: $form-label-fg;
-    font-weight: $text-bold-font-weight;
-    line-height: 1;
+        width: 100%;
+    }
 
-    background-color: $form-label-bg;
+    label {
+        color: $form-label-fg;
+        font-weight: $text-bold-font-weight;
+        line-height: 1;
 
-    margin: 0px;
-}
+        background-color: $form-label-bg;
 
-div.field-group label::first-letter {
-    color: $form-label-firstletter-fg;
+        margin: 0px;
 
-    background-color: $form-label-firstletter-bg;
-}
+        &::first-letter {
+            color: $form-label-firstletter-fg;
 
-div.field-group *:not(label):focus+label {
-    color: $form-label-focus-fg;
+            background-color: $form-label-firstletter-bg;
+        }
+    }
 
-    background-color: $form-label-focus-bg;
+    *:not(label):focus+label {
+        color: $form-label-focus-fg;
+
+        background-color: $form-label-focus-bg;
+    }
 }
 
 div.field-group-row {
-    margin-bottom: 16px;
-
-    display: flex;
     flex-direction: row;
 
     flex-flow: column wrap;
+
+    >div.field-group {
+        text-align: left;
+
+        margin: 0px;
+
+        width: 100%;
+
+        display: block;
+
+        &.left {
+            text-align: left;
+        }
+
+        &.center {
+            text-align: center;
+        }
+
+        &.right {
+            text-align: right;
+        }
+    }
 }
-
-div.field-group-row>div.field-group {
-    text-align: left;
-
-    margin: 0px;
-
-    width: 100%;
-
-    display: block;
-}
-
-div.field-group-row>div.field-group.left {
-    text-align: left;
-}
-
-div.field-group-row>div.field-group.center {
-    text-align: center;
-}
-
-div.field-group-row>div.field-group.right {
-    text-align: right;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // input[type=range]
-// // {
-// //     -webkit-appearance: none;
-// //     width: 100%;
-// //     height: 24px;
-
-// //     outline: none;
-
-// //     background-color: $aqua;
-// //     opacity: 1;
-// //     background-image:  repeating-linear-gradient(45deg, $blue 25%, transparent 25%, transparent 75%, $blue 75%, $blue), repeating-linear-gradient(45deg, $blue 25%, $aqua 25%, $aqua 75%, $blue 75%, $blue);
-// //     background-position: 0 0, 2px 2px;
-// //     background-size: 4px 4px;
-// // }
-
-// // input[type=range]::-webkit-slider-thumb
-// // {
-// //     -webkit-appearance: none;
-// //     appearance: none;
-// //     width: 24px;
-// //     height: 24px;
-
-// //     cursor: pointer;
-
-// //     background-color: $selectbox-scrollbar-thumb-bg;
-// //     border: $selectbox-scrollbar-thumb-border solid 4px;
-// // }
-
-// // input[type=range]::-moz-range-thumb {
-// //     width: 24px;
-// //     height: 24px;
-
-// //     background-color: $selectbox-scrollbar-thumb-bg;
-// //     border: $selectbox-scrollbar-thumb-border solid 4px;
-
-// //   cursor: pointer;
-// // }
-
-// input[type=range] {
-//     -webkit-appearance: none;
-//     margin: 18px 0;
-//     width: 100%;
-//   }
-//   input[type=range]:focus {
-//     outline: none;
-//   }
-//   input[type=range]::-webkit-slider-runnable-track {
-//     width: 100%;
-//     height: 8.4px;
-//     cursor: pointer;
-//     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-//     background: #3071a9;
-//     border-radius: 1.3px;
-//     border: 0.2px solid #010101;
-//   }
-//   input[type=range]::-webkit-slider-thumb {
-//     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-//     border: 1px solid #000000;
-//     height: 36px;
-//     width: 16px;
-//     border-radius: 3px;
-//     background: #ffffff;
-//     cursor: pointer;
-//     -webkit-appearance: none;
-//     margin-top: -14px;
-//   }
-//   input[type=range]:focus::-webkit-slider-runnable-track {
-//     background: #367ebd;
-//   }
-//   input[type=range]::-moz-range-track {
-//     width: 100%;
-//     height: 8.4px;
-//     cursor: pointer;
-//     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-//     background: #3071a9;
-//     border-radius: 1.3px;
-//     border: 0.2px solid #010101;
-//   }
-//   input[type=range]::-moz-range-thumb {
-//     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-//     border: 1px solid #000000;
-//     height: 36px;
-//     width: 16px;
-//     border-radius: 3px;
-//     background: #ffffff;
-//     cursor: pointer;
-//   }
-//   input[type=range]::-ms-track {
-//     width: 100%;
-//     height: 8.4px;
-//     cursor: pointer;
-//     background: transparent;
-//     border-color: transparent;
-//     border-width: 16px 0;
-//     color: transparent;
-//   }
-//   input[type=range]::-ms-fill-lower {
-//     background: #2a6495;
-//     border: 0.2px solid #010101;
-//     border-radius: 2.6px;
-//     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-//   }
-//   input[type=range]::-ms-fill-upper {
-//     background: #3071a9;
-//     border: 0.2px solid #010101;
-//     border-radius: 2.6px;
-//     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-//   }
-//   input[type=range]::-ms-thumb {
-//     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-//     border: 1px solid #000000;
-//     height: 36px;
-//     width: 16px;
-//     border-radius: 3px;
-//     background: #ffffff;
-//     cursor: pointer;
-//   }
-//   input[type=range]:focus::-ms-fill-lower {
-//     background: #3071a9;
-//   }
-//   input[type=range]:focus::-ms-fill-upper {
-//     background: #367ebd;
-//   }

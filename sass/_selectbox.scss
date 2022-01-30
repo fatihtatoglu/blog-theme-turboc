@@ -39,28 +39,24 @@ $selectbox-scrollbar-arrow-fg: $aqua;
 
 
 // Guidances
-.color-box.selectbox pre.active {
-    background-color: $selectbox-active-bg;
+.color-box.selectbox {
+    pre {
+        &.color-box.selectbox pre.active {
+            @include colorbox($selectbox-active-bg, $selectbox-active-fg);
+        }
 
-    color: $selectbox-active-fg
-}
+        &.default {
+            @include colorbox($selectbox-default-bg, $selectbox-default-fg);
+        }
 
-.color-box.selectbox pre.default {
-    background-color: $selectbox-default-bg;
+        &.selected {
+            @include colorbox($selectbox-selected-bg, $selectbox-selected-fg);
+        }
 
-    color: $selectbox-default-fg;
-}
-
-.color-box.selectbox pre.selected {
-    background-color: $selectbox-selected-bg;
-
-    color: $selectbox-selected-fg;
-}
-
-.color-box.selectbox pre.disabled {
-    background-color: $selectbox-disabled-bg;
-
-    color: $selectbox-disabled-fg;
+        &.disabled {
+            @include colorbox($selectbox-disabled-bg, $selectbox-disabled-fg);
+        }
+    }
 }
 
 
