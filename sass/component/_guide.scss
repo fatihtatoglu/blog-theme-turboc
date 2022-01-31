@@ -1,5 +1,5 @@
 .color-box {
-    @include colorbox($white, $black);
+    @include colorizeElement($white, $black);
 
     margin: 0px 10px 0px 10px;
     display: inline-block;

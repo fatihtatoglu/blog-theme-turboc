@@ -7,18 +7,6 @@ $form-label-focus-bg: $form-label-bg;
 $form-label-focus-fg: $bright-white;
 
 
-@if $darkMode==true {
-    $form-label-bg: $black;
-    $form-label-fg: $white;
-
-    $form-label-firstletter-bg: $form-label-bg;
-    $form-label-firstletter-fg: $light-yellow;
-
-    $form-label-focus-bg: $form-label-bg;
-    $form-label-focus-fg: $bright-white;
-}
-
-
 // Styles
 div.field-group,
 div.field-group-row {
@@ -48,25 +36,20 @@ div.field-group {
     }
 
     label {
-        color: $form-label-fg;
+        @include colorizeElement($form-label-bg, $form-label-fg);
+
         font-weight: $text-bold-font-weight;
         line-height: 1;
-
-        background-color: $form-label-bg;
 
         margin: 0px;
 
         &::first-letter {
-            color: $form-label-firstletter-fg;
-
-            background-color: $form-label-firstletter-bg;
+            @include colorizeElement($form-label-firstletter-bg, $form-label-firstletter-fg);
         }
     }
 
     *:not(label):focus+label {
-        color: $form-label-focus-fg;
-
-        background-color: $form-label-focus-bg;
+        @include colorizeElement($form-label-focus-bg, $form-label-focus-fg);
     }
 }
 

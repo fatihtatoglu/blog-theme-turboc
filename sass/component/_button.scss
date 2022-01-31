@@ -15,59 +15,35 @@ $button-disabled-fg: $gray;
 $button-disabled-bg: $white;
 
 
-@if $darkMode==true {
-    $button-selected-fg: $bright-white;
-    $button-selected-bg: $gray;
-
-    $button-selected-letter-fg: $light-yellow;
-    $button-selected-letter-bg: $gray;
-
-    $button-default-fg: $light-aqua;
-    $button-default-bg: $gray;
-
-    $button-default-letter-fg: $light-yellow;
-    $button-default-letter-bg: $gray;
-
-    $button-active-fg: $black;
-    $button-active-bg: $gray;
-
-    $button-active-letter-fg: $light-yellow;
-    $button-active-letter-bg: $gray;
-
-    $button-disabled-fg: $gray;
-    $button-disabled-bg: $white;
-}
-
-
 // Guidances
 .color-box.button {
     pre {
         &.selected {
-            @include colorbox($button-selected-bg, $button-selected-fg);
+            @include colorizeElement($button-selected-bg, $button-selected-fg);
 
             &::first-letter {
-                @include colorbox($button-selected-letter-bg, $button-selected-letter-fg);
+                @include colorizeElement($button-selected-letter-bg, $button-selected-letter-fg);
             }
         }
 
         &.default {
-            @include colorbox($button-default-bg, $button-default-fg);
+            @include colorizeElement($button-default-bg, $button-default-fg);
 
             &::first-letter {
-                @include colorbox($button-default-letter-bg, $button-default-letter-fg);
+                @include colorizeElement($button-default-letter-bg, $button-default-letter-fg);
             }
         }
 
         &.active {
-            @include colorbox($button-active-bg, $button-active-fg);
+            @include colorizeElement($button-active-bg, $button-active-fg);
 
             &::first-letter {
-                @include colorbox($button-active-letter-bg, $button-active-letter-fg);
+                @include colorizeElement($button-active-letter-bg, $button-active-letter-fg);
             }
         }
 
         &.disabled {
-            @include colorbox($button-disabled-bg, $button-disabled-fg);
+            @include colorizeElement($button-disabled-bg, $button-disabled-fg);
         }
     }
 }
@@ -76,9 +52,7 @@ $button-disabled-bg: $white;
 // Styles
 button,
 a.tc-btn {
-    background-color: $button-active-bg;
-
-    color: $button-active-fg;
+    @include colorizeElement($button-active-bg, $button-active-fg);
 
     font-weight: $text-bold-font-weight;
     line-height: 1;
@@ -106,9 +80,7 @@ a.tc-btn:link {
 a.tc-btn:active,
 a.tc-btn:link:active,
 a.tc-btn:visited:active {
-    background-color: $button-selected-bg;
-
-    color: $button-selected-fg;
+    @include colorizeElement($button-selected-bg, $button-selected-fg);
 }
 
 button:active,
@@ -123,8 +95,7 @@ a.tc-btn:active {
 
 button:disabled,
 a.tc-btn.disabled {
-    background-color: $button-disabled-bg;
-    color: $button-disabled-fg;
+    @include colorizeElement($button-disabled-bg, $button-disabled-fg);
 
     cursor: default;
 }
@@ -135,14 +106,12 @@ a.tc-btn.disabled {
 
 button.default,
 a.tc-btn.default {
-    background-color: $button-default-bg;
-    color: $button-default-fg;
+    @include colorizeElement($button-default-bg, $button-default-fg);
 }
 
 button:focus,
 a.tc-btn:focus {
-    background-color: $button-selected-bg;
-    color: $button-selected-fg;
+    @include colorizeElement($button-selected-bg, $button-selected-fg);
 }
 
 button:focus-visible,
@@ -157,7 +126,5 @@ a.tc-btn u {
 
 button[accesskey] u,
 a.tc-btn[accesskey] u {
-    color: $button-default-letter-fg;
-
-    background-color: $button-default-letter-bg;
+    @include colorizeElement($button-default-letter-bg, $button-default-letter-fg);
 }

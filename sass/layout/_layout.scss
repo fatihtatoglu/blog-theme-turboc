@@ -27,31 +27,11 @@ $article-header-fg: $bright-white;
 $article-header-border: $bright-white;
 
 
-@if $darkMode==true {
-    $body-bg: $black;
-    $body-bg-pattern: $gray;
-
-    $header-bg: $black;
-    $header-fg: $white;
-
-    $footer-bg: $black;
-    $footer-fg: $white;
-
-    $main-bg: $black;
-
-    $article-bg: $main-bg;
-    $article-fg: $white;
-
-    $article-header-fg: $bright-white;
-    $article-header-border: $bright-white;
-}
-
-
 // Guidances
 .color-box.layout {
     pre {
         &.header {
-            @include colorbox($header-bg, $header-fg);
+            @include colorizeElement($header-bg, $header-fg);
         }
     }
 }
@@ -68,9 +48,7 @@ body {
 }
 
 header {
-    color: $header-fg;
-
-    background-color: $header-bg;
+    @include colorizeElement($header-bg, $header-fg);
 
     height: $header-height;
     width: $site-width;
@@ -82,13 +60,13 @@ header {
     display: block;
 
     span.site-name {
+        @include colorizeElement($text-heading-bg, $text-heading-fg);
+
         font-size: 16rem;
         font-weight: $text-bold-font-weight;
         line-height: 1.2;
-        color: $text-heading-fg;
-        text-transform: uppercase;
 
-        background-color: $text-heading-bg;
+        text-transform: uppercase;
 
         margin: 12px 8px;
         padding: 3px 8px;
@@ -102,10 +80,9 @@ header {
 }
 
 footer {
-    color: $footer-fg;
-    text-align: center;
+    @include colorizeElement($footer-bg, $footer-fg);
 
-    background-color: $footer-bg;
+    text-align: center;
 
     height: $footer-height;
     width: $site-width;
@@ -120,7 +97,7 @@ footer {
 }
 
 main {
-    background-color: $main-bg;
+    @include colorizeElement($main-bg, $text-active-fg);
 
     min-height: calc(100vh - #{$main-height});
     width: $site-width;
@@ -130,9 +107,7 @@ main {
 }
 
 article {
-    color: $article-fg;
-
-    background-color: $article-bg;
+    @include colorizeElement($article-bg, $article-fg);
 
     position: relative;
 
@@ -163,11 +138,10 @@ article {
         left: 0px;
 
         >h1 {
-            color: $article-header-fg;
+            @include colorizeElement($article-bg, $article-header-fg);
+
             line-height: 1;
             text-transform: capitalize;
-
-            background-color: $article-bg;
 
             padding: 0px 8px;
             margin: 0px;
@@ -179,9 +153,9 @@ article {
     }
 
     >footer {
+        @include colorizeElement($article-bg, $text-active-fg);
+        
         text-align: center;
-
-        background-color: $article-bg;
 
         margin: 0px;
         padding: 30px 0px 0px 0px;

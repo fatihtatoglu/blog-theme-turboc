@@ -1,4 +1,4 @@
-@mixin colorbox($background-color, $foreground-color) {
+@mixin colorizeElement($background-color, $foreground-color) {
     /* Background */
     background-color: $background-color;
 

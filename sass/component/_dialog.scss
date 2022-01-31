@@ -11,33 +11,19 @@ $dialog-width: $site-width * 0.5;
 $dialog-large-width: $site-width * 0.75;
 
 
-@if $darkMode==true {
-    $dialog-border: $bright-white;
-
-    $dialog-title-bg: $black;
-    $dialog-title-fg: $bright-white;
-
-    $dialog-text-bg: $black;
-    $dialog-text-fg: $white;
-
-    $dialog-icon-bg: $black;
-    $dialog-icon-fg: $light-green;
-}
-
-
 // Guidances
 .color-box.dialog-guide {
     pre {
         &.title {
-            @include colorbox($dialog-title-bg, $dialog-title-fg);
+            @include colorizeElement($dialog-title-bg, $dialog-title-fg);
         }
 
         &.text {
-            @include colorbox($dialog-text-bg, $dialog-text-fg);
+            @include colorizeElement($dialog-text-bg, $dialog-text-fg);
         }
 
         &.icon {
-            @include colorbox($dialog-icon-bg, $dialog-icon-fg);
+            @include colorizeElement($dialog-icon-bg, $dialog-icon-fg);
         }
     }
 }
@@ -56,7 +42,7 @@ div.dialog {
     display: none;
 
     div.dialog-box {
-        background-color: $dialog-text-bg;
+        @include colorizeElement($dialog-text-bg, $dialog-text-fg);
 
         position: relative;
 
@@ -72,7 +58,7 @@ div.dialog {
         box-shadow: 16px 16px 0px 0px $shadow;
 
         div.dialog-content {
-            background-color: $dialog-text-bg;
+            @include colorizeElement($dialog-text-bg, $dialog-text-fg);
 
             padding: 21px 17px;
 
@@ -93,14 +79,10 @@ div.dialog {
 
             main {
                 @extend .reset-dialog-content;
-
-                color: $dialog-text-fg;
-
-                background-color: $dialog-text-bg;
+                @include colorizeElement($dialog-text-bg, $dialog-text-fg);
 
                 >p {
-                    color: $dialog-text-fg;
-                    background-color: $dialog-text-bg;
+                    @include colorizeElement($dialog-text-bg, $dialog-text-fg);
                 }
 
                 label,
@@ -111,11 +93,9 @@ div.dialog {
 
             footer {
                 @extend .reset-dialog-content;
+                @include colorizeElement($dialog-text-bg, $dialog-text-fg);
 
                 text-align: center;
-                color: $dialog-text-fg;
-
-                background-color: $dialog-text-bg;
             }
 
             >header {
@@ -132,11 +112,10 @@ div.dialog {
                 background-color: transparent;
 
                 >span {
-                    color: $dialog-title-fg;
+                    @include colorizeElement($dialog-title-bg, $dialog-title-fg);
+
                     line-height: 1;
                     text-transform: capitalize;
-
-                    background-color: $dialog-title-bg;
 
                     padding: 0px 8px;
                     margin: 0px;

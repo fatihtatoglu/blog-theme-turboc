@@ -15,48 +15,30 @@ $menu-disabled-selected-bg: $black;
 $menu-disabled-selected-fg: $menu-disabled-fg;
 
 
-@if $darkMode==true {
-    $menu-bg: $black;
-    $menu-border: $white;
-    $menu-normal-bg: $black;
-    $menu-normal-fg: $white;
-    $menu-normal-firstletter-bg: $black;
-    $menu-normal-firstletter-fg: $red;
-    $menu-selected-bg: $green;
-    $menu-selected-fg: $black;
-    $menu-selected-firstletter-bg: $green;
-    $menu-selected-firstletter-fg: $red;
-    $menu-disabled-bg: $black;
-    $menu-disabled-fg: $gray;
-    $menu-disabled-selected-bg: $black;
-    $menu-disabled-selected-fg: $menu-disabled-fg;
-}
-
-
 // Guidances
 .color-box.menu {
     pre {
         &.normal {
-            @include colorbox($menu-normal-bg, $menu-normal-fg);
+            @include colorizeElement($menu-normal-bg, $menu-normal-fg);
 
             &.firstletter {
-                @include colorbox($menu-normal-firstletter-bg, $menu-normal-firstletter-fg);
+                @include colorizeElement($menu-normal-firstletter-bg, $menu-normal-firstletter-fg);
             }
         }
 
         &.selected {
-            @include colorbox($menu-selected-bg, $menu-selected-fg);
+            @include colorizeElement($menu-selected-bg, $menu-selected-fg);
 
             &.firstletter {
-                @include colorbox($menu-selected-firstletter-bg, $menu-selected-firstletter-fg);
+                @include colorizeElement($menu-selected-firstletter-bg, $menu-selected-firstletter-fg);
             }
         }
 
         &.disabled {
-            @include colorbox($menu-disabled-bg, $menu-disabled-fg);
+            @include colorizeElement($menu-disabled-bg, $menu-disabled-fg);
 
             &.selected {
-                @include colorbox($menu-disabled-selected-bg, $menu-disabled-selected-fg);
+                @include colorizeElement($menu-disabled-selected-bg, $menu-disabled-selected-fg);
             }
         }
     }
@@ -91,30 +73,25 @@ nav {
             a:link,
             a:visited,
             a:hover {
-                color: $menu-normal-fg;
+                @include colorizeElement($menu-normal-bg, $menu-normal-fg);
                 font-weight: $text-bold-font-weight;
-
-                background-color: $menu-normal-bg;
 
                 padding: 0px 9px;
 
                 display: block;
 
                 &::first-letter {
-                    color: $menu-normal-firstletter-fg;
-                    background-color: $menu-normal-firstletter-bg;
+                    @include colorizeElement($menu-normal-firstletter-bg, $menu-normal-firstletter-fg);
                 }
             }
 
             a:focus,
             a:active,
             a:hover {
-                color: $menu-selected-fg;
-                background-color: $menu-selected-bg;
+                @include colorizeElement($menu-selected-bg, $menu-selected-fg);
 
                 &::first-letter {
-                    color: $menu-selected-firstletter-fg;
-                    background-color: $menu-selected-firstletter-bg;
+                    @include colorizeElement($menu-selected-firstletter-bg, $menu-selected-firstletter-fg);
                 }
             }
 
@@ -126,8 +103,7 @@ nav {
                 a:link::first-letter,
                 a:visited::first-letter,
                 a:hover::first-letter {
-                    color: $menu-disabled-fg;
-                    background-color: $menu-disabled-bg;
+                    @include colorizeElement($menu-disabled-bg, $menu-disabled-fg);
 
                     cursor: default;
                 }
@@ -138,8 +114,7 @@ nav {
                 a:focus::first-letter,
                 a:active::first-letter,
                 a:hover::first-letter {
-                    color: $menu-disabled-selected-fg;
-                    background-color: $menu-disabled-selected-bg;
+                    @include colorizeElement($menu-disabled-selected-bg, $menu-disabled-selected-fg);
 
                     cursor: default;
                 }

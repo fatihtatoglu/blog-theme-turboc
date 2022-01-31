@@ -15,46 +15,23 @@ $selectbox-scrollbar-arrow-bg: $blue;
 $selectbox-scrollbar-arrow-fg: $aqua;
 
 
-@if $darkMode==true {
-    $selectbox-active-bg: $black;
-    $selectbox-active-fg: $bright-white;
-
-    $selectbox-default-bg: $black;
-    $selectbox-default-fg: $light-yellow;
-
-    $selectbox-selected-bg: $green;
-    $selectbox-selected-fg: $bright-white;
-
-    $selectbox-disabled-bg: $black;
-    $selectbox-disabled-fg: $gray;
-
-    $selectbox-scrollbar-bg-1: $black;
-    $selectbox-scrollbar-bg-2: $gray;
-
-    $selectbox-scrollbar-thumb-border: $gray;
-    $selectbox-scrollbar-thumb-bg: $aqua;
-    $selectbox-scrollbar-arrow-bg: $gray;
-    $selectbox-scrollbar-arrow-fg: $aqua;
-}
-
-
 // Guidances
 .color-box.selectbox {
     pre {
         &.color-box.selectbox pre.active {
-            @include colorbox($selectbox-active-bg, $selectbox-active-fg);
+            @include colorizeElement($selectbox-active-bg, $selectbox-active-fg);
         }
 
         &.default {
-            @include colorbox($selectbox-default-bg, $selectbox-default-fg);
+            @include colorizeElement($selectbox-default-bg, $selectbox-default-fg);
         }
 
         &.selected {
-            @include colorbox($selectbox-selected-bg, $selectbox-selected-fg);
+            @include colorizeElement($selectbox-selected-bg, $selectbox-selected-fg);
         }
 
         &.disabled {
-            @include colorbox($selectbox-disabled-bg, $selectbox-disabled-fg);
+            @include colorizeElement($selectbox-disabled-bg, $selectbox-disabled-fg);
         }
     }
 }
@@ -71,12 +48,10 @@ select {
     outline: none;
 
     option {
+        @include colorizeElement($selectbox-active-bg, $selectbox-active-fg);
+        
         font-weight: $text-bold-font-weight;
         line-height: 1.1;
-
-        background-color: $selectbox-active-bg;
-
-        color: $selectbox-active-fg;
 
         cursor: pointer;
 

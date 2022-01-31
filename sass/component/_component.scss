@@ -11,25 +11,6 @@ $message-box-error-bg: $blue;
 $message-box-error-fg: $light-red;
 
 
-@if $darkMode==true {
-    $horizontal-line-border: $white;
-
-    $message-box-border: $bright-white;
-
-    $message-box-info-bg: $gray;
-    $message-box-info-fg: $blue;
-
-    $message-box-warn-bg: $gray;
-    $message-box-warn-fg: $light-yellow;
-
-    $message-box-notice-bg: $gray;
-    $message-box-notice-fg: $light-aqua;
-
-    $message-box-error-bg: $gray;
-    $message-box-error-fg: $light-red;
-}
-
-
 // Styles
 ol,
 ul {
@@ -87,28 +68,20 @@ hr {
 
 div.info-box {
     @extend .notification-box;
-
-    color: $message-box-info-fg;
-    background-color: $message-box-info-bg;
+    @include colorizeElement($message-box-info-bg, $message-box-info-fg);
 }
 
 div.warn-box {
     @extend .notification-box;
-    
-    color: $message-box-warn-fg;
-    background-color: $message-box-warn-bg;
+    @include colorizeElement($message-box-warn-bg, $message-box-warn-fg);
 }
 
 div.notice-box {
     @extend .notification-box;
-
-    color: $message-box-notice-fg;
-    background-color: $message-box-notice-bg;
+    @include colorizeElement($message-box-notice-bg, $message-box-notice-fg);
 }
 
 div.error-box {
     @extend .notification-box;
-    
-    color: $message-box-error-fg;
-    background-color: $message-box-error-bg;
+    @include colorizeElement($message-box-error-bg, $message-box-error-fg);
 }

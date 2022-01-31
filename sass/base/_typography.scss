@@ -22,50 +22,28 @@ $text-quotation-bg: $blue;
 $text-quotation-fg: $aqua;
 $text-quotation-border: $light-yellow;
 
-@if $darkMode==true {
-    $text-active-bg: $black;
-    $text-active-fg: $white;
-
-    $text-selected-bg: $gray;
-    $text-selected-fg: $white;
-
-    $text-keyword-active-bg: $black;
-    $text-keyword-active-fg: $light-yellow;
-
-    $text-keyword-selected-bg: $gray;
-    $text-keyword-selected-fg: $light-yellow;
-
-    $text-heading-bg: $black;
-    $text-heading-fg: $white;
-    $text-heading-border: $white;
-
-    $text-quotation-bg: $gray;
-    $text-quotation-fg: $bright-white;
-    $text-quotation-border: $yellow;
-}
-
 
 // Guidances
 .color-box.typo {
     pre {
         &.active {
-            @include colorbox($text-active-bg, $text-active-fg);
+            @include colorizeElement($text-active-bg, $text-active-fg);
         }
 
         &.selected {
-            @include colorbox($text-selected-bg, $text-selected-fg);
+            @include colorizeElement($text-selected-bg, $text-selected-fg);
         }
 
         &.keyword {
-            @include colorbox($text-keyword-active-bg, $text-keyword-active-fg);
+            @include colorizeElement($text-keyword-active-bg, $text-keyword-active-fg);
         }
 
         &.keyword-selected {
-            @include colorbox($text-keyword-selected-bg, $text-keyword-selected-fg);
+            @include colorizeElement($text-keyword-selected-bg, $text-keyword-selected-fg);
         }
 
         &.heading {
-            @include colorbox($text-heading-bg, $text-heading-fg);
+            @include colorizeElement($text-heading-bg, $text-heading-fg);
         }
     }
 }
@@ -78,13 +56,11 @@ html {
 }
 
 body {
+    @include colorizeElement($text-active-bg, $text-active-fg);
+
     font-size: $text-size;
     font-weight: $text-font-weight;
     font-family: $font-family;
-    color: $text-active-fg;
-
-    background-color: $text-active-bg;
-
     line-height: $text-line-height;
 }
 
@@ -92,12 +68,11 @@ h1,
 h2,
 h3,
 h4 {
+    @include colorizeElement($text-heading-bg, $text-heading-fg);
+
     font-size: 16rem;
     font-weight: $text-bold-font-weight;
     line-height: 1.2;
-    color: $text-heading-fg;
-
-    background-color: $text-heading-bg;
 
     margin: 12px 8px;
 
@@ -134,11 +109,10 @@ h4 {
 }
 
 p {
+    @include colorizeElement($text-active-bg, $text-active-fg);
+
     font-size: 16rem;
     font-weight: $text-font-weight;
-
-    background-color: $text-active-bg;
-    color: $text-active-fg;
 
     margin: 10px 0px;
 }
@@ -162,14 +136,12 @@ a {
 
     &:link,
     &:visited {
-        background-color: $text-keyword-active-bg;
-        color: $text-keyword-active-fg;
+        @include colorizeElement($text-keyword-active-bg, $text-keyword-active-fg);
     }
 
     &:focus,
     &:active {
-        background-color: $text-keyword-selected-bg;
-        color: $text-keyword-selected-fg;
+        @include colorizeElement($text-keyword-selected-bg, $text-keyword-selected-fg);
 
         outline: none;
     }
@@ -183,7 +155,7 @@ time {
 }
 
 blockquote {
-    background-color: $text-quotation-bg;
+    @include colorizeElement($text-quotation-bg, $text-quotation-fg);
 
     margin: 12px 8px;
     padding: 0px;
@@ -193,10 +165,9 @@ blockquote {
     border-left: 7px solid $text-quotation-border;
 
     p {
-        font-style: italic;
-        color: $text-quotation-fg;
+        @include colorizeElement($text-quotation-bg, $text-quotation-fg);
 
-        background-color: $text-quotation-bg;
+        font-style: italic;
 
         margin: 0px 10px;
         padding: 0px;
@@ -204,13 +175,9 @@ blockquote {
 }
 
 ::-moz-selection {
-    color: $text-selected-fg;
-
-    background-color: $text-selected-bg;
+    @include colorizeElement($text-selected-bg, $text-selected-fg);
 }
 
 ::selection {
-    color: $text-selected-fg;
-
-    background: $text-selected-bg;
+    @include colorizeElement($text-selected-bg, $text-selected-fg);
 }

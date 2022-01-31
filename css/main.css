@@ -101,9 +101,9 @@ fieldset { border-width: 0; padding: 0; margin: 0; }
 
 html { font-size: 1px; /*for using REM units*/ }
 
-body { font-size: 16rem; font-weight: 400; font-family: "Roboto Mono", monospace; color: black; background-color: #00aaa8; line-height: 1.5; }
+body { /* Background */ background-color: #00aaa8; /* Foreground */ color: black; font-size: 16rem; font-weight: 400; font-family: "Roboto Mono", monospace; line-height: 1.5; }
 
-h1, h2, h3, h4 { font-size: 16rem; font-weight: 700; line-height: 1.2; color: black; background-color: #00aaa8; margin: 12px 8px; border-bottom: black solid 7px; display: table; cursor: default; }
+h1, h2, h3, h4 { /* Background */ background-color: #00aaa8; /* Foreground */ color: black; font-size: 16rem; font-weight: 700; line-height: 1.2; margin: 12px 8px; border-bottom: black solid 7px; display: table; cursor: default; }
 
 h1, h2 { padding: 3px 8px; }
 
@@ -115,7 +115,7 @@ h2 { border-top: black solid 10px; }
 
 h4 { border-top: black solid 1px; border-bottom: black solid 1px; border-left: black solid 2px; border-right: black solid 2px; }
 
-p { font-size: 16rem; font-weight: 400; background-color: #00aaa8; color: black; margin: 10px 0px; }
+p { /* Background */ background-color: #00aaa8; /* Foreground */ color: black; font-size: 16rem; font-weight: 400; margin: 10px 0px; }
 
 b, strong { font-weight: 700; }
 
@@ -123,19 +123,19 @@ i, em { font-style: italic; }
 
 strong, em { text-decoration: underline; }
 
-a:link, a:visited { background-color: #00aaa8; color: #feff55; }
+a:link, a:visited { /* Background */ background-color: #00aaa8; /* Foreground */ color: #feff55; }
 
-a:focus, a:active { background-color: #0000a9; color: #feff55; outline: none; }
+a:focus, a:active { /* Background */ background-color: #0000a9; /* Foreground */ color: #feff55; outline: none; }
 
 address, time { font-style: italic; display: inline-block; }
 
-blockquote { background-color: #0000a9; margin: 12px 8px; padding: 0px; display: block; border-left: 7px solid #feff55; }
+blockquote { /* Background */ background-color: #0000a9; /* Foreground */ color: #00aaa8; margin: 12px 8px; padding: 0px; display: block; border-left: 7px solid #feff55; }
 
-blockquote p { font-style: italic; color: #00aaa8; background-color: #0000a9; margin: 0px 10px; padding: 0px; }
+blockquote p { /* Background */ background-color: #0000a9; /* Foreground */ color: #00aaa8; font-style: italic; margin: 0px 10px; padding: 0px; }
 
-::-moz-selection { color: black; background-color: #aaaaaa; }
+::-moz-selection { /* Background */ background-color: #aaaaaa; /* Foreground */ color: black; }
 
-::selection { color: black; background: #aaaaaa; }
+::selection { /* Background */ background-color: #aaaaaa; /* Foreground */ color: black; }
 
 .color-box.button pre.selected { /* Background */ background-color: #00a800; /* Foreground */ color: white; }
 
@@ -151,27 +151,27 @@ blockquote p { font-style: italic; color: #00aaa8; background-color: #0000a9; ma
 
 .color-box.button pre.disabled { /* Background */ background-color: #aaaaaa; /* Foreground */ color: #555555; }
 
-button, a.tc-btn { background-color: #00a800; color: black; font-weight: 700; line-height: 1; margin: 10px; padding: 4px 15px 8px 15px; min-width: 132px; -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75); -moz-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75); box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75); }
+button, a.tc-btn { /* Background */ background-color: #00a800; /* Foreground */ color: black; font-weight: 700; line-height: 1; margin: 10px; padding: 4px 15px 8px 15px; min-width: 132px; -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75); -moz-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75); box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75); }
 
 a.tc-btn, a.tc-btn:link { display: inline-block; text-decoration: none; color: black; text-align: center; }
 
-a.tc-btn:active, a.tc-btn:link:active, a.tc-btn:visited:active { background-color: #00a800; color: white; }
+a.tc-btn:active, a.tc-btn:link:active, a.tc-btn:visited:active { /* Background */ background-color: #00a800; /* Foreground */ color: white; }
 
 button:active, a.tc-btn:active { margin-left: 20px; margin-right: 0px; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
 
-button:disabled, a.tc-btn.disabled { background-color: #aaaaaa; color: #555555; cursor: default; }
+button:disabled, a.tc-btn.disabled { /* Background */ background-color: #aaaaaa; /* Foreground */ color: #555555; cursor: default; }
 
 a.tc-btn.disabled { pointer-events: none; }
 
-button.default, a.tc-btn.default { background-color: #00a800; color: #55fffd; }
+button.default, a.tc-btn.default { /* Background */ background-color: #00a800; /* Foreground */ color: #55fffd; }
 
-button:focus, a.tc-btn:focus { background-color: #00a800; color: white; }
+button:focus, a.tc-btn:focus { /* Background */ background-color: #00a800; /* Foreground */ color: white; }
 
 button:focus-visible, a.tc-btn:focus-visible { outline: none; }
 
 button u, a.tc-btn u { text-decoration: none; }
 
-button[accesskey] u, a.tc-btn[accesskey] u { color: #feff55; background-color: #00a800; }
+button[accesskey] u, a.tc-btn[accesskey] u { /* Background */ background-color: #00a800; /* Foreground */ color: #feff55; }
 
 .color-box.checkbox pre.active { /* Background */ background-color: #00aaa8; /* Foreground */ color: black; }
 
@@ -187,11 +187,11 @@ button[accesskey] u, a.tc-btn[accesskey] u { color: #feff55; background-color: #
 
 input[type=checkbox], input[type=radio] { line-height: 1.1; width: 30px; }
 
-input[type=checkbox]::after, input[type=radio]::after { font-weight: 700; color: black; line-height: 1.1; background-color: #00aaa8; width: 30px; margin: -2px -3px; display: inline-block; cursor: pointer; }
+input[type=checkbox]::after, input[type=radio]::after { /* Background */ background-color: #00aaa8; /* Foreground */ color: black; font-weight: 700; line-height: 1.1; width: 30px; margin: -2px -3px; display: inline-block; cursor: pointer; }
 
-input[type=checkbox] + label, input[type=radio] + label { color: black; line-height: 1.1; font-weight: 700; background-color: #00aaa8; margin-bottom: 0px; margin-left: -7px; display: inline-block; vertical-align: middle; cursor: pointer; }
+input[type=checkbox] + label, input[type=radio] + label { /* Background */ background-color: #00aaa8; /* Foreground */ color: black; line-height: 1.1; font-weight: 700; margin-bottom: 0px; margin-left: -7px; display: inline-block; vertical-align: middle; cursor: pointer; }
 
-input[type=checkbox] + label[for]::first-letter, input[type=radio] + label[for]::first-letter { color: #feff55; background-color: #00aaa8; }
+input[type=checkbox] + label[for]::first-letter, input[type=radio] + label[for]::first-letter { /* Background */ background-color: #00aaa8; /* Foreground */ color: #feff55; }
 
 input[type=checkbox]::after { content: "[ ]"; }
 
@@ -203,13 +203,13 @@ input[type=radio]:checked::after { content: "(●)"; letter-spacing: 0.4rem; }
 
 input[type=radio] + label { vertical-align: bottom; }
 
-input[type=checkbox] + label:active, input[type=checkbox]:active + label, input[type=checkbox]:focus + label, input[type=radio] + label:active, input[type=radio]:active + label, input[type=radio]:focus + label { color: white; background-color: #00aaa8; }
+input[type=checkbox] + label:active, input[type=checkbox]:active + label, input[type=checkbox]:focus + label, input[type=radio] + label:active, input[type=radio]:active + label, input[type=radio]:focus + label { /* Background */ background-color: #00aaa8; /* Foreground */ color: white; }
 
-input[type=checkbox] + label:active::first-letter, input[type=checkbox]:active + label::first-letter, input[type=checkbox]:focus + label::first-letter, input[type=radio] + label:active::first-letter, input[type=radio]:active + label::first-letter, input[type=radio]:focus + label::first-letter { color: #feff55; background-color: #00aaa8; }
+input[type=checkbox] + label:active::first-letter, input[type=checkbox]:active + label::first-letter, input[type=checkbox]:focus + label::first-letter, input[type=radio] + label:active::first-letter, input[type=radio]:active + label::first-letter, input[type=radio]:focus + label::first-letter { /* Background */ background-color: #00aaa8; /* Foreground */ color: #feff55; }
 
-input[type=checkbox]:active::after, input[type=checkbox]:focus::after, input[type=radio]:active::after, input[type=radio]:focus::after { color: white; background-color: #00aaa8; }
+input[type=checkbox]:active::after, input[type=checkbox]:focus::after, input[type=radio]:active::after, input[type=radio]:focus::after { /* Background */ background-color: #00aaa8; /* Foreground */ color: white; }
 
-input[type=checkbox]:disabled, input[type=checkbox]:disabled::after, input[type=checkbox]:disabled + label, input[type=checkbox]:disabled + label::first-letter, input[type=radio]:disabled, input[type=radio]:disabled::after, input[type=radio]:disabled + label, input[type=radio]:disabled + label::first-letter { color: #555555; font-weight: 700; background-color: #00aaa8; cursor: default; }
+input[type=checkbox]:disabled, input[type=checkbox]:disabled::after, input[type=checkbox]:disabled + label, input[type=checkbox]:disabled + label::first-letter, input[type=radio]:disabled, input[type=radio]:disabled::after, input[type=radio]:disabled + label, input[type=radio]:disabled + label::first-letter { /* Background */ background-color: #00aaa8; /* Foreground */ color: #555555; font-weight: 700; cursor: default; }
 
 .color-box.menu pre.normal { /* Background */ background-color: #aaaaaa; /* Foreground */ color: black; }
 
@@ -231,17 +231,17 @@ nav ul li { padding: 0px; display: inline-block; }
 
 nav ul li::before { display: none; }
 
-nav ul li a:link, nav ul li a:visited, nav ul li a:hover { color: black; font-weight: 700; background-color: #aaaaaa; padding: 0px 9px; display: block; }
+nav ul li a:link, nav ul li a:visited, nav ul li a:hover { /* Background */ background-color: #aaaaaa; /* Foreground */ color: black; font-weight: 700; padding: 0px 9px; display: block; }
 
-nav ul li a:link::first-letter, nav ul li a:visited::first-letter, nav ul li a:hover::first-letter { color: #a90000; background-color: #aaaaaa; }
+nav ul li a:link::first-letter, nav ul li a:visited::first-letter, nav ul li a:hover::first-letter { /* Background */ background-color: #aaaaaa; /* Foreground */ color: #a90000; }
 
-nav ul li a:focus, nav ul li a:active, nav ul li a:hover { color: black; background-color: #00a800; }
+nav ul li a:focus, nav ul li a:active, nav ul li a:hover { /* Background */ background-color: #00a800; /* Foreground */ color: black; }
 
-nav ul li a:focus::first-letter, nav ul li a:active::first-letter, nav ul li a:hover::first-letter { color: #a90000; background-color: #00a800; }
+nav ul li a:focus::first-letter, nav ul li a:active::first-letter, nav ul li a:hover::first-letter { /* Background */ background-color: #00a800; /* Foreground */ color: #a90000; }
 
-nav ul li.disabled a:link, nav ul li.disabled a:visited, nav ul li.disabled a:hover, nav ul li.disabled a:link::first-letter, nav ul li.disabled a:visited::first-letter, nav ul li.disabled a:hover::first-letter { color: #555555; background-color: #aaaaaa; cursor: default; }
+nav ul li.disabled a:link, nav ul li.disabled a:visited, nav ul li.disabled a:hover, nav ul li.disabled a:link::first-letter, nav ul li.disabled a:visited::first-letter, nav ul li.disabled a:hover::first-letter { /* Background */ background-color: #aaaaaa; /* Foreground */ color: #555555; cursor: default; }
 
-nav ul li.disabled a:focus, nav ul li.disabled a:active, nav ul li.disabled a:hover, nav ul li.disabled a:focus::first-letter, nav ul li.disabled a:active::first-letter, nav ul li.disabled a:hover::first-letter { color: #555555; background-color: black; cursor: default; }
+nav ul li.disabled a:focus, nav ul li.disabled a:active, nav ul li.disabled a:hover, nav ul li.disabled a:focus::first-letter, nav ul li.disabled a:active::first-letter, nav ul li.disabled a:hover::first-letter { /* Background */ background-color: black; /* Foreground */ color: #555555; cursor: default; }
 
 nav ul li div.sub-menu { background-color: #aaaaaa; margin: 0px; padding: 7px 11px; display: none; position: absolute; z-index: 2; }
 
@@ -349,13 +349,13 @@ hr { margin: 5px auto; display: block; border: 2px solid black; }
 
 .notification-box, div.info-box, div.warn-box, div.notice-box, div.error-box { font-weight: 700; margin: 12px 8px; padding: 5px 10px; display: block; border: double 4px white; }
 
-div.info-box { color: #00aaa8; background-color: #0000a9; }
+div.info-box { /* Background */ background-color: #0000a9; /* Foreground */ color: #00aaa8; }
 
-div.warn-box { color: #feff55; background-color: #0000a9; }
+div.warn-box { /* Background */ background-color: #0000a9; /* Foreground */ color: #feff55; }
 
-div.notice-box { color: #55fffd; background-color: #0000a9; }
+div.notice-box { /* Background */ background-color: #0000a9; /* Foreground */ color: #55fffd; }
 
-div.error-box { color: #fe5454; background-color: #0000a9; }
+div.error-box { /* Background */ background-color: #0000a9; /* Foreground */ color: #fe5454; }
 
 .color-box { /* Background */ background-color: #aaaaaa; /* Foreground */ color: black; margin: 0px 10px 0px 10px; display: inline-block; }
 
@@ -369,23 +369,23 @@ div.error-box { color: #fe5454; background-color: #0000a9; }
 
 div.dialog { background-color: transparent; position: fixed; top: 0; bottom: 0; left: 0; right: 0; display: none; }
 
-div.dialog div.dialog-box { background-color: #aaaaaa; position: relative; margin: 100px auto; padding: 5px 1px 8px 2px; display: block; width: 450px; -webkit-box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 0.75); -moz-box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 0.75); box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 0.75); }
+div.dialog div.dialog-box { /* Background */ background-color: #aaaaaa; /* Foreground */ color: black; position: relative; margin: 100px auto; padding: 5px 1px 8px 2px; display: block; width: 450px; -webkit-box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 0.75); -moz-box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 0.75); box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 0.75); }
 
-div.dialog div.dialog-box div.dialog-content { background-color: #aaaaaa; padding: 21px 17px; border: 4px double white; }
+div.dialog div.dialog-box div.dialog-content { /* Background */ background-color: #aaaaaa; /* Foreground */ color: black; padding: 21px 17px; border: 4px double white; }
 
 div.dialog div.dialog-box div.dialog-content .reset-dialog-content, div.dialog div.dialog-box div.dialog-content header, div.dialog div.dialog-box div.dialog-content main, div.dialog div.dialog-box div.dialog-content footer { width: 100%; min-height: inherit; height: inherit; margin: 0px; padding: 0px; }
 
-div.dialog div.dialog-box div.dialog-content main { color: black; background-color: #aaaaaa; }
+div.dialog div.dialog-box div.dialog-content main { /* Background */ background-color: #aaaaaa; /* Foreground */ color: black; }
 
-div.dialog div.dialog-box div.dialog-content main > p { color: black; background-color: #aaaaaa; }
+div.dialog div.dialog-box div.dialog-content main > p { /* Background */ background-color: #aaaaaa; /* Foreground */ color: black; }
 
 div.dialog div.dialog-box div.dialog-content main label, div.dialog div.dialog-box div.dialog-content main label::first-letter { background-color: #aaaaaa; }
 
-div.dialog div.dialog-box div.dialog-content footer { text-align: center; color: black; background-color: #aaaaaa; }
+div.dialog div.dialog-box div.dialog-content footer { /* Background */ background-color: #aaaaaa; /* Foreground */ color: black; text-align: center; }
 
 div.dialog div.dialog-box div.dialog-content > header { display: inline; position: absolute; top: 0px; left: 0px; margin: 0px; padding: 0px; width: 100%; height: inherit; line-height: 1; text-align: center; background-color: transparent; }
 
-div.dialog div.dialog-box div.dialog-content > header > span { color: white; line-height: 1; text-transform: capitalize; background-color: #aaaaaa; padding: 0px 8px; margin: 0px; display: inline-block; border: none; }
+div.dialog div.dialog-box div.dialog-content > header > span { /* Background */ background-color: #aaaaaa; /* Foreground */ color: white; line-height: 1; text-transform: capitalize; padding: 0px 8px; margin: 0px; display: inline-block; border: none; }
 
 div.dialog.large div.dialog-box { width: 675px; }
 

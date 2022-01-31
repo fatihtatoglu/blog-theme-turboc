@@ -15,57 +15,33 @@ $textbox-scrollbar-arrow-bg: $blue;
 $textbox-scrollbar-arrow-fg: $aqua;
 
 
-@if $darkMode==true {
-    $textbox-normal-fg: $light-aqua;
-    $textbox-normal-bg: $gray;
-
-    $textbox-volatile-fg: $bright-white;
-    $textbox-volatile-bg: $black;
-
-    $textbox-selected-fg: $bright-white;
-    $textbox-selected-bg: $gray;
-
-    $textbox-disabled-fg: $gray;
-    $textbox-disabled-bg: $white;
-
-    $textbox-scrollbar-bg-1: $black;
-    $textbox-scrollbar-bg-2: $gray;
-
-    $textbox-scrollbar-thumb-border: $gray;
-    $textbox-scrollbar-thumb-bg: $aqua;
-    $textbox-scrollbar-arrow-bg: $gray;
-    $textbox-scrollbar-arrow-fg: $aqua;
-}
-
-
 // Guidances
 .color-box.textbox {
     pre {
         &.normal {
-            @include colorbox($textbox-normal-bg, $textbox-normal-fg);
+            @include colorizeElement($textbox-normal-bg, $textbox-normal-fg);
         }
 
         &.volatile {
-            @include colorbox($textbox-volatile-bg, $textbox-volatile-fg);
+            @include colorizeElement($textbox-volatile-bg, $textbox-volatile-fg);
         }
 
         &.selected {
-            @include colorbox($textbox-selected-bg, $textbox-selected-fg);
+            @include colorizeElement($textbox-selected-bg, $textbox-selected-fg);
         }
 
         &.disabled {
-            @include colorbox($textbox-disabled-bg, $textbox-disabled-fg);
+            @include colorizeElement($textbox-disabled-bg, $textbox-disabled-fg);
         }
     }
 }
 
 
 .text-field {
-    color: $textbox-normal-fg;
+    @include colorizeElement($textbox-normal-bg, textbox-normal-fg);
+
     font-weight: $text-bold-font-weight;
     line-height: 1.1;
-
-    background-color: $textbox-normal-bg;
 
     border: none;
 
@@ -76,32 +52,26 @@ $textbox-scrollbar-arrow-fg: $aqua;
     margin: 3px 0px;
 
     &:focus {
-        color: $textbox-selected-fg;
-        background-color: $textbox-selected-bg;
+        @include colorizeElement($textbox-selected-bg, $textbox-selected-fg);
     }
 
     &::-moz-selection {
-        color: $textbox-volatile-fg;
-        background-color: $textbox-volatile-bg;
+        @include colorizeElement($textbox-volatile-bg, $textbox-volatile-fg);
     }
 
     &::selection {
-        color: $textbox-volatile-fg;
-        background-color: $textbox-volatile-bg;
+        @include colorizeElement($textbox-volatile-bg, $textbox-volatile-fg);
     }
 
     &:disabled {
-        color: $textbox-disabled-fg;
-        background-color: $textbox-disabled-bg;
+        @include colorizeElement($textbox-disabled-bg, $textbox-disabled-fg);
 
         &::-moz-selection {
-            color: $textbox-disabled-fg;
-            background-color: $textbox-disabled-bg;
+            @include colorizeElement($textbox-disabled-bg, $textbox-disabled-fg);
         }
 
         &::selection {
-            color: $textbox-disabled-fg;
-            background-color: $textbox-disabled-bg;
+            @include colorizeElement($textbox-disabled-bg, $textbox-disabled-fg);
         }
     }
 }
