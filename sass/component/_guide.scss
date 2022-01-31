@@ -1,11 +1,3 @@
-@mixin colorbox($background-color, $foreground-color) {
-    /* Background */
-    background-color: $background-color;
-
-    /* Foreground */
-    color: $foreground-color;
-}
-
 .color-box {
     @include colorbox($white, $black);
 
