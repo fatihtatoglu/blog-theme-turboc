@@ -84,25 +84,25 @@ header {
     padding: 5px 10px;
 
     display: block;
-}
 
-header span.site-name {
-    font-size: 16rem;
-    font-weight: $text-bold-font-weight;
-    line-height: 1.2;
-    color: $text-heading-fg;
-    text-transform: uppercase;
+    span.site-name {
+        font-size: 16rem;
+        font-weight: $text-bold-font-weight;
+        line-height: 1.2;
+        color: $text-heading-fg;
+        text-transform: uppercase;
 
-    background-color: $text-heading-bg;
+        background-color: $text-heading-bg;
 
-    margin: 12px 8px;
-    padding: 3px 8px;
+        margin: 12px 8px;
+        padding: 3px 8px;
 
-    border-bottom: $text-heading-border solid 7px;
+        border-bottom: $text-heading-border solid 7px;
 
-    display: table;
+        display: table;
 
-    cursor: default;
+        cursor: default;
+    }
 }
 
 footer {
@@ -116,11 +116,11 @@ footer {
 
     padding: 0px;
     margin: $footer-margin-top auto $footer-margin-bottom auto;
-}
 
-footer span.credits {
-    display: inline-block;
-    margin: pixel($footer-credits-margin-top) 0px;
+    span.credits {
+        display: inline-block;
+        margin: pixel($footer-credits-margin-top) 0px;
+    }
 }
 
 main {
@@ -148,49 +148,49 @@ article {
     padding: 10px 3px;
 
     border: 4px double $article-header-border;
-}
 
-article>header {
-    line-height: 1;
-    text-align: center;
+    >header {
+        line-height: 1;
+        text-align: center;
 
-    background-color: transparent;
+        background-color: transparent;
 
-    width: 100%;
-    height: inherit;
+        width: 100%;
+        height: inherit;
 
-    margin: 0px;
-    padding: 0px;
+        margin: 0px;
+        padding: 0px;
 
-    display: inline;
-    position: absolute;
-    top: -10px;
-    left: 0px;
-}
+        display: inline;
+        position: absolute;
+        top: -10px;
+        left: 0px;
 
-article>header>h1 {
-    color: $article-header-fg;
-    line-height: 1;
-    text-transform: capitalize;
+        >h1 {
+            color: $article-header-fg;
+            line-height: 1;
+            text-transform: capitalize;
 
-    background-color: $article-bg;
+            background-color: $article-bg;
 
-    padding: 0px 8px;
-    margin: 0px;
+            padding: 0px 8px;
+            margin: 0px;
 
-    display: inline-block;
+            display: inline-block;
 
-    border: none;
-}
+            border: none;
+        }
+    }
 
-article>footer {
-    text-align: center;
+    >footer {
+        text-align: center;
 
-    background-color: $article-bg;
+        background-color: $article-bg;
 
-    margin: 0px;
-    padding: 30px 0px 0px 0px;
+        margin: 0px;
+        padding: 30px 0px 0px 0px;
 
-    width: 100% !important;
-    height: inherit;
+        width: 100% !important;
+        height: inherit;
+    }
 }

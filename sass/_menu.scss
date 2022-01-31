@@ -70,136 +70,124 @@ nav {
     width: $site-width;
 
     margin: 0px auto;
-}
 
-nav ul {
-    padding: 0px;
-    margin: 0px;
+    ul {
+        padding: 0px;
+        margin: 0px;
 
-    list-style: none;
+        list-style: none;
 
-    display: table;
-}
+        display: table;
 
-nav ul li {
-    padding: 0px 0px;
+        li {
+            padding: 0px;
 
-    display: inline-block;
-}
+            display: inline-block;
 
-nav ul li::before {
-    display: none;
-}
+            &::before {
+                display: none;
+            }
 
-nav ul li a:link,
-nav ul li a:visited,
-nav ul li a:hover {
-    color: $menu-normal-fg;
-    font-weight: $text-bold-font-weight;
+            a:link,
+            a:visited,
+            a:hover {
+                color: $menu-normal-fg;
+                font-weight: $text-bold-font-weight;
 
-    background-color: $menu-normal-bg;
+                background-color: $menu-normal-bg;
 
-    padding: 0px 9px;
+                padding: 0px 9px;
 
-    display: block;
-}
+                display: block;
 
-nav ul li a:link::first-letter,
-nav ul li a:visited::first-letter,
-nav ul li a:hover::first-letter {
-    color: $menu-normal-firstletter-fg;
+                &::first-letter {
+                    color: $menu-normal-firstletter-fg;
+                    background-color: $menu-normal-firstletter-bg;
+                }
+            }
 
-    background-color: $menu-normal-firstletter-bg;
-}
+            a:focus,
+            a:active,
+            a:hover {
+                color: $menu-selected-fg;
+                background-color: $menu-selected-bg;
 
-nav ul li a:focus,
-nav ul li a:active,
-nav ul li a:hover,
-nav ul li.active a:link,
-nav ul li.active a:visited,
-nav ul li.active a:hover {
-    color: $menu-selected-fg;
+                &::first-letter {
+                    color: $menu-selected-firstletter-fg;
+                    background-color: $menu-selected-firstletter-bg;
+                }
+            }
 
-    background-color: $menu-selected-bg;
-}
+            &.disabled {
 
-nav ul li a:focus::first-letter,
-nav ul li a:active::first-letter,
-nav ul li a:hover::first-letter,
-nav ul li.active a:link::first-letter,
-nav ul li.active a:visited::first-letter,
-nav ul li.active a:hover::first-letter {
-    color: $menu-selected-firstletter-fg;
+                a:link,
+                a:visited,
+                a:hover,
+                a:link::first-letter,
+                a:visited::first-letter,
+                a:hover::first-letter {
+                    color: $menu-disabled-fg;
+                    background-color: $menu-disabled-bg;
 
-    background-color: $menu-selected-firstletter-bg;
-}
+                    cursor: default;
+                }
 
-nav ul li.disabled a:link,
-nav ul li.disabled a:visited,
-nav ul li.disabled a:hover,
-nav ul li.disabled a:link::first-letter,
-nav ul li.disabled a:visited::first-letter,
-nav ul li.disabled a:hover::first-letter {
-    color: $menu-disabled-fg;
+                a:focus,
+                a:active,
+                a:hover,
+                a:focus::first-letter,
+                a:active::first-letter,
+                a:hover::first-letter {
+                    color: $menu-disabled-selected-fg;
+                    background-color: $menu-disabled-selected-bg;
 
-    background-color: $menu-disabled-bg;
+                    cursor: default;
+                }
+            }
 
-    cursor: default;
-}
+            div.sub-menu {
 
-nav ul li.disabled a:focus,
-nav ul li.disabled a:active,
-nav ul li.disabled a:hover,
-nav ul li.disabled a:focus::first-letter,
-nav ul li.disabled a:active::first-letter,
-nav ul li.disabled a:hover::first-letter {
-    color: $menu-disabled-selected-fg;
+                background-color: $menu-bg;
 
-    background-color: $menu-disabled-selected-bg;
+                margin: 0px;
+                padding: 7px 11px;
 
-    cursor: default;
-}
+                display: none;
 
-nav ul li div.sub-menu {
+                position: absolute;
 
-    background-color: $menu-bg;
+                z-index: 2;
 
-    margin: 0px;
-    padding: 7px 11px;
+                ul {
+                    padding-bottom: 7px;
+                    padding-top: 8px;
 
-    display: none;
+                    border: 2px solid $menu-border;
+                    border-top-width: 1px;
+                    border-bottom-width: 1px;
 
-    position: absolute;
+                    li {
+                        margin: 0px 3px;
 
-    z-index: 2;
-}
+                        display: block;
 
-nav ul li div.sub-menu ul {
-    padding-bottom: 7px;
-    padding-top: 8px;
+                        &[role=separator] {
+                            width: 100%;
 
-    border: 2px solid $menu-border;
-    border-top-width: 1px;
-    border-bottom-width: 1px;
-}
+                            margin: 7px 0px 8px 0px;
 
-nav ul li div.sub-menu ul li {
-    margin: 0px 3px;
+                            border-bottom: 1px solid $menu-border;
+                        }
 
-    display: block;
-}
+                        a {
+                            margin: 0px;
+                            padding: 3px 8px;
 
-nav ul li div.sub-menu ul li[role=separator] {
-    width: 100%;
-
-    margin: 7px 0px 8px 0px;
-
-    border-bottom: 1px solid $menu-border;
-}
-
-nav ul li div.sub-menu ul li a {
-    margin: 0px;
-    padding: 3px 8px;
-
-    min-width: 150px;
+                            min-width: 150px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

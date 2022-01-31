@@ -1,7 +1,4 @@
 window.onload = function () {
-
-
-
     var menuitems = document.querySelectorAll("nav>ul>li");
     menuitems.forEach(function (item) {
 
@@ -44,9 +41,5 @@ window.onload = function () {
 
         $body.classList.add("theme-large");
     });
-
-
-
-
 
 };

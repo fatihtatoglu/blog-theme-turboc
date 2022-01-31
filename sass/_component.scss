@@ -74,10 +74,7 @@ hr {
     border: 2px solid $horizontal-line-border;
 }
 
-div.info-box,
-div.warn-box,
-div.notice-box,
-div.error-box {
+.notification-box {
     font-weight: $text-bold-font-weight;
 
     margin: 12px 8px;
@@ -89,25 +86,29 @@ div.error-box {
 }
 
 div.info-box {
-    color: $message-box-info-fg;
+    @extend .notification-box;
 
+    color: $message-box-info-fg;
     background-color: $message-box-info-bg;
 }
 
 div.warn-box {
+    @extend .notification-box;
+    
     color: $message-box-warn-fg;
-
     background-color: $message-box-warn-bg;
 }
 
 div.notice-box {
-    color: $message-box-notice-fg;
+    @extend .notification-box;
 
+    color: $message-box-notice-fg;
     background-color: $message-box-notice-bg;
 }
 
 div.error-box {
+    @extend .notification-box;
+    
     color: $message-box-error-fg;
-
     background-color: $message-box-error-bg;
 }

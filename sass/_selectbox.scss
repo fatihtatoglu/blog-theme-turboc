@@ -69,80 +69,87 @@ select {
     border: none;
 
     outline: none;
-}
 
-option {
-    font-weight: $text-bold-font-weight;
-    line-height: 1.1;
+    option {
+        font-weight: $text-bold-font-weight;
+        line-height: 1.1;
 
-    background-color: $selectbox-active-bg;
+        background-color: $selectbox-active-bg;
 
-    color: $selectbox-active-fg;
+        color: $selectbox-active-fg;
 
-    cursor: pointer;
-}
+        cursor: pointer;
 
-select option:checked {
-    color: $selectbox-default-fg;
+        &:checked {
+            color: $selectbox-default-fg;
 
-    background: $selectbox-default-bg linear-gradient(0deg, $selectbox-default-bg 0%, $selectbox-default-bg 100%);
-}
+            background: $selectbox-default-bg linear-gradient(0deg, $selectbox-default-bg 0%, $selectbox-default-bg 100%);
+        }
 
-select:focus option:checked {
-    color: $selectbox-selected-fg;
+        &:disabled {
+            color: $selectbox-disabled-fg;
 
-    background: $selectbox-selected-bg linear-gradient(0deg, $selectbox-selected-bg 0%, $selectbox-selected-bg 100%);
-}
+            background: $selectbox-disabled-bg linear-gradient(0deg, $selectbox-disabled-bg 0%, $selectbox-disabled-bg 100%);
 
-select:disabled {
-    overflow: hidden;
-}
-
-select:disabled option,
-select option:disabled {
-    color: $selectbox-disabled-fg;
-
-    background: $selectbox-disabled-bg linear-gradient(0deg, $selectbox-disabled-bg 0%, $selectbox-disabled-bg 100%);
-
-    cursor: default;
-}
-
-select::-webkit-scrollbar {
-    width: 16rem;
-}
-
-select::-webkit-scrollbar-track {
-    background-color: $selectbox-scrollbar-bg-1;
-    opacity: 1;
-    background-image: repeating-linear-gradient(45deg, $selectbox-scrollbar-bg-2 25%, transparent 25%, transparent 75%, $selectbox-scrollbar-bg-2 75%, $selectbox-scrollbar-bg-2), repeating-linear-gradient(45deg, $selectbox-scrollbar-bg-2 25%, $selectbox-scrollbar-bg-1 25%, $selectbox-scrollbar-bg-1 75%, $selectbox-scrollbar-bg-2 75%, $selectbox-scrollbar-bg-2);
-    background-position: 0 0, 2px 2px;
-    background-size: 4px 4px;
-}
-
-select::-webkit-scrollbar-thumb {
-    background-color: $selectbox-scrollbar-thumb-bg;
-    border: $selectbox-scrollbar-thumb-border solid 4px;
-}
-
-select::-webkit-scrollbar-button:vertical {
-    height: 16px;
-    width: 8px;
-}
-
-@if $selectbox-scrollbar-arrow-fg==$aqua {
-    select::-webkit-scrollbar-button:vertical:decrement {
-        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAYAAABmBXS+AAAAAXNSR0IArs4c6QAAAD1JREFUKFNjZEAHq5b/ZwiLZEQWRuEwgBTAAJJCEhUhm4JmGsIkgoqwKUAyDWISUYowwgFVANV3OBQTpQgA9UIVC8Bjp68AAAAASUVORK5CYII=);
-        background-repeat: no-repeat;
-        background-position-x: 4px;
-        background-position-y: 2px;
-        background-size: 8px 16px;
+            cursor: default;
+        }
     }
 
-    select::-webkit-scrollbar-button:vertical:increment {
-        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAYAAABmBXS+AAAAAXNSR0IArs4c6QAAAD9JREFUKFNjZACBVcv/g2lsICySkZF4RbhMC4sEGwIxiWhF6AqhpqCaRLQimEIkUzBNwhEKCIfjDChk3+FRBAD1QhULt999SAAAAABJRU5ErkJggg==);
-        background-repeat: no-repeat;
-        background-position-x: 4px;
-        background-position-y: 3px;
-        background-size: 8px 16px;
+    &:focus option:checked {
+        color: $selectbox-selected-fg;
+
+        background: $selectbox-selected-bg linear-gradient(0deg, $selectbox-selected-bg 0%, $selectbox-selected-bg 100%);
+    }
+
+    &:disabled {
+        overflow: hidden;
+
+        option {
+            color: $selectbox-disabled-fg;
+
+            background: $selectbox-disabled-bg linear-gradient(0deg, $selectbox-disabled-bg 0%, $selectbox-disabled-bg 100%);
+
+            cursor: default;
+        }
+    }
+
+    &::-webkit-scrollbar {
+        width: 16rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: $selectbox-scrollbar-bg-1;
+        opacity: 1;
+        background-image: repeating-linear-gradient(45deg, $selectbox-scrollbar-bg-2 25%, transparent 25%, transparent 75%, $selectbox-scrollbar-bg-2 75%, $selectbox-scrollbar-bg-2), repeating-linear-gradient(45deg, $selectbox-scrollbar-bg-2 25%, $selectbox-scrollbar-bg-1 25%, $selectbox-scrollbar-bg-1 75%, $selectbox-scrollbar-bg-2 75%, $selectbox-scrollbar-bg-2);
+        background-position: 0 0, 2px 2px;
+        background-size: 4px 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $selectbox-scrollbar-thumb-bg;
+        border: $selectbox-scrollbar-thumb-border solid 4px;
+    }
+
+    &::-webkit-scrollbar-button:vertical {
+        height: 16px;
+        width: 8px;
+    }
+
+    @if $selectbox-scrollbar-arrow-fg==$aqua {
+        &::-webkit-scrollbar-button:vertical:decrement {
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAYAAABmBXS+AAAAAXNSR0IArs4c6QAAAD1JREFUKFNjZEAHq5b/ZwiLZEQWRuEwgBTAAJJCEhUhm4JmGsIkgoqwKUAyDWISUYowwgFVANV3OBQTpQgA9UIVC8Bjp68AAAAASUVORK5CYII=);
+            background-repeat: no-repeat;
+            background-position-x: 4px;
+            background-position-y: 2px;
+            background-size: 8px 16px;
+        }
+
+        &::-webkit-scrollbar-button:vertical:increment {
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAYAAABmBXS+AAAAAXNSR0IArs4c6QAAAD9JREFUKFNjZACBVcv/g2lsICySkZF4RbhMC4sEGwIxiWhF6AqhpqCaRLQimEIkUzBNwhEKCIfjDChk3+FRBAD1QhULt999SAAAAABJRU5ErkJggg==);
+            background-repeat: no-repeat;
+            background-position-x: 4px;
+            background-position-y: 3px;
+            background-size: 8px 16px;
+        }
     }
 }

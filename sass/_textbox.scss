@@ -60,13 +60,7 @@ $textbox-scrollbar-arrow-fg: $aqua;
 }
 
 
-// Styles
-input[type=text],
-input[type=password],
-input[type=email],
-input[type=tel],
-input[type=number],
-textarea {
+.text-field {
     color: $textbox-normal-fg;
     font-weight: $text-bold-font-weight;
     line-height: 1.1;
@@ -80,78 +74,45 @@ textarea {
     padding: 3px 8px;
 
     margin: 3px 0px;
+
+    &:focus {
+        color: $textbox-selected-fg;
+        background-color: $textbox-selected-bg;
+    }
+
+    &::-moz-selection {
+        color: $textbox-volatile-fg;
+        background-color: $textbox-volatile-bg;
+    }
+
+    &::selection {
+        color: $textbox-volatile-fg;
+        background-color: $textbox-volatile-bg;
+    }
+
+    &:disabled {
+        color: $textbox-disabled-fg;
+        background-color: $textbox-disabled-bg;
+
+        &::-moz-selection {
+            color: $textbox-disabled-fg;
+            background-color: $textbox-disabled-bg;
+        }
+
+        &::selection {
+            color: $textbox-disabled-fg;
+            background-color: $textbox-disabled-bg;
+        }
+    }
 }
 
-textarea {
-    background-color: $textbox-scrollbar-arrow-bg;
-
-    resize: none;
-}
-
-input[type=text]:focus,
-input[type=password]:focus,
-input[type=email]:focus,
-input[type=tel]:focus,
-input[type=number]:focus,
-textarea:focus {
-    color: $textbox-selected-fg;
-
-    background-color: $textbox-selected-bg;
-}
-
-input[type=text]::-moz-selection,
-input[type=password]::-moz-selection,
-input[type=email]::-moz-selection,
-input[type=tel]::-moz-selection,
-input[type=number]::-moz-selection,
-textarea::-moz-selection {
-    color: $textbox-volatile-fg;
-
-    background-color: $textbox-volatile-bg;
-}
-
-input[type=text]::selection,
-input[type=password]::selection,
-input[type=email]::selection,
-input[type=tel]::selection,
-input[type=number]::selection,
-textarea::selection {
-    color: $textbox-volatile-fg;
-
-    background-color: $textbox-volatile-bg;
-}
-
-input[type=text]:disabled,
-input[type=password]:disabled,
-input[type=email]:disabled,
-input[type=tel]:disabled,
-input[type=number]:disabled,
-textarea:disabled {
-    color: $textbox-disabled-fg;
-
-    background-color: $textbox-disabled-bg;
-}
-
-input[type=text]:disabled::-moz-selection,
-input[type=password]:disabled::-moz-selection,
-input[type=email]:disabled::-moz-selection,
-input[type=tel]:disabled::-moz-selection,
-input[type=number]:disabled::-moz-selection,
-textarea:disabled::-moz-selection {
-    color: $textbox-disabled-fg;
-
-    background-color: $textbox-disabled-bg;
-}
-
-input[type=text]:disabled::selection,
-input[type=password]:disabled::selection,
-input[type=email]:disabled::selection,
-input[type=tel]:disabled::selection,
-input[type=number]:disabled::selection,
-textarea:disabled::selection {
-    color: $textbox-disabled-fg;
-
-    background-color: $textbox-disabled-bg;
+// Styles
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=tel],
+input[type=number] {
+    @extend .text-field;
 }
 
 input[type=number]::-webkit-outer-spin-button,
@@ -166,71 +127,77 @@ input[type=number] {
 }
 
 textarea {
-    min-height: 150px;
-}
+    @extend .text-field;
 
-textarea::-webkit-scrollbar {
-    width: 16rem;
-    height: 16rem;
-}
-
-textarea::-webkit-scrollbar-track {
-    background-color: $textbox-scrollbar-bg-2;
-    opacity: 1;
-    background-image: repeating-linear-gradient(45deg, $textbox-scrollbar-bg-1 25%, transparent 25%, transparent 75%, $textbox-scrollbar-bg-1 75%, $textbox-scrollbar-bg-1), repeating-linear-gradient(45deg, $textbox-scrollbar-bg-1 25%, $textbox-scrollbar-bg-2 25%, $textbox-scrollbar-bg-2 75%, $textbox-scrollbar-bg-1 75%, $textbox-scrollbar-bg-1);
-    background-position: 0 0, 2px 2px;
-    background-size: 4px 4px;
-}
-
-textarea::-webkit-scrollbar-thumb {
-    background-color: $textbox-scrollbar-thumb-bg;
-
-    border: $textbox-scrollbar-thumb-border solid 4px;
-}
-
-textarea::-webkit-scrollbar-button {
-    height: 16px;
-    width: 16px;
-}
-
-textarea::-webkit-scrollbar-corner {
     background-color: $textbox-scrollbar-arrow-bg;
-}
 
-@if $textbox-scrollbar-arrow-fg==$aqua {
-    textarea::-webkit-scrollbar-button:vertical:decrement {
-        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAYAAABmBXS+AAAAAXNSR0IArs4c6QAAAD1JREFUKFNjZEAHq5b/ZwiLZEQWRuEwgBTAAJJCEhUhm4JmGsIkgoqwKUAyDWISUYowwgFVANV3OBQTpQgA9UIVC8Bjp68AAAAASUVORK5CYII=);
-        background-repeat: no-repeat;
-        background-position-x: 4px;
-        background-position-y: 2px;
-        background-size: 8px 16px;
+    min-height: 150px;
+
+    resize: none;
+
+    &::-webkit-scrollbar {
+        width: 16rem;
+        height: 16rem;
     }
 
-    textarea::-webkit-scrollbar-button:vertical:increment {
-        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAYAAABmBXS+AAAAAXNSR0IArs4c6QAAAD9JREFUKFNjZACBVcv/g2lsICySkZF4RbhMC4sEGwIxiWhF6AqhpqCaRLQimEIkUzBNwhEKCIfjDChk3+FRBAD1QhULt999SAAAAABJRU5ErkJggg==);
-        background-repeat: no-repeat;
-        background-position-x: 4px;
-        background-position-y: 3px;
-        background-size: 8px 16px;
+    &::-webkit-scrollbar-track {
+        background-color: $textbox-scrollbar-bg-2;
+        opacity: 1;
+        background-image: repeating-linear-gradient(45deg, $textbox-scrollbar-bg-1 25%, transparent 25%, transparent 75%, $textbox-scrollbar-bg-1 75%, $textbox-scrollbar-bg-1), repeating-linear-gradient(45deg, $textbox-scrollbar-bg-1 25%, $textbox-scrollbar-bg-2 25%, $textbox-scrollbar-bg-2 75%, $textbox-scrollbar-bg-1 75%, $textbox-scrollbar-bg-1);
+        background-position: 0 0, 2px 2px;
+        background-size: 4px 4px;
     }
 
-    textarea::-webkit-scrollbar-button:horizontal:decrement {
-        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAD1JREFUKFNjZMAGVi3/zxAWyYgshcIBS4AUgQBehTBFeBUiK8KpEF0R5SbCvEeUG9EVEwweWBARpRBLJAAADBEbC/NtWlUAAAAASUVORK5CYII=);
-        background-repeat: no-repeat;
-        background-position-x: 1px;
-        background-position-y: 1px;
-        background-size: 12px 16px;
+    &::-webkit-scrollbar-thumb {
+        background-color: $textbox-scrollbar-thumb-bg;
 
-        width: 12rem;
+        border: $textbox-scrollbar-thumb-border solid 4px;
     }
 
-    textarea::-webkit-scrollbar-button:horizontal:increment {
-        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAADpJREFUKFNjZEAGq5b/ZwiLZEQRg3JQBUEKQQCLYuwKsSjGrRBNMX6FSIqpYCKahyjwNVHhiC2koWIAJBEbCzHyaSkAAAAASUVORK5CYII=);
-        background-repeat: no-repeat;
-        background-position-x: 0px;
-        background-position-y: 1px;
-        background-size: 12px 16px;
+    &::-webkit-scrollbar-button {
+        height: 16px;
+        width: 16px;
+    }
 
-        width: 12rem;
+    &::-webkit-scrollbar-corner {
+        background-color: $textbox-scrollbar-arrow-bg;
+    }
+
+    @if $textbox-scrollbar-arrow-fg==$aqua {
+        &::-webkit-scrollbar-button:vertical:decrement {
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAYAAABmBXS+AAAAAXNSR0IArs4c6QAAAD1JREFUKFNjZEAHq5b/ZwiLZEQWRuEwgBTAAJJCEhUhm4JmGsIkgoqwKUAyDWISUYowwgFVANV3OBQTpQgA9UIVC8Bjp68AAAAASUVORK5CYII=);
+            background-repeat: no-repeat;
+            background-position-x: 4px;
+            background-position-y: 2px;
+            background-size: 8px 16px;
+        }
+
+        &::-webkit-scrollbar-button:vertical:increment {
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAYAAABmBXS+AAAAAXNSR0IArs4c6QAAAD9JREFUKFNjZACBVcv/g2lsICySkZF4RbhMC4sEGwIxiWhF6AqhpqCaRLQimEIkUzBNwhEKCIfjDChk3+FRBAD1QhULt999SAAAAABJRU5ErkJggg==);
+            background-repeat: no-repeat;
+            background-position-x: 4px;
+            background-position-y: 3px;
+            background-size: 8px 16px;
+        }
+
+        &::-webkit-scrollbar-button:horizontal:decrement {
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAD1JREFUKFNjZMAGVi3/zxAWyYgshcIBS4AUgQBehTBFeBUiK8KpEF0R5SbCvEeUG9EVEwweWBARpRBLJAAADBEbC/NtWlUAAAAASUVORK5CYII=);
+            background-repeat: no-repeat;
+            background-position-x: 1px;
+            background-position-y: 1px;
+            background-size: 12px 16px;
+
+            width: 12rem;
+        }
+
+        &::-webkit-scrollbar-button:horizontal:increment {
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAADpJREFUKFNjZEAGq5b/ZwiLZEQRg3JQBUEKQQCLYuwKsSjGrRBNMX6FSIqpYCKahyjwNVHhiC2koWIAJBEbCzHyaSkAAAAASUVORK5CYII=);
+            background-repeat: no-repeat;
+            background-position-x: 0px;
+            background-position-y: 1px;
+            background-size: 12px 16px;
+
+            width: 12rem;
+        }
     }
 }

@@ -6,6 +6,7 @@ $dialog-text-bg: $white;
 $dialog-text-fg: $black;
 $dialog-icon-bg: $white;
 $dialog-icon-fg: $light-green;
+
 $dialog-width: $site-width * 0.5;
 $dialog-large-width: $site-width * 0.75;
 
@@ -53,97 +54,104 @@ div.dialog {
     right: 0;
 
     display: none;
-}
 
-div.dialog div.dialog-box {
-    background-color: $dialog-text-bg;
+    div.dialog-box {
+        background-color: $dialog-text-bg;
 
-    position: relative;
+        position: relative;
 
-    margin: 100px auto;
-    padding: 5px 1px 8px 2px;
+        margin: 100px auto;
+        padding: 5px 1px 8px 2px;
 
-    display: block;
+        display: block;
 
-    width: $dialog-width;
+        width: $dialog-width;
 
-    -webkit-box-shadow: 16px 16px 0px 0px $shadow;
-    -moz-box-shadow: 16px 16px 0px 0px $shadow;
-    box-shadow: 16px 16px 0px 0px $shadow;
-}
+        -webkit-box-shadow: 16px 16px 0px 0px $shadow;
+        -moz-box-shadow: 16px 16px 0px 0px $shadow;
+        box-shadow: 16px 16px 0px 0px $shadow;
 
-div.dialog.large div.dialog-box {
-    width: $dialog-large-width;
-}
+        div.dialog-content {
+            background-color: $dialog-text-bg;
 
-div.dialog div.dialog-box div.dialog-content {
-    background-color: $dialog-text-bg;
+            padding: 21px 17px;
 
-    padding: 21px 17px;
+            border: 4px double $dialog-border;
 
-    border: 4px double $dialog-border;
-}
+            .reset-dialog-content {
+                width: 100%;
+                min-height: inherit;
+                height: inherit;
 
-/* Reset Default Styles */
-div.dialog div.dialog-box div.dialog-content header,
-div.dialog div.dialog-box div.dialog-content main,
-div.dialog div.dialog-box div.dialog-content footer {
-    width: 100%;
-    min-height: inherit;
-    height: inherit;
+                margin: 0px;
+                padding: 0px;
+            }
 
-    margin: 0px;
-    padding: 0px;
-}
+            header {
+                @extend .reset-dialog-content;
+            }
 
-div.dialog div.dialog-box div.dialog-content>header {
-    display: inline;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-    height: inherit;
-    line-height: 1;
-    text-align: center;
-    background-color: transparent;
-}
+            main {
+                @extend .reset-dialog-content;
 
-div.dialog div.dialog-box div.dialog-content>header>span {
-    color: $dialog-title-fg;
-    line-height: 1;
-    text-transform: capitalize;
+                color: $dialog-text-fg;
 
-    background-color: $dialog-title-bg;
+                background-color: $dialog-text-bg;
 
-    padding: 0px 8px;
-    margin: 0px;
+                >p {
+                    color: $dialog-text-fg;
+                    background-color: $dialog-text-bg;
+                }
 
-    display: inline-block;
+                label,
+                label::first-letter {
+                    background-color: $dialog-text-bg;
+                }
+            }
 
-    border: none;
-}
+            footer {
+                @extend .reset-dialog-content;
 
-div.dialog div.dialog-box div.dialog-content main {
-    color: $dialog-text-fg;
+                text-align: center;
+                color: $dialog-text-fg;
 
-    background-color: $dialog-text-bg;
-}
+                background-color: $dialog-text-bg;
+            }
 
-div.dialog div.dialog-box div.dialog-content>main>p {
-    color: $dialog-text-fg;
-}
+            >header {
+                display: inline;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                margin: 0px;
+                padding: 0px;
+                width: 100%;
+                height: inherit;
+                line-height: 1;
+                text-align: center;
+                background-color: transparent;
 
-div.dialog div.dialog-box div.dialog-content>main p,
-div.dialog div.dialog-box div.dialog-content>main label,
-div.dialog div.dialog-box div.dialog-content>main label::first-letter {
-    background-color: $dialog-text-bg;
-}
+                >span {
+                    color: $dialog-title-fg;
+                    line-height: 1;
+                    text-transform: capitalize;
 
-div.dialog div.dialog-box div.dialog-content footer {
-    text-align: center;
-    color: $dialog-text-fg;
+                    background-color: $dialog-title-bg;
 
-    background-color: $dialog-text-bg;
+                    padding: 0px 8px;
+                    margin: 0px;
+
+                    display: inline-block;
+
+                    border: none;
+                }
+            }
+        }
+    }
+
+    &.large {
+        div.dialog-box {
+            width: $dialog-large-width;
+        }
+    }
 }

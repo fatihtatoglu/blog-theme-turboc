@@ -148,15 +148,12 @@ strong {
     font-weight: $text-bold-font-weight;
 }
 
-strong {
-    text-decoration: underline;
-}
-
 i,
 em {
     font-style: italic;
 }
 
+strong,
 em {
     text-decoration: underline;
 }

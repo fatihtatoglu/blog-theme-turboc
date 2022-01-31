@@ -124,11 +124,9 @@ p { font-size: 16rem; font-weight: 400; background-color: #00aaa8; color: black;
 
 b, strong { font-weight: 700; }
 
-strong { text-decoration: underline; }
-
 i, em { font-style: italic; }
 
-em { text-decoration: underline; }
+strong, em { text-decoration: underline; }
 
 a:link, a:visited { background-color: #00aaa8; color: #feff55; }
 
@@ -190,27 +188,25 @@ button[accesskey] u, a.tc-btn[accesskey] u { color: #feff55; background-color: #
 
 .color-box.textbox pre.disabled { /* Background */ background-color: #aaaaaa; /* Foreground */ color: #555555; }
 
-input[type=text], input[type=password], input[type=email], input[type=tel], input[type=number], textarea { color: #55fffd; font-weight: 700; line-height: 1.1; background-color: #0000a9; border: none; outline: none; padding: 3px 8px; margin: 3px 0px; }
+.text-field, input[type=text], input[type=password], input[type=email], input[type=tel], input[type=number], textarea { color: #55fffd; font-weight: 700; line-height: 1.1; background-color: #0000a9; border: none; outline: none; padding: 3px 8px; margin: 3px 0px; }
 
-textarea { background-color: #0000a9; resize: none; }
+.text-field:focus, input:focus[type=text], input:focus[type=password], input:focus[type=email], input:focus[type=tel], input:focus[type=number], textarea:focus { color: white; background-color: #0000a9; }
 
-input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=tel]:focus, input[type=number]:focus, textarea:focus { color: white; background-color: #0000a9; }
+.text-field::-moz-selection, input[type=text]::-moz-selection, input[type=password]::-moz-selection, input[type=email]::-moz-selection, input[type=tel]::-moz-selection, input[type=number]::-moz-selection, textarea::-moz-selection { color: white; background-color: #00a800; }
 
-input[type=text]::-moz-selection, input[type=password]::-moz-selection, input[type=email]::-moz-selection, input[type=tel]::-moz-selection, input[type=number]::-moz-selection, textarea::-moz-selection { color: white; background-color: #00a800; }
+.text-field::selection, input[type=text]::selection, input[type=password]::selection, input[type=email]::selection, input[type=tel]::selection, input[type=number]::selection, textarea::selection { color: white; background-color: #00a800; }
 
-input[type=text]::selection, input[type=password]::selection, input[type=email]::selection, input[type=tel]::selection, input[type=number]::selection, textarea::selection { color: white; background-color: #00a800; }
+.text-field:disabled, input:disabled[type=text], input:disabled[type=password], input:disabled[type=email], input:disabled[type=tel], input:disabled[type=number], textarea:disabled { color: #555555; background-color: #aaaaaa; }
 
-input[type=text]:disabled, input[type=password]:disabled, input[type=email]:disabled, input[type=tel]:disabled, input[type=number]:disabled, textarea:disabled { color: #555555; background-color: #aaaaaa; }
+.text-field:disabled::-moz-selection, input[type=text]:disabled::-moz-selection, input[type=password]:disabled::-moz-selection, input[type=email]:disabled::-moz-selection, input[type=tel]:disabled::-moz-selection, input[type=number]:disabled::-moz-selection, textarea:disabled::-moz-selection { color: #555555; background-color: #aaaaaa; }
 
-input[type=text]:disabled::-moz-selection, input[type=password]:disabled::-moz-selection, input[type=email]:disabled::-moz-selection, input[type=tel]:disabled::-moz-selection, input[type=number]:disabled::-moz-selection, textarea:disabled::-moz-selection { color: #555555; background-color: #aaaaaa; }
-
-input[type=text]:disabled::selection, input[type=password]:disabled::selection, input[type=email]:disabled::selection, input[type=tel]:disabled::selection, input[type=number]:disabled::selection, textarea:disabled::selection { color: #555555; background-color: #aaaaaa; }
+.text-field:disabled::selection, input[type=text]:disabled::selection, input[type=password]:disabled::selection, input[type=email]:disabled::selection, input[type=tel]:disabled::selection, input[type=number]:disabled::selection, textarea:disabled::selection { color: #555555; background-color: #aaaaaa; }
 
 input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
 
 input[type=number] { -moz-appearance: textfield; }
 
-textarea { min-height: 150px; }
+textarea { background-color: #0000a9; min-height: 150px; resize: none; }
 
 textarea::-webkit-scrollbar { width: 16rem; height: 16rem; }
 
@@ -241,15 +237,17 @@ textarea::-webkit-scrollbar-button:horizontal:increment { background: url(data:i
 
 select { line-height: 1.1; background-color: #0000a9; border: none; outline: none; }
 
-option { font-weight: 700; line-height: 1.1; background-color: #00aaa8; color: black; cursor: pointer; }
+select option { font-weight: 700; line-height: 1.1; background-color: #00aaa8; color: black; cursor: pointer; }
 
 select option:checked { color: #feff55; background: #00aaa8 linear-gradient(0deg, #00aaa8 0%, #00aaa8 100%); }
+
+select option:disabled { color: #555555; background: #00aaa8 linear-gradient(0deg, #00aaa8 0%, #00aaa8 100%); cursor: default; }
 
 select:focus option:checked { color: white; background: #00a800 linear-gradient(0deg, #00a800 0%, #00a800 100%); }
 
 select:disabled { overflow: hidden; }
 
-select:disabled option, select option:disabled { color: #555555; background: #00aaa8 linear-gradient(0deg, #00aaa8 0%, #00aaa8 100%); cursor: default; }
+select:disabled option { color: #555555; background: #00aaa8 linear-gradient(0deg, #00aaa8 0%, #00aaa8 100%); cursor: default; }
 
 select::-webkit-scrollbar { width: 16rem; }
 
@@ -339,7 +337,7 @@ img { max-width: 100%; margin: 5px auto; display: block; }
 
 hr { margin: 5px auto; display: block; border: 2px solid black; }
 
-div.info-box, div.warn-box, div.notice-box, div.error-box { font-weight: 700; margin: 12px 8px; padding: 5px 10px; display: block; border: double 4px white; }
+.notification-box, div.info-box, div.warn-box, div.notice-box, div.error-box { font-weight: 700; margin: 12px 8px; padding: 5px 10px; display: block; border: double 4px white; }
 
 div.info-box { color: #00aaa8; background-color: #0000a9; }
 
@@ -387,7 +385,7 @@ nav { background-color: #aaaaaa; width: 900px; margin: 0px auto; }
 
 nav ul { padding: 0px; margin: 0px; list-style: none; display: table; }
 
-nav ul li { padding: 0px 0px; display: inline-block; }
+nav ul li { padding: 0px; display: inline-block; }
 
 nav ul li::before { display: none; }
 
@@ -395,9 +393,9 @@ nav ul li a:link, nav ul li a:visited, nav ul li a:hover { color: black; font-we
 
 nav ul li a:link::first-letter, nav ul li a:visited::first-letter, nav ul li a:hover::first-letter { color: #a90000; background-color: #aaaaaa; }
 
-nav ul li a:focus, nav ul li a:active, nav ul li a:hover, nav ul li.active a:link, nav ul li.active a:visited, nav ul li.active a:hover { color: black; background-color: #00a800; }
+nav ul li a:focus, nav ul li a:active, nav ul li a:hover { color: black; background-color: #00a800; }
 
-nav ul li a:focus::first-letter, nav ul li a:active::first-letter, nav ul li a:hover::first-letter, nav ul li.active a:link::first-letter, nav ul li.active a:visited::first-letter, nav ul li.active a:hover::first-letter { color: #a90000; background-color: #00a800; }
+nav ul li a:focus::first-letter, nav ul li a:active::first-letter, nav ul li a:hover::first-letter { color: #a90000; background-color: #00a800; }
 
 nav ul li.disabled a:link, nav ul li.disabled a:visited, nav ul li.disabled a:hover, nav ul li.disabled a:link::first-letter, nav ul li.disabled a:visited::first-letter, nav ul li.disabled a:hover::first-letter { color: #555555; background-color: #aaaaaa; cursor: default; }
 
@@ -423,24 +421,23 @@ div.dialog { background-color: transparent; position: fixed; top: 0; bottom: 0; 
 
 div.dialog div.dialog-box { background-color: #aaaaaa; position: relative; margin: 100px auto; padding: 5px 1px 8px 2px; display: block; width: 450px; -webkit-box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 0.75); -moz-box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 0.75); box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 0.75); }
 
-div.dialog.large div.dialog-box { width: 675px; }
-
 div.dialog div.dialog-box div.dialog-content { background-color: #aaaaaa; padding: 21px 17px; border: 4px double white; }
 
-/* Reset Default Styles */
-div.dialog div.dialog-box div.dialog-content header, div.dialog div.dialog-box div.dialog-content main, div.dialog div.dialog-box div.dialog-content footer { width: 100%; min-height: inherit; height: inherit; margin: 0px; padding: 0px; }
+div.dialog div.dialog-box div.dialog-content .reset-dialog-content, div.dialog div.dialog-box div.dialog-content header, div.dialog div.dialog-box div.dialog-content main, div.dialog div.dialog-box div.dialog-content footer { width: 100%; min-height: inherit; height: inherit; margin: 0px; padding: 0px; }
+
+div.dialog div.dialog-box div.dialog-content main { color: black; background-color: #aaaaaa; }
+
+div.dialog div.dialog-box div.dialog-content main > p { color: black; background-color: #aaaaaa; }
+
+div.dialog div.dialog-box div.dialog-content main label, div.dialog div.dialog-box div.dialog-content main label::first-letter { background-color: #aaaaaa; }
+
+div.dialog div.dialog-box div.dialog-content footer { text-align: center; color: black; background-color: #aaaaaa; }
 
 div.dialog div.dialog-box div.dialog-content > header { display: inline; position: absolute; top: 0px; left: 0px; margin: 0px; padding: 0px; width: 100%; height: inherit; line-height: 1; text-align: center; background-color: transparent; }
 
 div.dialog div.dialog-box div.dialog-content > header > span { color: white; line-height: 1; text-transform: capitalize; background-color: #aaaaaa; padding: 0px 8px; margin: 0px; display: inline-block; border: none; }
 
-div.dialog div.dialog-box div.dialog-content main { color: black; background-color: #aaaaaa; }
-
-div.dialog div.dialog-box div.dialog-content > main > p { color: black; }
-
-div.dialog div.dialog-box div.dialog-content > main p, div.dialog div.dialog-box div.dialog-content > main label, div.dialog div.dialog-box div.dialog-content > main label::first-letter { background-color: #aaaaaa; }
-
-div.dialog div.dialog-box div.dialog-content footer { text-align: center; color: black; background-color: #aaaaaa; }
+div.dialog.large div.dialog-box { width: 675px; }
 
 /* Themes */
 body.theme-small header, body.theme-small main, body.theme-small footer, body.theme-small nav { width: 640px; }
