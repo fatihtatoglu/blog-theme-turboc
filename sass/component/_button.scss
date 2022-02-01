@@ -13,6 +13,7 @@ $button-active-letter-fg: $light-yellow;
 $button-active-letter-bg: $green;
 $button-disabled-fg: $gray;
 $button-disabled-bg: $white;
+$button-shadow: $shadow-black;
 
 
 // Guidances
@@ -61,9 +62,9 @@ a.tc-btn {
     padding: 4px 15px 8px 15px;
     min-width: 132px;
 
-    -webkit-box-shadow: 10px 10px 0px 0px $shadow;
-    -moz-box-shadow: 10px 10px 0px 0px $shadow;
-    box-shadow: 10px 10px 0px 0px $shadow;
+    -webkit-box-shadow: 10px 10px 0px 0px $button-shadow;
+    -moz-box-shadow: 10px 10px 0px 0px $button-shadow;
+    box-shadow: 10px 10px 0px 0px $button-shadow;
 }
 
 a.tc-btn,

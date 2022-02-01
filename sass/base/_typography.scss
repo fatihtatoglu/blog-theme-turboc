@@ -1,5 +1,4 @@
 // Variables
-$html-font-size: 1px;
 $font-family : 'Roboto Mono',
 monospace;
 $text-font-weight: 400;
@@ -50,11 +49,6 @@ $text-quotation-border: $light-yellow;
 
 
 // Styles
-html {
-    font-size: $html-font-size;
-    /*for using REM units*/
-}
-
 body {
     @include colorizeElement($text-active-bg, $text-active-fg);
 

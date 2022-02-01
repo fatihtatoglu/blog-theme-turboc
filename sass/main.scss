@@ -25,9 +25,11 @@
 // Page
 
 // Themes 
+@import "theme/theming";
 @import "theme/large-theme";
 @import "theme/small-theme";
 @import "theme/dark-theme";
+@import "theme/light_theme";
 
 // Vendor
 @import "vendor/normalize";

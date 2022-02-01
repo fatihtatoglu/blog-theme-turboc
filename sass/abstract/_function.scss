@@ -3,9 +3,9 @@
 }
 
 @function rem($pxValue) {
-    @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+    @return #{stripUnit($pxValue) / stripUnit(1px)}rem;
 }
 
 @function pixel($remValue) {
-    @return #{stripUnit($remValue) / stripUnit($html-font-size)}px;
+    @return #{stripUnit($remValue) / stripUnit(1px)}px;
 }

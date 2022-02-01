@@ -1,26 +1,25 @@
 // Variables
-$body-bg: $white;
-$body-bg-pattern: $blue;
-
 $header-height: 70px;
 $header-margin-top: 20px;
 $header-margin-bottom: 0px;
-$header-bg: $aqua;
-$header-fg: $black;
 
 $nav-height: stripUnit($text-size) * $text-line-height;
 
 $footer-height: 50px;
 $footer-margin-top: 15px;
 $footer-margin-bottom: 10px;
-$footer-bg: $aqua;
-$footer-fg: $black;
 
 $footer-credits-margin-top: (stripUnit($footer-height) - (stripUnit($text-size) * $text-line-height)) / 2;
 
 $main-height: $header-margin-top+$header-height+$header-margin-bottom+$nav-height+$footer-margin-top+$footer-height+$footer-margin-bottom;
-$main-bg: $aqua;
 
+$body-bg: $white;
+$body-bg-pattern: $blue;
+$header-bg: $aqua;
+$header-fg: $black;
+$footer-bg: $aqua;
+$footer-fg: $black;
+$main-bg: $aqua;
 $article-bg: $main-bg;
 $article-fg: $black;
 $article-header-fg: $bright-white;

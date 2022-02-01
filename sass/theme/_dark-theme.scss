@@ -1,170 +1,125 @@
-@if $darkMode==true {
-    $shadow: rgba(255, 255, 255, 0.75);
+$theme-dark: (text-active-bg: $black,
+    text-active-fg: $white,
+    text-selected-bg: $gray,
+    text-selected-fg: $white,
+    text-keyword-active-bg: $black,
+    text-keyword-active-fg: $light-yellow,
+    text-keyword-selected-bg: $gray,
+    text-keyword-selected-fg: $light-yellow,
+    text-heading-bg: $black,
+    text-heading-fg: $white,
+    text-heading-border: $white,
+    text-quotation-bg: $gray,
+    text-quotation-fg: $bright-white,
+    text-quotation-border: $yellow,
 
-    $text-active-bg: $black;
-    $text-active-fg: $white;
+    button-selected-fg: $bright-white,
+    button-selected-bg: $gray,
+    button-selected-letter-fg: $light-yellow,
+    button-selected-letter-bg: $gray,
+    button-default-fg: $light-aqua,
+    button-default-bg: $gray,
+    button-default-letter-fg: $light-yellow,
+    button-default-letter-bg: $gray,
+    button-active-fg: $black,
+    button-active-bg: $gray,
+    button-active-letter-fg: $light-yellow,
+    button-active-letter-bg: $gray,
+    button-disabled-fg: $gray,
+    button-disabled-bg: $white,
+    button-shadow: $shadow-white,
 
-    $text-selected-bg: $gray;
-    $text-selected-fg: $white;
+    checkbox-active-bg: $black,
+    checkbox-active-fg: $white,
+    checkbox-active-firstletter-bg: $black,
+    checkbox-active-firstletter-fg: $light-yellow,
+    checkbox-selected-bg: $black,
+    checkbox-selected-fg: $bright-white,
+    checkbox-selected-firstletter-bg: $black,
+    checkbox-selected-firstletter-fg: $light-yellow,
+    checkbox-disabled-bg: $black,
+    checkbox-disabled-fg: $gray,
 
-    $text-keyword-active-bg: $black;
-    $text-keyword-active-fg: $light-yellow;
+    horizontal-line-border: $white,
+    message-box-border: $bright-white,
+    message-box-info-bg: $gray,
+    message-box-info-fg: $blue,
+    message-box-warn-bg: $gray,
+    message-box-warn-fg: $light-yellow,
+    message-box-notice-bg: $gray,
+    message-box-notice-fg: $light-aqua,
+    message-box-error-bg: $gray,
+    message-box-error-fg: $light-red,
 
-    $text-keyword-selected-bg: $gray;
-    $text-keyword-selected-fg: $light-yellow;
+    dialog-border: $bright-white,
+    dialog-title-bg: $black,
+    dialog-title-fg: $bright-white,
+    dialog-text-bg: $black,
+    dialog-text-fg: $white,
+    dialog-icon-bg: $black,
+    dialog-icon-fg: $light-green,
+    dialog-shadow: $shadow-white,
 
-    $text-heading-bg: $black;
-    $text-heading-fg: $white;
-    $text-heading-border: $white;
+    menu-bg: $black,
+    menu-border: $white,
+    menu-normal-bg: $black,
+    menu-normal-fg: $white,
+    menu-normal-firstletter-bg: $black,
+    menu-normal-firstletter-fg: $red,
+    menu-selected-bg: $green,
+    menu-selected-fg: $black,
+    menu-selected-firstletter-bg: $green,
+    menu-selected-firstletter-fg: $red,
+    menu-disabled-bg: $black,
+    menu-disabled-fg: $gray,
+    menu-disabled-selected-bg: $black,
+    menu-disabled-selected-fg: $gray,
 
-    $text-quotation-bg: $gray;
-    $text-quotation-fg: $bright-white;
-    $text-quotation-border: $yellow;
+    selectbox-active-bg: $black,
+    selectbox-active-fg: $bright-white,
+    selectbox-default-bg: $black,
+    selectbox-default-fg: $light-yellow,
+    selectbox-selected-bg: $green,
+    selectbox-selected-fg: $bright-white,
+    selectbox-disabled-bg: $black,
+    selectbox-disabled-fg: $gray,
+    selectbox-scrollbar-bg-1: $black,
+    selectbox-scrollbar-bg-2: $gray,
+    selectbox-scrollbar-thumb-border: $gray,
+    selectbox-scrollbar-thumb-bg: $aqua,
+    selectbox-scrollbar-arrow-bg: $gray,
+    selectbox-scrollbar-arrow-fg: $aqua,
 
-    $button-selected-fg: $bright-white;
-    $button-selected-bg: $gray;
+    textbox-normal-fg: $light-aqua,
+    textbox-normal-bg: $gray,
+    textbox-volatile-fg: $bright-white,
+    textbox-volatile-bg: $black,
+    textbox-selected-fg: $bright-white,
+    textbox-selected-bg: $gray,
+    textbox-disabled-fg: $gray,
+    textbox-disabled-bg: $white,
+    textbox-scrollbar-bg-1: $black,
+    textbox-scrollbar-bg-2: $gray,
+    textbox-scrollbar-thumb-border: $gray,
+    textbox-scrollbar-thumb-bg: $aqua,
+    textbox-scrollbar-arrow-bg: $gray,
+    textbox-scrollbar-arrow-fg: $aqua,
 
-    $button-selected-letter-fg: $light-yellow;
-    $button-selected-letter-bg: $gray;
+    form-label-bg: $black,
+    form-label-fg: $white,
+    form-label-firstletter-bg: $black,
+    form-label-firstletter-fg: $light-yellow,
+    form-label-focus-bg: $black,
+    form-label-focus-fg: $bright-white,
 
-    $button-default-fg: $light-aqua;
-    $button-default-bg: $gray;
-
-    $button-default-letter-fg: $light-yellow;
-    $button-default-letter-bg: $gray;
-
-    $button-active-fg: $black;
-    $button-active-bg: $gray;
-
-    $button-active-letter-fg: $light-yellow;
-    $button-active-letter-bg: $gray;
-
-    $button-disabled-fg: $gray;
-    $button-disabled-bg: $white;
-
-    $checkbox-active-bg: $black;
-    $checkbox-active-fg: $white;
-
-    $checkbox-active-firstletter-bg: $black;
-    $checkbox-active-firstletter-fg: $light-yellow;
-
-    $checkbox-selected-bg: $black;
-    $checkbox-selected-fg: $bright-white;
-
-    $checkbox-selected-firstletter-bg: $black;
-    $checkbox-selected-firstletter-fg: $light-yellow;
-
-    $checkbox-disabled-bg: $black;
-    $checkbox-disabled-fg: $gray;
-
-    $horizontal-line-border: $white;
-
-    $message-box-border: $bright-white;
-
-    $message-box-info-bg: $gray;
-    $message-box-info-fg: $blue;
-
-    $message-box-warn-bg: $gray;
-    $message-box-warn-fg: $light-yellow;
-
-    $message-box-notice-bg: $gray;
-    $message-box-notice-fg: $light-aqua;
-
-    $message-box-error-bg: $gray;
-    $message-box-error-fg: $light-red;
-
-    $dialog-border: $bright-white;
-
-    $dialog-title-bg: $black;
-    $dialog-title-fg: $bright-white;
-
-    $dialog-text-bg: $black;
-    $dialog-text-fg: $white;
-
-    $dialog-icon-bg: $black;
-    $dialog-icon-fg: $light-green;
-
-    $menu-bg: $black;
-    $menu-border: $white;
-
-    $menu-normal-bg: $black;
-    $menu-normal-fg: $white;
-    $menu-normal-firstletter-bg: $black;
-    $menu-normal-firstletter-fg: $red;
-
-    $menu-selected-bg: $green;
-    $menu-selected-fg: $black;
-    $menu-selected-firstletter-bg: $green;
-    $menu-selected-firstletter-fg: $red;
-
-    $menu-disabled-bg: $black;
-    $menu-disabled-fg: $gray;
-    $menu-disabled-selected-bg: $black;
-    $menu-disabled-selected-fg: $menu-disabled-fg;
-
-    $selectbox-active-bg: $black;
-    $selectbox-active-fg: $bright-white;
-
-    $selectbox-default-bg: $black;
-    $selectbox-default-fg: $light-yellow;
-
-    $selectbox-selected-bg: $green;
-    $selectbox-selected-fg: $bright-white;
-
-    $selectbox-disabled-bg: $black;
-    $selectbox-disabled-fg: $gray;
-
-    $selectbox-scrollbar-bg-1: $black;
-    $selectbox-scrollbar-bg-2: $gray;
-
-    $selectbox-scrollbar-thumb-border: $gray;
-    $selectbox-scrollbar-thumb-bg: $aqua;
-    $selectbox-scrollbar-arrow-bg: $gray;
-    $selectbox-scrollbar-arrow-fg: $aqua;
-
-    $textbox-normal-fg: $light-aqua;
-    $textbox-normal-bg: $gray;
-
-    $textbox-volatile-fg: $bright-white;
-    $textbox-volatile-bg: $black;
-
-    $textbox-selected-fg: $bright-white;
-    $textbox-selected-bg: $gray;
-
-    $textbox-disabled-fg: $gray;
-    $textbox-disabled-bg: $white;
-
-    $textbox-scrollbar-bg-1: $black;
-    $textbox-scrollbar-bg-2: $gray;
-
-    $textbox-scrollbar-thumb-border: $gray;
-    $textbox-scrollbar-thumb-bg: $aqua;
-    $textbox-scrollbar-arrow-bg: $gray;
-    $textbox-scrollbar-arrow-fg: $aqua;
-
-    $form-label-bg: $black;
-    $form-label-fg: $white;
-
-    $form-label-firstletter-bg: $form-label-bg;
-    $form-label-firstletter-fg: $light-yellow;
-
-    $form-label-focus-bg: $form-label-bg;
-    $form-label-focus-fg: $bright-white;
-
-    $body-bg: $black;
-    $body-bg-pattern: $gray;
-
-    $header-bg: $black;
-    $header-fg: $white;
-
-    $footer-bg: $black;
-    $footer-fg: $white;
-
-    $main-bg: $black;
-
-    $article-bg: $main-bg;
-    $article-fg: $white;
-
-    $article-header-fg: $bright-white;
-    $article-header-border: $bright-white;
-}
+    body-bg: $black,
+    body-bg-pattern: $gray,
+    header-bg: $black,
+    header-fg: $white,
+    footer-bg: $black,
+    footer-fg: $white,
+    main-bg: $black,
+    article-bg: $black,
+    article-fg: $white,
+    article-header-fg: $bright-white,
+    article-header-border: $bright-white);

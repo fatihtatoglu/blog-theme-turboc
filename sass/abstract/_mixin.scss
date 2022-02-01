@@ -5,3 +5,11 @@
     /* Foreground */
     color: $foreground-color;
 }
+
+@mixin generateThemeVariables ($themeName, $themeMap) {
+
+    @each $key,
+    $value in $themeMap {
+        --theme-#{$themeName}-#{$key}: #{$value};
+    }
+}

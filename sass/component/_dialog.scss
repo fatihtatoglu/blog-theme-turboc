@@ -1,4 +1,7 @@
 // Variables
+$dialog-width: $site-width * 0.5;
+$dialog-large-width: $site-width * 0.75;
+
 $dialog-border: $bright-white;
 $dialog-title-bg: $white;
 $dialog-title-fg: $bright-white;
@@ -6,9 +9,7 @@ $dialog-text-bg: $white;
 $dialog-text-fg: $black;
 $dialog-icon-bg: $white;
 $dialog-icon-fg: $light-green;
-
-$dialog-width: $site-width * 0.5;
-$dialog-large-width: $site-width * 0.75;
+$dialog-shadow: $shadow-black;
 
 
 // Guidances
@@ -53,9 +54,9 @@ div.dialog {
 
         width: $dialog-width;
 
-        -webkit-box-shadow: 16px 16px 0px 0px $shadow;
-        -moz-box-shadow: 16px 16px 0px 0px $shadow;
-        box-shadow: 16px 16px 0px 0px $shadow;
+        -webkit-box-shadow: 16px 16px 0px 0px $dialog-shadow;
+        -moz-box-shadow: 16px 16px 0px 0px $dialog-shadow;
+        box-shadow: 16px 16px 0px 0px $dialog-shadow;
 
         div.dialog-content {
             @include colorizeElement($dialog-text-bg, $dialog-text-fg);

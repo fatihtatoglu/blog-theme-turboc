@@ -1,0 +1,13 @@
+@import "../abstract/variable";
+@import "../abstract/mixin";
+
+@import "light_theme";
+@import "dark-theme";
+
+html {
+    /* Light Theme*/
+    @include generateThemeVariables("light", $theme-light);
+
+    /* Dark Theme */
+    @include generateThemeVariables("dark", $theme-dark);
+}
