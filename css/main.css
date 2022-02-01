@@ -924,8 +924,8 @@ html[data-theme=light] .color-box.menu pre.normal {
 }
 
 html[data-theme=dark] .color-box.menu pre.normal {
-  background-color: black;
-  color: #aaaaaa;
+  background-color: #555555;
+  color: black;
 }
 
 html[data-theme=light] .color-box.menu pre.normal.firstletter {
@@ -934,8 +934,8 @@ html[data-theme=light] .color-box.menu pre.normal.firstletter {
 }
 
 html[data-theme=dark] .color-box.menu pre.normal.firstletter {
-  background-color: black;
-  color: #a90000;
+  background-color: #555555;
+  color: #feff55;
 }
 
 html[data-theme=light] .color-box.menu pre.selected {
@@ -955,7 +955,7 @@ html[data-theme=light] .color-box.menu pre.selected.firstletter {
 
 html[data-theme=dark] .color-box.menu pre.selected.firstletter {
   background-color: #00a800;
-  color: #a90000;
+  color: #feff55;
 }
 
 html[data-theme=light] .color-box.menu pre.disabled {
@@ -988,7 +988,7 @@ html[data-theme=light] nav {
 }
 
 html[data-theme=dark] nav {
-  background-color: black;
+  background-color: #555555;
 }
 
 nav ul {
@@ -1025,8 +1025,8 @@ nav ul li a:hover {
 html[data-theme=dark] nav ul li a:link, html[data-theme=dark]
 nav ul li a:visited, html[data-theme=dark]
 nav ul li a:hover {
-  background-color: black;
-  color: #aaaaaa;
+  background-color: #555555;
+  color: black;
 }
 
 html[data-theme=light] nav ul li a:link::first-letter, html[data-theme=light]
@@ -1039,8 +1039,8 @@ nav ul li a:hover::first-letter {
 html[data-theme=dark] nav ul li a:link::first-letter, html[data-theme=dark]
 nav ul li a:visited::first-letter, html[data-theme=dark]
 nav ul li a:hover::first-letter {
-  background-color: black;
-  color: #a90000;
+  background-color: #555555;
+  color: #feff55;
 }
 
 html[data-theme=light] nav ul li a:focus, html[data-theme=light]
@@ -1068,7 +1068,7 @@ html[data-theme=dark] nav ul li a:focus::first-letter, html[data-theme=dark]
 nav ul li a:active::first-letter, html[data-theme=dark]
 nav ul li a:hover::first-letter {
   background-color: #00a800;
-  color: #a90000;
+  color: #feff55;
 }
 
 nav ul li.disabled a:link,
@@ -1142,7 +1142,7 @@ html[data-theme=light] nav ul li div.sub-menu {
 }
 
 html[data-theme=dark] nav ul li div.sub-menu {
-  background-color: black;
+  background-color: #555555;
 }
 
 nav ul li div.sub-menu ul {
