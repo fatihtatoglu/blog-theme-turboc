@@ -1,50 +1,53 @@
-// Variables
-$button-selected-fg: $bright-white;
-$button-selected-bg: $green;
-$button-selected-letter-fg: $light-yellow;
-$button-selected-letter-bg: $green;
-$button-default-fg: $light-aqua;
-$button-default-bg: $green;
-$button-default-letter-fg: $light-yellow;
-$button-default-letter-bg: $green;
-$button-active-fg: $black;
-$button-active-bg: $green;
-$button-active-letter-fg: $light-yellow;
-$button-active-letter-bg: $green;
-$button-disabled-fg: $gray;
-$button-disabled-bg: $white;
-$button-shadow: $shadow-black;
-
-
 // Guidances
 .color-box.button {
     pre {
         &.selected {
-            @include colorizeElement($button-selected-bg, $button-selected-fg);
+            @include themify {
+                background-color: themed("button-selected-bg");
+                color: themed("button-selected-fg");
+            }
 
             &::first-letter {
-                @include colorizeElement($button-selected-letter-bg, $button-selected-letter-fg);
+                @include themify {
+                    background-color: themed("button-selected-letter-bg");
+                    color: themed("button-selected-letter-fg");
+                }
             }
         }
 
         &.default {
-            @include colorizeElement($button-default-bg, $button-default-fg);
+            @include themify {
+                background-color: themed("button-default-bg");
+                color: themed("button-default-fg");
+            }
 
             &::first-letter {
-                @include colorizeElement($button-default-letter-bg, $button-default-letter-fg);
+                @include themify {
+                    background-color: themed("button-default-letter-bg");
+                    color: themed("button-default-letter-fg");
+                }
             }
         }
 
         &.active {
-            @include colorizeElement($button-active-bg, $button-active-fg);
+            @include themify {
+                background-color: themed("button-active-bg");
+                color: themed("button-active-fg");
+            }
 
             &::first-letter {
-                @include colorizeElement($button-active-letter-bg, $button-active-letter-fg);
+                @include themify {
+                    background-color: themed("button-active-letter-bg");
+                    color: themed("button-active-letter-fg");
+                }
             }
         }
 
         &.disabled {
-            @include colorizeElement($button-disabled-bg, $button-disabled-fg);
+            @include themify {
+                background-color: themed("button-disabled-bg");
+                color: themed("button-disabled-fg");
+            }
         }
     }
 }
@@ -53,27 +56,33 @@ $button-shadow: $shadow-black;
 // Styles
 button,
 a.tc-btn {
-    @include colorizeElement($button-active-bg, $button-active-fg);
+    @include themify {
+        background-color: themed("button-active-bg");
+        color: themed("button-active-fg");
+
+        -webkit-box-shadow: 10px 10px 0px 0px themed("button-shadow");
+        -moz-box-shadow: 10px 10px 0px 0px themed("button-shadow");
+        box-shadow: 10px 10px 0px 0px themed("button-shadow");
+    }
 
     font-weight: $text-bold-font-weight;
     line-height: 1;
 
     margin: 10px;
     padding: 4px 15px 8px 15px;
-    min-width: 132px;
 
-    -webkit-box-shadow: 10px 10px 0px 0px $button-shadow;
-    -moz-box-shadow: 10px 10px 0px 0px $button-shadow;
-    box-shadow: 10px 10px 0px 0px $button-shadow;
+    min-width: 132px;
 }
 
 a.tc-btn,
 a.tc-btn:link {
+    @include themify {
+        color: themed("button-active-fg");
+    }
+
     display: inline-block;
 
     text-decoration: none;
-
-    color: $button-active-fg;
 
     text-align: center;
 }
@@ -81,7 +90,10 @@ a.tc-btn:link {
 a.tc-btn:active,
 a.tc-btn:link:active,
 a.tc-btn:visited:active {
-    @include colorizeElement($button-selected-bg, $button-selected-fg);
+    @include themify {
+        background-color: themed("button-selected-bg");
+        color: themed("button-selected-fg");
+    }
 }
 
 button:active,
@@ -89,14 +101,19 @@ a.tc-btn:active {
     margin-left: 20px;
     margin-right: 0px;
 
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
+    @include themify {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
 }
 
 button:disabled,
 a.tc-btn.disabled {
-    @include colorizeElement($button-disabled-bg, $button-disabled-fg);
+    @include themify {
+        background-color: themed("button-disabled-bg");
+        color: themed("button-disabled-fg");
+    }
 
     cursor: default;
 }
@@ -107,12 +124,18 @@ a.tc-btn.disabled {
 
 button.default,
 a.tc-btn.default {
-    @include colorizeElement($button-default-bg, $button-default-fg);
+    @include themify {
+        background-color: themed("button-default-bg");
+        color: themed("button-default-fg");
+    }
 }
 
 button:focus,
 a.tc-btn:focus {
-    @include colorizeElement($button-selected-bg, $button-selected-fg);
+    @include themify {
+        background-color: themed("button-selected-bg");
+        color: themed("button-selected-fg");
+    }
 }
 
 button:focus-visible,
@@ -127,5 +150,8 @@ a.tc-btn u {
 
 button[accesskey] u,
 a.tc-btn[accesskey] u {
-    @include colorizeElement($button-default-letter-bg, $button-default-letter-fg);
+    @include themify {
+        background-color: themed("button-default-letter-bg");
+        color: themed("button-default-letter-fg");
+    }
 }

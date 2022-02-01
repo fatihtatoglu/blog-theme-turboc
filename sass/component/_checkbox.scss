@@ -1,40 +1,45 @@
-// Variables
-$checkbox-active-bg: $aqua;
-$checkbox-active-fg: $black;
-$checkbox-active-firstletter-bg: $aqua;
-$checkbox-active-firstletter-fg: $light-yellow;
-$checkbox-selected-bg: $aqua;
-$checkbox-selected-fg: $bright-white;
-$checkbox-selected-firstletter-bg: $aqua;
-$checkbox-selected-firstletter-fg: $light-yellow;
-$checkbox-disabled-bg: $aqua;
-$checkbox-disabled-fg: $gray;
-
-
 // Guidances
 .color-box.checkbox {
     pre {
         &.active {
-            @include colorizeElement($checkbox-active-bg, $checkbox-active-fg);
+            @include themify {
+                background-color: themed("checkbox-active-bg");
+                color: themed("checkbox-active-fg");
+            }
 
             &::first-letter {
-                @include colorizeElement($checkbox-active-firstletter-bg, $checkbox-active-firstletter-fg);
+                @include themify {
+                    background-color: themed("checkbox-active-firstletter-bg");
+                    color: themed("checkbox-active-firstletter-fg");
+                }
             }
         }
 
         &.selected {
-            @include colorizeElement($checkbox-selected-bg, $checkbox-selected-fg);
+            @include themify {
+                background-color: themed("checkbox-selected-bg");
+                color: themed("checkbox-selected-fg");
+            }
 
             &::first-letter {
-                @include colorizeElement($checkbox-selected-firstletter-bg, $checkbox-selected-firstletter-fg);
+                @include themify {
+                    background-color: themed("checkbox-selected-firstletter-bg");
+                    color: themed("checkbox-selected-firstletter-fg");
+                }
             }
         }
 
         &.disabled {
-            @include colorizeElement($checkbox-disabled-bg, $checkbox-disabled-fg);
+            @include themify {
+                background-color: themed("checkbox-disabled-bg");
+                color: themed("checkbox-disabled-fg");
+            }
 
             &::first-letter {
-                @include colorizeElement($checkbox-disabled-bg, $checkbox-disabled-fg);
+                @include themify {
+                    background-color: themed("checkbox-disabled-bg");
+                    color: themed("checkbox-disabled-fg");
+                }
             }
         }
     }
@@ -49,7 +54,10 @@ input[type=radio] {
     width: 30px;
 
     &::after {
-        @include colorizeElement($checkbox-active-bg, $checkbox-active-fg);
+        @include themify {
+            background-color: themed("checkbox-active-bg");
+            color: themed("checkbox-active-fg");
+        }
 
         font-weight: $text-bold-font-weight;
         line-height: 1.1;
@@ -63,7 +71,10 @@ input[type=radio] {
     }
 
     +label {
-        @include colorizeElement($checkbox-active-bg, $checkbox-active-fg);
+        @include themify {
+            background-color: themed("checkbox-active-bg");
+            color: themed("checkbox-active-fg");
+        }
 
         line-height: 1.1;
         font-weight: $text-bold-font-weight;
@@ -77,7 +88,10 @@ input[type=radio] {
         cursor: pointer;
 
         &[for]::first-letter {
-            @include colorizeElement($checkbox-active-firstletter-bg, $checkbox-active-firstletter-fg);
+            @include themify {
+                background-color: themed("checkbox-active-firstletter-bg");
+                color: themed("checkbox-active-firstletter-fg");
+            }
         }
     }
 }
@@ -110,7 +124,10 @@ input[type=checkbox]:focus+label,
 input[type=radio]+label:active,
 input[type=radio]:active+label,
 input[type=radio]:focus+label {
-    @include colorizeElement($checkbox-selected-bg, $checkbox-selected-fg);
+    @include themify {
+        background-color: themed("checkbox-selected-bg");
+        color: themed("checkbox-selected-fg");
+    }
 }
 
 input[type=checkbox]+label:active::first-letter,
@@ -119,14 +136,20 @@ input[type=checkbox]:focus+label::first-letter,
 input[type=radio]+label:active::first-letter,
 input[type=radio]:active+label::first-letter,
 input[type=radio]:focus+label::first-letter {
-    @include colorizeElement($checkbox-selected-firstletter-bg, $checkbox-selected-firstletter-fg);
+    @include themify {
+        background-color: themed("checkbox-selected-firstletter-bg");
+        color: themed("checkbox-selected-firstletter-fg");
+    }
 }
 
 input[type=checkbox]:active::after,
 input[type=checkbox]:focus::after,
 input[type=radio]:active::after,
 input[type=radio]:focus::after {
-    @include colorizeElement($checkbox-selected-bg, $checkbox-selected-fg);
+    @include themify {
+        background-color: themed("checkbox-selected-bg");
+        color: themed("checkbox-selected-fg");
+    }
 }
 
 input[type=checkbox]:disabled,
@@ -137,7 +160,10 @@ input[type=radio]:disabled,
 input[type=radio]:disabled::after,
 input[type=radio]:disabled+label,
 input[type=radio]:disabled+label::first-letter {
-    @include colorizeElement($checkbox-disabled-bg, $checkbox-disabled-fg);
+    @include themify {
+        background-color: themed("checkbox-disabled-bg");
+        color: themed("checkbox-disabled-fg");
+    }
 
     font-weight: $text-bold-font-weight;
     cursor: default;

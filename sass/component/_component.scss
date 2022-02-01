@@ -1,16 +1,3 @@
-// Variables
-$horizontal-line-border: $black;
-$message-box-border: $bright-white;
-$message-box-info-bg: $blue;
-$message-box-info-fg: $aqua;
-$message-box-warn-bg: $blue;
-$message-box-warn-fg: $light-yellow;
-$message-box-notice-bg: $blue;
-$message-box-notice-fg: $light-aqua;
-$message-box-error-bg: $blue;
-$message-box-error-fg: $light-red;
-
-
 // Styles
 ol,
 ul {
@@ -48,40 +35,60 @@ img {
 }
 
 hr {
+    @include themify {
+        border: 2px solid themed("$horizontal-line-border");
+    }
+
     margin: 5px auto;
 
     display: block;
-
-    border: 2px solid $horizontal-line-border;
 }
 
 .notification-box {
+    @include themify {
+        border: double 4px themed("message-box-border");
+    }
+
     font-weight: $text-bold-font-weight;
 
     margin: 12px 8px;
     padding: 5px 10px;
 
     display: block;
-
-    border: double 4px $message-box-border;
 }
 
 div.info-box {
     @extend .notification-box;
-    @include colorizeElement($message-box-info-bg, $message-box-info-fg);
+
+    @include themify {
+        background-color: themed("message-box-info-bg");
+        color: themed("message-box-info-fg");
+    }
 }
 
 div.warn-box {
     @extend .notification-box;
-    @include colorizeElement($message-box-warn-bg, $message-box-warn-fg);
+
+    @include themify {
+        background-color: themed("message-box-warn-bg");
+        color: themed("message-box-warn-fg");
+    }
 }
 
 div.notice-box {
     @extend .notification-box;
-    @include colorizeElement($message-box-notice-bg, $message-box-notice-fg);
+
+    @include themify {
+        background-color: themed("message-box-notice-bg");
+        color: themed("message-box-notice-fg");
+    }
 }
 
 div.error-box {
     @extend .notification-box;
-    @include colorizeElement($message-box-error-bg, $message-box-error-fg);
+
+    @include themify {
+        background-color: themed("message-box-error-bg");
+        color: themed("message-box-error-fg");
+    }
 }

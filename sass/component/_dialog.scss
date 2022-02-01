@@ -2,29 +2,28 @@
 $dialog-width: $site-width * 0.5;
 $dialog-large-width: $site-width * 0.75;
 
-$dialog-border: $bright-white;
-$dialog-title-bg: $white;
-$dialog-title-fg: $bright-white;
-$dialog-text-bg: $white;
-$dialog-text-fg: $black;
-$dialog-icon-bg: $white;
-$dialog-icon-fg: $light-green;
-$dialog-shadow: $shadow-black;
-
-
 // Guidances
 .color-box.dialog-guide {
     pre {
         &.title {
-            @include colorizeElement($dialog-title-bg, $dialog-title-fg);
+            @include themify {
+                background-color: themed("dialog-title-bg");
+                color: themed("dialog-title-fg");
+            }
         }
 
         &.text {
-            @include colorizeElement($dialog-text-bg, $dialog-text-fg);
+            @include themify {
+                background-color: themed("dialog-text-bg");
+                color: themed("dialog-text-fg");
+            }
         }
 
         &.icon {
-            @include colorizeElement($dialog-icon-bg, $dialog-icon-fg);
+            @include themify {
+                background-color: themed("dialog-icon-bg");
+                color: themed("dialog-icon-fg");
+            }
         }
     }
 }
@@ -43,7 +42,14 @@ div.dialog {
     display: none;
 
     div.dialog-box {
-        @include colorizeElement($dialog-text-bg, $dialog-text-fg);
+        @include themify {
+            background-color: themed("dialog-text-bg");
+            color: themed("dialog-text-fg");
+
+            -webkit-box-shadow: 16px 16px 0px 0px themed("dialog-shadow");
+            -moz-box-shadow: 16px 16px 0px 0px themed("dialog-shadow");
+            box-shadow: 16px 16px 0px 0px themed("dialog-shadow");
+        }
 
         position: relative;
 
@@ -54,16 +60,15 @@ div.dialog {
 
         width: $dialog-width;
 
-        -webkit-box-shadow: 16px 16px 0px 0px $dialog-shadow;
-        -moz-box-shadow: 16px 16px 0px 0px $dialog-shadow;
-        box-shadow: 16px 16px 0px 0px $dialog-shadow;
-
         div.dialog-content {
-            @include colorizeElement($dialog-text-bg, $dialog-text-fg);
+            @include themify {
+                background-color: themed("dialog-text-bg");
+                color: themed("dialog-text-fg");
+
+                border: 4px double themed("dialog-border");
+            }
 
             padding: 21px 17px;
-
-            border: 4px double $dialog-border;
 
             .reset-dialog-content {
                 width: 100%;
@@ -80,21 +85,34 @@ div.dialog {
 
             main {
                 @extend .reset-dialog-content;
-                @include colorizeElement($dialog-text-bg, $dialog-text-fg);
+
+                @include themify {
+                    background-color: themed("dialog-text-bg");
+                    color: themed("dialog-text-fg");
+                }
 
                 >p {
-                    @include colorizeElement($dialog-text-bg, $dialog-text-fg);
+                    @include themify {
+                        background-color: themed("dialog-text-bg");
+                        color: themed("dialog-text-fg");
+                    }
                 }
 
                 label,
                 label::first-letter {
-                    background-color: $dialog-text-bg;
+                    @include themify {
+                        background-color: themed("dialog-text-bg");
+                    }
                 }
             }
 
             footer {
                 @extend .reset-dialog-content;
-                @include colorizeElement($dialog-text-bg, $dialog-text-fg);
+
+                @include themify {
+                    background-color: themed("dialog-text-bg");
+                    color: themed("dialog-text-fg");
+                }
 
                 text-align: center;
             }
@@ -113,7 +131,10 @@ div.dialog {
                 background-color: transparent;
 
                 >span {
-                    @include colorizeElement($dialog-title-bg, $dialog-title-fg);
+                    @include themify {
+                        background-color: themed("dialog-title-bg");
+                        color: themed("dialog-title-fg");
+                    }
 
                     line-height: 1;
                     text-transform: capitalize;

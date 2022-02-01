@@ -3,6 +3,16 @@
 @import "abstract/function";
 @import "abstract/mixin";
 
+// Themes 
+@import "theme/large-theme";
+@import "theme/small-theme";
+
+@import "theme/light_theme";
+@include addTheme("light", $theme-light);
+
+@import "theme/dark-theme";
+@include addTheme("dark", $theme-dark);
+
 // Base 
 @import "base/reset";
 @import "base/color";
@@ -23,13 +33,6 @@
 @import "layout/layout";
 
 // Page
-
-// Themes 
-@import "theme/theming";
-@import "theme/large-theme";
-@import "theme/small-theme";
-@import "theme/dark-theme";
-@import "theme/light_theme";
 
 // Vendor
 @import "vendor/normalize";

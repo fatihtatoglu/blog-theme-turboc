@@ -6,43 +6,43 @@ $text-bold-font-weight: 700;
 $text-line-height: 1.5;
 $text-size: 16rem;
 
-$text-active-bg: $aqua;
-$text-active-fg: $black;
-$text-selected-bg: $white;
-$text-selected-fg: $black;
-$text-keyword-active-bg: $aqua;
-$text-keyword-active-fg: $light-yellow;
-$text-keyword-selected-bg: $blue;
-$text-keyword-selected-fg: $light-yellow;
-$text-heading-bg: $aqua;
-$text-heading-fg: $black;
-$text-heading-border: $black;
-$text-quotation-bg: $blue;
-$text-quotation-fg: $aqua;
-$text-quotation-border: $light-yellow;
-
 
 // Guidances
 .color-box.typo {
     pre {
         &.active {
-            @include colorizeElement($text-active-bg, $text-active-fg);
+            @include themify {
+                background-color: themed("text-active-bg");
+                color: themed("text-active-fg");
+            }
         }
 
         &.selected {
-            @include colorizeElement($text-selected-bg, $text-selected-fg);
+            @include themify {
+                background-color: themed("text-selected-bg");
+                color: themed("text-selected-fg");
+            }
         }
 
         &.keyword {
-            @include colorizeElement($text-keyword-active-bg, $text-keyword-active-fg);
+            @include themify {
+                background-color: themed("text-keyword-active-bg");
+                color: themed("text-keyword-active-fg");
+            }
         }
 
         &.keyword-selected {
-            @include colorizeElement($text-keyword-selected-bg, $text-keyword-selected-fg);
+            @include themify {
+                background-color: themed("text-keyword-selected-bg");
+                color: themed("text-keyword-selected-fg");
+            }
         }
 
         &.heading {
-            @include colorizeElement($text-heading-bg, $text-heading-fg);
+            @include themify {
+                background-color: themed("text-heading-bg");
+                color: themed("text-heading-fg");
+            }
         }
     }
 }
@@ -50,7 +50,10 @@ $text-quotation-border: $light-yellow;
 
 // Styles
 body {
-    @include colorizeElement($text-active-bg, $text-active-fg);
+    @include themify {
+        background-color: themed("text-active-bg");
+        color: themed("text-active-fg");
+    }
 
     font-size: $text-size;
     font-weight: $text-font-weight;
@@ -62,15 +65,17 @@ h1,
 h2,
 h3,
 h4 {
-    @include colorizeElement($text-heading-bg, $text-heading-fg);
+    @include themify {
+        background-color: themed("text-heading-bg");
+        color: themed("text-heading-fg");
+        border-bottom: themed("text-heading-border") solid 7px;
+    }
 
     font-size: 16rem;
     font-weight: $text-bold-font-weight;
     line-height: 1.2;
 
     margin: 12px 8px;
-
-    border-bottom: $text-heading-border solid 7px;
 
     display: table;
 
@@ -92,18 +97,25 @@ h1 {
 }
 
 h2 {
-    border-top: $text-heading-border solid 10px;
+    @include themify {
+        border-top: themed("text-heading-border") solid 10px;
+    }
 }
 
 h4 {
-    border-top: $text-heading-border solid 1px;
-    border-bottom: $text-heading-border solid 1px;
-    border-left: $text-heading-border solid 2px;
-    border-right: $text-heading-border solid 2px;
+    @include themify {
+        border-top: themed("text-heading-border") solid 1px;
+        border-bottom: themed("text-heading-border") solid 1px;
+        border-left: themed("text-heading-border") solid 2px;
+        border-right: themed("text-heading-border") solid 2px;
+    }
 }
 
 p {
-    @include colorizeElement($text-active-bg, $text-active-fg);
+    @include themify {
+        background-color: themed("text-active-bg");
+        color: themed("text-active-fg");
+    }
 
     font-size: 16rem;
     font-weight: $text-font-weight;
@@ -130,12 +142,18 @@ a {
 
     &:link,
     &:visited {
-        @include colorizeElement($text-keyword-active-bg, $text-keyword-active-fg);
+        @include themify {
+            background-color: themed("text-keyword-active-bg");
+            color: themed("text-keyword-active-fg");
+        }
     }
 
     &:focus,
     &:active {
-        @include colorizeElement($text-keyword-selected-bg, $text-keyword-selected-fg);
+        @include themify {
+            background-color: themed("text-keyword-selected-bg");
+            color: themed("text-keyword-selected-fg");
+        }
 
         outline: none;
     }
@@ -149,17 +167,22 @@ time {
 }
 
 blockquote {
-    @include colorizeElement($text-quotation-bg, $text-quotation-fg);
+    @include themify {
+        background-color: themed("text-quotation-bg");
+        color: themed("text-quotation-fg");
+        border-left: 7px solid themed("text-quotation-border");
+    }
 
     margin: 12px 8px;
     padding: 0px;
 
     display: block;
 
-    border-left: 7px solid $text-quotation-border;
-
     p {
-        @include colorizeElement($text-quotation-bg, $text-quotation-fg);
+        @include themify {
+            background-color: themed("text-quotation-bg");
+            color: themed("text-quotation-fg");
+        }
 
         font-style: italic;
 
@@ -169,9 +192,15 @@ blockquote {
 }
 
 ::-moz-selection {
-    @include colorizeElement($text-selected-bg, $text-selected-fg);
+    @include themify {
+        background-color: themed("text-selected-bg");
+        color: themed("text-selected-fg");
+    }
 }
 
 ::selection {
-    @include colorizeElement($text-selected-bg, $text-selected-fg);
+    @include themify {
+        background-color: themed("text-selected-bg");
+        color: themed("text-selected-fg");
+    }
 }

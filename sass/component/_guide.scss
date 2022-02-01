@@ -1,5 +1,8 @@
 .color-box {
-    @include colorizeElement($white, $black);
+    @include themify {
+        background-color: themed("white");
+        color: themed("black");
+    }
 
     margin: 0px 10px 0px 10px;
     display: inline-block;

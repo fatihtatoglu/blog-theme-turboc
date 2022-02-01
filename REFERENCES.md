@@ -13,3 +13,4 @@
 - [Convert pixel values to rem, Sass style](https://medium.com/@bhargav3shah/scss-convert-pixel-values-to-rem-using-functions-f1cef575edfd)
 - [CSS Layout - The position Property](https://www.w3schools.com/css/css_positioning.asp)
 - [Easy Color Theming with SCSS](https://medium.com/@dmitriy.borodiy/easy-color-theming-with-scss-bc38fd5734d1)
+- [SASS Content Directive](https://thoughtbot.com/blog/sasss-content-directive)

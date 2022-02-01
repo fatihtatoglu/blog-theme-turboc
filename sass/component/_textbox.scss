@@ -1,44 +1,41 @@
-// Variables
-$textbox-normal-fg: $light-aqua;
-$textbox-normal-bg: $blue;
-$textbox-volatile-fg: $bright-white;
-$textbox-volatile-bg: $green;
-$textbox-selected-fg: $bright-white;
-$textbox-selected-bg: $blue;
-$textbox-disabled-fg: $gray;
-$textbox-disabled-bg: $white;
-$textbox-scrollbar-bg-1: $blue;
-$textbox-scrollbar-bg-2: $aqua;
-$textbox-scrollbar-thumb-border: $blue;
-$textbox-scrollbar-thumb-bg: $aqua;
-$textbox-scrollbar-arrow-bg: $blue;
-$textbox-scrollbar-arrow-fg: $aqua;
-
-
 // Guidances
 .color-box.textbox {
     pre {
         &.normal {
-            @include colorizeElement($textbox-normal-bg, $textbox-normal-fg);
+            @include themify {
+                background-color: themed("textbox-normal-bg");
+                color: themed("textbox-normal-fg)");
+            }
         }
 
         &.volatile {
-            @include colorizeElement($textbox-volatile-bg, $textbox-volatile-fg);
+            @include themify {
+                background-color: themed("textbox-volatile-bg");
+                color: themed("textbox-volatile-fg");
+            }
         }
 
         &.selected {
-            @include colorizeElement($textbox-selected-bg, $textbox-selected-fg);
+            @include themify {
+                background-color: themed("textbox-selected-bg");
+                color: themed("textbox-selected-fg");
+            }
         }
 
         &.disabled {
-            @include colorizeElement($textbox-disabled-bg, $textbox-disabled-fg);
+            @include themify {
+                background-color: themed("textbox-disabled-bg");
+                color: themed("textbox-disabled-fg");
+            }
         }
     }
 }
 
-
 .text-field {
-    @include colorizeElement($textbox-normal-bg, textbox-normal-fg);
+    @include themify {
+        background-color: themed("textbox-normal-bg");
+        color: themed("textbox-normal-fg");
+    }
 
     font-weight: $text-bold-font-weight;
     line-height: 1.1;
@@ -52,26 +49,44 @@ $textbox-scrollbar-arrow-fg: $aqua;
     margin: 3px 0px;
 
     &:focus {
-        @include colorizeElement($textbox-selected-bg, $textbox-selected-fg);
+        @include themify {
+            background-color: themed("textbox-selected-bg");
+            color: themed("textbox-selected-fg");
+        }
     }
 
     &::-moz-selection {
-        @include colorizeElement($textbox-volatile-bg, $textbox-volatile-fg);
+        @include themify {
+            background-color: themed("textbox-volatile-bg");
+            color: themed("textbox-volatile-fg");
+        }
     }
 
     &::selection {
-        @include colorizeElement($textbox-volatile-bg, $textbox-volatile-fg);
+        @include themify {
+            background-color: themed("textbox-volatile-bg");
+            color: themed("textbox-volatile-fg");
+        }
     }
 
     &:disabled {
-        @include colorizeElement($textbox-disabled-bg, $textbox-disabled-fg);
+        @include themify {
+            background-color: themed("textbox-disabled-bg");
+            color: themed("textbox-disabled-fg");
+        }
 
         &::-moz-selection {
-            @include colorizeElement($textbox-disabled-bg, $textbox-disabled-fg);
+            @include themify {
+                background-color: themed("textbox-disabled-bg");
+                color: themed("textbox-disabled-fg");
+            }
         }
 
         &::selection {
-            @include colorizeElement($textbox-disabled-bg, $textbox-disabled-fg);
+            @include themify {
+                background-color: themed("textbox-disabled-bg");
+                color: themed("textbox-disabled-fg");
+            }
         }
     }
 }
@@ -99,7 +114,9 @@ input[type=number] {
 textarea {
     @extend .text-field;
 
-    background-color: $textbox-scrollbar-arrow-bg;
+    @include themify {
+        background-color: themed("textbox-scrollbar-arrow-bg");
+    }
 
     min-height: 150px;
 
@@ -111,17 +128,22 @@ textarea {
     }
 
     &::-webkit-scrollbar-track {
-        background-color: $textbox-scrollbar-bg-2;
+        @include themify {
+            background-color: themed("textbox-scrollbar-bg-2");
+            background-image: repeating-linear-gradient(45deg, themed("textbox-scrollbar-bg-1") 25%, transparent 25%, transparent 75%, themed("textbox-scrollbar-bg-1") 75%, themed("textbox-scrollbar-bg-1")), repeating-linear-gradient(45deg, themed("textbox-scrollbar-bg-1") 25%, themed("textbox-scrollbar-bg-2") 25%, themed("textbox-scrollbar-bg-2") 75%, themed("textbox-scrollbar-bg-1") 75%, themed("textbox-scrollbar-bg-1"));
+        }
+
         opacity: 1;
-        background-image: repeating-linear-gradient(45deg, $textbox-scrollbar-bg-1 25%, transparent 25%, transparent 75%, $textbox-scrollbar-bg-1 75%, $textbox-scrollbar-bg-1), repeating-linear-gradient(45deg, $textbox-scrollbar-bg-1 25%, $textbox-scrollbar-bg-2 25%, $textbox-scrollbar-bg-2 75%, $textbox-scrollbar-bg-1 75%, $textbox-scrollbar-bg-1);
-        background-position: 0 0, 2px 2px;
+        background-position: 0 0,
+        2px 2px;
         background-size: 4px 4px;
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: $textbox-scrollbar-thumb-bg;
-
-        border: $textbox-scrollbar-thumb-border solid 4px;
+        @include themify {
+            background-color: themed("textbox-scrollbar-thumb-bg");
+            border: themed("textbox-scrollbar-thumb-border") solid 4px;
+        }
     }
 
     &::-webkit-scrollbar-button {
@@ -130,44 +152,44 @@ textarea {
     }
 
     &::-webkit-scrollbar-corner {
-        background-color: $textbox-scrollbar-arrow-bg;
+        @include themify {
+            background-color: themed("textbox-scrollbar-arrow-bg");
+        }
     }
 
-    @if $textbox-scrollbar-arrow-fg==$aqua {
-        &::-webkit-scrollbar-button:vertical:decrement {
-            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAYAAABmBXS+AAAAAXNSR0IArs4c6QAAAD1JREFUKFNjZEAHq5b/ZwiLZEQWRuEwgBTAAJJCEhUhm4JmGsIkgoqwKUAyDWISUYowwgFVANV3OBQTpQgA9UIVC8Bjp68AAAAASUVORK5CYII=);
-            background-repeat: no-repeat;
-            background-position-x: 4px;
-            background-position-y: 2px;
-            background-size: 8px 16px;
-        }
+    &::-webkit-scrollbar-button:vertical:decrement {
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAYAAABmBXS+AAAAAXNSR0IArs4c6QAAAD1JREFUKFNjZEAHq5b/ZwiLZEQWRuEwgBTAAJJCEhUhm4JmGsIkgoqwKUAyDWISUYowwgFVANV3OBQTpQgA9UIVC8Bjp68AAAAASUVORK5CYII=);
+        background-repeat: no-repeat;
+        background-position-x: 4px;
+        background-position-y: 2px;
+        background-size: 8px 16px;
+    }
 
-        &::-webkit-scrollbar-button:vertical:increment {
-            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAYAAABmBXS+AAAAAXNSR0IArs4c6QAAAD9JREFUKFNjZACBVcv/g2lsICySkZF4RbhMC4sEGwIxiWhF6AqhpqCaRLQimEIkUzBNwhEKCIfjDChk3+FRBAD1QhULt999SAAAAABJRU5ErkJggg==);
-            background-repeat: no-repeat;
-            background-position-x: 4px;
-            background-position-y: 3px;
-            background-size: 8px 16px;
-        }
+    &::-webkit-scrollbar-button:vertical:increment {
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAYAAABmBXS+AAAAAXNSR0IArs4c6QAAAD9JREFUKFNjZACBVcv/g2lsICySkZF4RbhMC4sEGwIxiWhF6AqhpqCaRLQimEIkUzBNwhEKCIfjDChk3+FRBAD1QhULt999SAAAAABJRU5ErkJggg==);
+        background-repeat: no-repeat;
+        background-position-x: 4px;
+        background-position-y: 3px;
+        background-size: 8px 16px;
+    }
 
-        &::-webkit-scrollbar-button:horizontal:decrement {
-            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAD1JREFUKFNjZMAGVi3/zxAWyYgshcIBS4AUgQBehTBFeBUiK8KpEF0R5SbCvEeUG9EVEwweWBARpRBLJAAADBEbC/NtWlUAAAAASUVORK5CYII=);
-            background-repeat: no-repeat;
-            background-position-x: 1px;
-            background-position-y: 1px;
-            background-size: 12px 16px;
+    &::-webkit-scrollbar-button:horizontal:decrement {
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAD1JREFUKFNjZMAGVi3/zxAWyYgshcIBS4AUgQBehTBFeBUiK8KpEF0R5SbCvEeUG9EVEwweWBARpRBLJAAADBEbC/NtWlUAAAAASUVORK5CYII=);
+        background-repeat: no-repeat;
+        background-position-x: 1px;
+        background-position-y: 1px;
+        background-size: 12px 16px;
 
-            width: 12rem;
-        }
+        width: 12rem;
+    }
 
-        &::-webkit-scrollbar-button:horizontal:increment {
-            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAADpJREFUKFNjZEAGq5b/ZwiLZEQRg3JQBUEKQQCLYuwKsSjGrRBNMX6FSIqpYCKahyjwNVHhiC2koWIAJBEbCzHyaSkAAAAASUVORK5CYII=);
-            background-repeat: no-repeat;
-            background-position-x: 0px;
-            background-position-y: 1px;
-            background-size: 12px 16px;
+    &::-webkit-scrollbar-button:horizontal:increment {
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAADpJREFUKFNjZEAGq5b/ZwiLZEQRg3JQBUEKQQCLYuwKsSjGrRBNMX6FSIqpYCKahyjwNVHhiC2koWIAJBEbCzHyaSkAAAAASUVORK5CYII=);
+        background-repeat: no-repeat;
+        background-position-x: 0px;
+        background-position-y: 1px;
+        background-size: 12px 16px;
 
-            width: 12rem;
-        }
+        width: 12rem;
     }
 }

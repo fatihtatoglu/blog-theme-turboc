@@ -19,28 +19,36 @@ window.onload = function () {
         }
     });
 
-    $body = document.getElementsByTagName("body")[0];
+    $html = document.getElementsByTagName("html")[0];
+
     $lnkSmallTheme = document.getElementById("lnkSmallTheme");
     $lnkMediumTheme = document.getElementById("lnkMediumTheme");
     $lnkLargeTheme = document.getElementById("lnkLargeTheme");
+    $lnkThemeLight = document.getElementById("lnkThemeLight");
+    $lnkThemeDark = document.getElementById("lnkThemeDark");
+
+    // default
+    $html.setAttribute("data-theme", "light");
+    $html.setAttribute("data-width", "");
 
     $lnkSmallTheme.addEventListener("click", function () {
-        $body.classList.remove("theme-large");
-        $body.classList.remove("theme-small");
-
-        $body.classList.add("theme-small");
+        $html.setAttribute("data-width", "small");
     });
 
     $lnkMediumTheme.addEventListener("click", function () {
-        $body.classList.remove("theme-large");
-        $body.classList.remove("theme-small");
+        $html.setAttribute("data-width", "");
     });
 
     $lnkLargeTheme.addEventListener("click", function () {
-        $body.classList.remove("theme-large");
-        $body.classList.remove("theme-small");
+        $html.setAttribute("data-width", "large");
+    });
 
-        $body.classList.add("theme-large");
+    $lnkThemeLight.addEventListener("click", function () {
+        $html.setAttribute("data-theme", "light");
+    });
+
+    $lnkThemeDark.addEventListener("click", function () {
+        $html.setAttribute("data-theme", "dark");
     });
 
     $btnOpenDialog = document.getElementById("btnOpenDialog");

@@ -13,24 +13,14 @@ $footer-credits-margin-top: (stripUnit($footer-height) - (stripUnit($text-size) 
 
 $main-height: $header-margin-top+$header-height+$header-margin-bottom+$nav-height+$footer-margin-top+$footer-height+$footer-margin-bottom;
 
-$body-bg: $white;
-$body-bg-pattern: $blue;
-$header-bg: $aqua;
-$header-fg: $black;
-$footer-bg: $aqua;
-$footer-fg: $black;
-$main-bg: $aqua;
-$article-bg: $main-bg;
-$article-fg: $black;
-$article-header-fg: $bright-white;
-$article-header-border: $bright-white;
-
-
 // Guidances
 .color-box.layout {
     pre {
         &.header {
-            @include colorizeElement($header-bg, $header-fg);
+            @include themify {
+                background-color: themed("$header-bg");
+                color: themed("header-fg");
+            }
         }
     }
 }
@@ -38,16 +28,22 @@ $article-header-border: $bright-white;
 
 // Styles
 body {
-    background-color: $body-bg;
-    background-image: radial-gradient(circle, $body-bg-pattern 25%, transparent 10%),
-        radial-gradient(circle, $body-bg-pattern 25%, transparent 10%);
+    @include themify {
+        background-color: themed("body-bg");
+        background-image: radial-gradient(circle, themed("body-bg-pattern") 25%, transparent 10%),
+            radial-gradient(circle, themed("body-bg-pattern") 25%, transparent 10%);
+    }
+
     background-size: 6px 6px;
     background-position: 0 0,
-        3px 3px;
+    3px 3px;
 }
 
 header {
-    @include colorizeElement($header-bg, $header-fg);
+    @include themify {
+        background-color: themed("header-bg");
+        color: themed("header-fg");
+    }
 
     height: $header-height;
     width: $site-width;
@@ -59,7 +55,11 @@ header {
     display: block;
 
     span.site-name {
-        @include colorizeElement($text-heading-bg, $text-heading-fg);
+        @include themify {
+            background-color: themed("text-heading-bg");
+            color: themed("text-heading-fg");
+            border-bottom: themed("text-heading-border") solid 7px;
+        }
 
         font-size: 16rem;
         font-weight: $text-bold-font-weight;
@@ -70,8 +70,6 @@ header {
         margin: 12px 8px;
         padding: 3px 8px;
 
-        border-bottom: $text-heading-border solid 7px;
-
         display: table;
 
         cursor: default;
@@ -79,7 +77,10 @@ header {
 }
 
 footer {
-    @include colorizeElement($footer-bg, $footer-fg);
+    @include themify {
+        background-color: themed("footer-bg");
+        color: themed("footer-fg");
+    }
 
     text-align: center;
 
@@ -96,7 +97,10 @@ footer {
 }
 
 main {
-    @include colorizeElement($main-bg, $text-active-fg);
+    @include themify {
+        background-color: themed("main-bg");
+        color: themed("text-active-fg");
+    }
 
     min-height: calc(100vh - #{$main-height});
     width: $site-width;
@@ -106,7 +110,11 @@ main {
 }
 
 article {
-    @include colorizeElement($article-bg, $article-fg);
+    @include themify {
+        background-color: themed("article-bg");
+        color: themed("article-fg");
+        border: 4px double themed("article-header-border");
+    }
 
     position: relative;
 
@@ -117,13 +125,13 @@ article {
 
     padding: 10px 3px;
 
-    border: 4px double $article-header-border;
-
     >header {
         line-height: 1;
         text-align: center;
 
-        background-color: transparent;
+        @include themify {
+            background-color: transparent;
+        }
 
         width: 100%;
         height: inherit;
@@ -137,7 +145,11 @@ article {
         left: 0px;
 
         >h1 {
-            @include colorizeElement($article-bg, $article-header-fg);
+            @include themify {
+                background-color: themed("article-bg");
+                color: themed("article-header-fg");
+                border: none;
+            }
 
             line-height: 1;
             text-transform: capitalize;
@@ -146,14 +158,15 @@ article {
             margin: 0px;
 
             display: inline-block;
-
-            border: none;
         }
     }
 
     >footer {
-        @include colorizeElement($article-bg, $text-active-fg);
-        
+        @include themify {
+            background-color: themed("article-bg");
+            color: themed("text-active-fg");
+        }
+
         text-align: center;
 
         margin: 0px;
