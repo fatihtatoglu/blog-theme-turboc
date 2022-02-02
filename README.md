@@ -30,6 +30,8 @@ While developing this theme I have also used following technologies.
 - [CSS Layout - The position Property](https://www.w3schools.com/css/css_positioning.asp)
 - [Easy Color Theming with SCSS](https://medium.com/@dmitriy.borodiy/easy-color-theming-with-scss-bc38fd5734d1)
 - [SASS Content Directive](https://thoughtbot.com/blog/sasss-content-directive)
+- [Web Design - Accessibility](https://www.w3.org/standards/webdesign/accessibility)
+- [Blink Cursor Sample](https://codepen.io/amit_merchant/pen/qBjvvzL)
 
 ## For Build
 
@@ -51,3 +53,8 @@ npm run compile-styles
 - CSS Animations
 - Add SVG Icons
 - More colors for scrollbar arrows.
+- 🆕 Add accessibility. (from Altan Yılmaz)
+- 🆕 Blink and Fat cursor. (from Altan Yılmaz)
+- 🆕 Moving in web site with enter and arrow keys. (from Altan Yılmaz)
+- 🆕 ES6. (from Altan Yılmaz)
+- 🆕 Use no querySelectorAll. (from Altan Yılmaz)
