@@ -1,5 +1,7 @@
+@use "sass:math";
+
 @function stripUnit($value) {
-    @return $value / ($value * 0 + 1);
+    @return math.div($value, ($value * 0 + 1));
 }
 
 @function rem($pxValue) {
@@ -7,7 +9,7 @@
 }
 
 @function pixel($remValue) {
-    @return #{stripUnit($remValue) / stripUnit(1px)}px;
+    @return math.div(stripUnit($remValue), stripUnit(1px));
 }
 
 @function themed($key) {
