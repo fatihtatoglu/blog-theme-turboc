@@ -9,7 +9,7 @@
 }
 
 @function pixel($remValue) {
-    @return math.div(stripUnit($remValue), stripUnit(1px));
+    @return #{math.div(stripUnit($remValue), stripUnit(1px))}px;
 }
 
 @function themed($key) {
