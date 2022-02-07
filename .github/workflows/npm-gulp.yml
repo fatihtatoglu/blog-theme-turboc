@@ -34,3 +34,4 @@ jobs:
         branch: main
         folder: publish
         name: blog-theme-turboc
+        path: artifact.zip
