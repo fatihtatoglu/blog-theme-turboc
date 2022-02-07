@@ -1,4 +1,4 @@
-name: NodeJS with Gulp
+name: Publish Project
 
 on:
   push:
@@ -31,5 +31,5 @@ jobs:
     - name: Publish Artifact
       uses: actions/upload-artifact@v2
       with:
-        name: blog-theme-turboc
+        name: blog-theme-turboc.zip
         path: ${{ github.workspace }}/publish/
