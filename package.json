@@ -16,6 +16,7 @@
   "homepage": "https://github.com/fatihtatoglu/blog#readme",
   "devDependencies": {
     "clean-css": "^5.2.4",
+    "glob-parent": ">=5.1.2",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
@@ -25,7 +26,8 @@
     "gulp-minify": "^3.1.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
-    "gulp-sourcemaps": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "postcss": ">=8.2.13",
     "sass": "^1.49.7"
   },
   "dependencies": {
