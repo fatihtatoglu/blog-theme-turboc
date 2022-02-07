@@ -33,16 +33,16 @@ While developing this theme I have also used following technologies.
 - [Web Design - Accessibility](https://www.w3.org/standards/webdesign/accessibility)
 - [Blink Cursor Sample](https://codepen.io/amit_merchant/pen/qBjvvzL)
 
-## For Build
+## Prerequisite
 
 ```bash
 npm install
 ```
 
-## For Compile
+## For Build
 
 ```bash
-npm run compile-styles
+gulp
 ```
 
 ## Feature Development Targets
