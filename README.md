@@ -53,6 +53,7 @@ npm run compile-styles
 - CSS Animations
 - Add SVG Icons
 - More colors for scrollbar arrows.
+- 🔥 Build Automation.
 - 🆕 Add accessibility. (from Altan Yılmaz)
 - 🆕 Blink and Fat cursor. (from Altan Yılmaz)
 - 🆕 Moving in web site with enter and arrow keys. (from Altan Yılmaz)
