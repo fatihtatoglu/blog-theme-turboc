@@ -33,3 +33,9 @@ jobs:
       with:
         name: blog-theme-turboc.zip
         path: ${{ github.workspace }}/publish/
+    
+    - name: Publish GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ${{ github.workspace }}/publish/
