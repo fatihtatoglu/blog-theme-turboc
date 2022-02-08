@@ -14,6 +14,10 @@ While developing this theme I have also used following technologies.
 - Javascript
 - CSS
 
+## For Demo
+
+- [Blog Theme TurboC](https://fatihtatoglu.github.io/blog-theme-turboc/)
+
 ## References
 
 - [Patternify](http://www.patternify.com)
@@ -32,6 +36,7 @@ While developing this theme I have also used following technologies.
 - [SASS Content Directive](https://thoughtbot.com/blog/sasss-content-directive)
 - [Web Design - Accessibility](https://www.w3.org/standards/webdesign/accessibility)
 - [Blink Cursor Sample](https://codepen.io/amit_merchant/pen/qBjvvzL)
+- [How to Host Your Static Webpages on GitHub Pages](https://www.pluralsight.com/guides/how-to-host-your-static-webpages-on-github-pages)
 
 ## Prerequisite
 
@@ -53,7 +58,8 @@ gulp
 - CSS Animations
 - Add SVG Icons
 - More colors for scrollbar arrows.
-- 🔥 Build Automation.
+- Build Automation.
+- CI / CD Pipeline with GitHub Actions.
 - 🆕 Add accessibility. (from Altan Yılmaz)
 - 🆕 Blink and Fat cursor. (from Altan Yılmaz)
 - 🆕 Moving in web site with enter and arrow keys. (from Altan Yılmaz)
