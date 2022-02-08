@@ -351,3 +351,5 @@ MigrationBackup/
 
 css/
 publish/
+
+./package-lock.json
