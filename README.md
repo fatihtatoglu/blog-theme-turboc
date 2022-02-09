@@ -41,6 +41,7 @@ While developing this theme I have also used following technologies.
 ## Prerequisite
 
 ```bash
+npm install --global gulp-cli
 npm install
 ```
 
