@@ -74,3 +74,14 @@ document.addEventListener('DOMContentLoaded', () => {
         window.localStorage.setItem("theme-color", "dark");
     });
 });
+
+document.addEventListener("keydown", (e)=>{
+
+    var name = e.key;
+    var code = e.code;
+
+    console.log("Key Down Name: " + name + " Code:" + code);
+
+    e.preventDefault();
+
+},false);
