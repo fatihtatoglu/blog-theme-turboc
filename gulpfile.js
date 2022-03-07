@@ -32,8 +32,8 @@ function cssMinify() {
 }
 
 function jsTranspile() {
-    return src("./js/*.js")
-        .pipe(dest("publish/js"))
+    return src(["./js/*.js","./node_modules/mustache/mustache.js"])
+        .pipe(dest("publish/js"));
 }
 
 function jsBundle(cb) {
@@ -79,6 +79,13 @@ function setPublishDate() {
         .pipe(dest("publish/"));
 }
 
+function changeMustachePath()
+{
+    return src(["publish/*"])
+        .pipe(replace(/node_modules\/mustache\/mustache.min.js/g, "./js/mustache.js"))
+        .pipe(dest("publish/"));
+}
+
 exports.default = series(
     cleanAll,
     parallel(
@@ -87,5 +94,6 @@ exports.default = series(
     ),
     parallel(cssMinify, jsMinify),
     html,
-    setPublishDate
+    setPublishDate,
+    changeMustachePath
 );
