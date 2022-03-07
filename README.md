@@ -61,8 +61,8 @@ gulp
 - More colors for scrollbar arrows.
 - Build Automation.
 - CI / CD Pipeline with GitHub Actions.
-- 🆕 Add accessibility.
-- 🆕 Blink and Fat cursor.
-- 🆕 Moving in web site with enter and arrow keys.
-- 🆕 ES6.
-- 🆕 Use no querySelectorAll.
+- Add accessibility.
+- Blink and Fat cursor.
+- Moving in web site with enter and arrow keys.
+- ES6.
+- Use no querySelectorAll.
