@@ -1,14 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     loadSiteSettings();
 
     renderMenu();
 
     bindThemeButtons();
+
+    openDialog();
 });
 
-function renderMenu()
-{
+function renderMenu() {
     var $navigation = document.getElementById("navigation");
 
     var menuJson = [
@@ -194,8 +195,7 @@ function renderMenu()
     });
 }
 
-function bindThemeButtons()
-{
+function bindThemeButtons() {
     var $html = document.getElementsByTagName("html")[0];
 
     var $lnkSmallTheme = document.getElementById("lnkSmallTheme");
@@ -235,8 +235,7 @@ function bindThemeButtons()
     });
 }
 
-function loadSiteSettings()
-{
+function loadSiteSettings() {
     // default
     var $html = document.getElementsByTagName("html")[0];
     var themeWidth = window.localStorage.getItem("theme-width");
@@ -257,4 +256,45 @@ function loadSiteSettings()
         $html.setAttribute("data-theme", "light");
         window.localStorage.setItem("theme-color", "light");
     }
+}
+
+function openDialog() {
+    var $btnOpenDialog = document.getElementById("btnOpenDialog");
+    if (!$btnOpenDialog) {
+        return;
+    }
+
+    var $pnlDialog = document.getElementById("pnlDialog");
+    var $btnOk = document.getElementById("btnOK");
+
+    $btnOpenDialog.addEventListener("click", () => {
+        $pnlDialog.style.display = "block";
+    });
+    $btnOk.addEventListener("click", () => {
+        $pnlDialog.style.display = "none";
+    });
+
+    var $btnOpenFormDialog = document.getElementById("btnOpenFormDialog");
+    if (!$btnOpenFormDialog) {
+        return;
+    }
+
+    var $pnlFormDialog = document.getElementById("pnlFormDialog");
+    var $btnSubmit = document.getElementById("btnSubmit");
+    var $btnCancel = document.getElementById("btnCancel");
+    var $btnHelp = document.getElementById("btnHelp");
+
+    $btnOpenFormDialog.addEventListener("click", () => {
+        $pnlFormDialog.style.display = "block";
+    });
+
+    $btnCancel.addEventListener("click", () => {
+        $pnlFormDialog.style.display = "none";
+    });
+
+    window.addEventListener("click", function (e) {
+        if (e.target == $pnlFormDialog) {
+            $pnlFormDialog.style.display = "none";
+        }
+    });
 }
