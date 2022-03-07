@@ -1,0 +1,106 @@
+[
+    {
+        "title": "-",
+        "children": [
+            {
+                "element-id": "lnkThemeLight",
+                "title": "Light Theme"
+            },
+            {
+                "element-id": "lnkThemeDark",
+                "title": "Dark Theme"
+            },
+            {
+                "role": "separator"
+            },
+            {
+                "element-id": "lnkSmallTheme",
+                "title": "Small Page Width"
+            },
+            {
+                "element-id": "lnkMediumTheme",
+                "title": "Medium Page Width"
+            },
+            {
+                "element-id": "lnkLargeTheme",
+                "title": "Large Page Width"
+            }
+        ]
+    },
+    {
+        "title": "Home",
+        "url": "index.html"
+    },
+    {
+        "title": "Elements",
+        "children": [
+            {
+                "url": "color_matrix.html",
+                "title": "Colors"
+            },
+            {
+                "url": "typography.html",
+                "title": "Typography"
+            },
+            {
+                "role": "separator"
+            },
+            {
+                "url": "button.html",
+                "title": "Button"
+            },
+            {
+                "url": "textbox.html",
+                "title": "Textbox"
+            },
+            {
+                "url": "selectbox.html",
+                "title": "Selectbox"
+            },
+            {
+                "url": "checkbox.html",
+                "title": "Checkbox"
+            },
+            {
+                "role": "separator"
+            },
+            {
+                "url": "form.html",
+                "title": "Form"
+            },
+            {
+                "url": "dialog.html",
+                "title": "Dialog"
+            },
+            {
+                "url": "menu.html",
+                "title": "Menu"
+            }
+        ]
+    },
+    {
+        "title": "Demo Pages",
+        "children": [
+            {
+                "title": "Layout",
+                "url": "layout.html"
+            },
+            {
+                "title": "Blog Post",
+                "disabled": true
+            },
+            {
+                "title": "Blog Home Page",
+                "disabled": true
+            }
+        ]
+    },
+    {
+        "title": "Disabled",
+        "disabled": true
+    },
+    {
+        "title": "About",
+        "url": "about.html"
+    }
+]
