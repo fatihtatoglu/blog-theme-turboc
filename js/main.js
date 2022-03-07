@@ -1,5 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
+    
+    loadSiteSettings();
 
+    renderMenu();
+
+    bindThemeButtons();
+});
+
+function renderMenu()
+{
     var $navigation = document.getElementById("navigation");
 
     var menuJson = [
@@ -163,27 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     var output = Mustache.render(menuTemplate, data);
     $navigation.innerHTML = output;
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    // default
-    var $html = document.getElementsByTagName("html")[0];
-    var themeWidth = window.localStorage.getItem("theme-width");
-    var themeColor = window.localStorage.getItem("theme-color");
-
-    if (themeWidth) {
-        $html.setAttribute("data-width", themeWidth);
-    }
-    else {
-        $html.setAttribute("data-width", "");
-    }
-
-    if (themeColor) {
-        $html.setAttribute("data-theme", themeColor);
-    }
-    else {
-        $html.setAttribute("data-theme", "light");
-    }
 
     var menuitems = document.querySelectorAll("nav>ul>li");
     menuitems.forEach((item) => {
@@ -204,6 +192,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     });
+}
+
+function bindThemeButtons()
+{
+    var $html = document.getElementsByTagName("html")[0];
 
     var $lnkSmallTheme = document.getElementById("lnkSmallTheme");
     var $lnkMediumTheme = document.getElementById("lnkMediumTheme");
@@ -240,4 +233,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
         window.localStorage.setItem("theme-color", "dark");
     });
-});
+}
+
+function loadSiteSettings()
+{
+    // default
+    var $html = document.getElementsByTagName("html")[0];
+    var themeWidth = window.localStorage.getItem("theme-width");
+    var themeColor = window.localStorage.getItem("theme-color");
+
+    if (themeWidth) {
+        $html.setAttribute("data-width", themeWidth);
+    }
+    else {
+        $html.setAttribute("data-width", "");
+        window.localStorage.setItem("theme-width", "");
+    }
+
+    if (themeColor) {
+        $html.setAttribute("data-theme", themeColor);
+    }
+    else {
+        $html.setAttribute("data-theme", "light");
+        window.localStorage.setItem("theme-color", "light");
+    }
+}
