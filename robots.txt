@@ -1,0 +1,6 @@
+User-agent: *
+
+Disallow: /js
+Disallow: /css
+
+Sitemap: https://blog.tatoglu.net/blog-theme-turboc/sitemap.xml

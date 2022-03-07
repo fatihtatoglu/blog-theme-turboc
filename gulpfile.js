@@ -32,7 +32,7 @@ function cssMinify() {
 }
 
 function jsTranspile() {
-    return src(["./js/*.js","./node_modules/mustache/mustache.js"])
+    return src(["./js/*.js", "./node_modules/mustache/mustache.js"])
         .pipe(dest("publish/js"));
 }
 
@@ -79,10 +79,14 @@ function setPublishDate() {
         .pipe(dest("publish/"));
 }
 
-function changeMustachePath()
-{
+function changeMustachePath() {
     return src(["publish/*"])
         .pipe(replace(/node_modules\/mustache\/mustache.min.js/g, "./js/mustache.js"))
+        .pipe(dest("publish/"));
+}
+
+function copySEO() {
+    return src(["./sitemap.xml", "./robots.txt"])
         .pipe(dest("publish/"));
 }
 
@@ -95,5 +99,6 @@ exports.default = series(
     parallel(cssMinify, jsMinify),
     html,
     setPublishDate,
-    changeMustachePath
+    changeMustachePath,
+    copySEO
 );
