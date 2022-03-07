@@ -29,6 +29,12 @@ $main-height: $header-margin-top+$header-height+$header-margin-bottom+$nav-heigh
 
 
 // Styles
+* {
+    @include themify {
+    cursor: url(themed("cursor")), auto !important;
+    }
+}
+
 body {
     @include themify {
         background-color: themed("body-bg");
