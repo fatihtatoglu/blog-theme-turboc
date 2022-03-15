@@ -4,7 +4,7 @@
 @import "abstract/variable";
 
 // Themes 
-@import "theme/light_theme";
+@import "theme/light-theme";
 @include addTheme("light", $theme-light);
 
 @import "theme/dark-theme";
