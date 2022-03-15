@@ -2,31 +2,31 @@
 .color-box.selectbox {
     pre {
         &.color-box.selectbox pre.active {
-            @include themify {
-                background-color: themed("selectbox-active-bg");
-                color: themed("selectbox-active-fg");
-            }
+
+            background-color: var(--selectbox-active-bg);
+            color: var(--selectbox-active-fg);
+
         }
 
         &.default {
-            @include themify {
-                background-color: themed("selectbox-default-bg");
-                color: themed("selectbox-default-fg");
-            }
+
+            background-color: var(--selectbox-default-bg);
+            color: var(--selectbox-default-fg);
+
         }
 
         &.selected {
-            @include themify {
-                background-color: themed("selectbox-selected-bg");
-                color: themed("selectbox-selected-fg");
-            }
+
+            background-color: var(--selectbox-selected-bg);
+            color: var(--selectbox-selected-fg);
+
         }
 
         &.disabled {
-            @include themify {
-                background-color: themed("selectbox-disabled-bg");
-                color: themed("selectbox-disabled-fg");
-            }
+
+            background-color: var(--selectbox-disabled-bg);
+            color: var(--selectbox-disabled-fg);
+
         }
     }
 }
@@ -36,19 +36,19 @@
 select {
     line-height: 1.1;
 
-    @include themify {
-        background-color: themed("selectbox-scrollbar-arrow-bg");
-    }
+
+    background-color: var(--selectbox-scrollbar-arrow-bg);
+
 
     border: none;
 
     outline: none;
 
     option {
-        @include themify {
-            background-color: themed("selectbox-active-bg");
-            color: themed("selectbox-active-fg");
-        }
+
+        background-color: var(--selectbox-active-bg);
+        color: var(--selectbox-active-fg);
+
 
         font-weight: $text-bold-font-weight;
         line-height: 1.1;
@@ -56,37 +56,37 @@ select {
         cursor: pointer;
 
         &:checked {
-            @include themify {
-                background: themed("selectbox-default-bg") linear-gradient(0deg, themed("selectbox-default-bg") 0%, themed("selectbox-default-bg") 100%);
-                color: themed("selectbox-default-fg");
-            }
+
+            background: var(--selectbox-default-bg) linear-gradient(0deg, var(--selectbox-default-bg) 0%, var(--selectbox-default-bg) 100%);
+            color: var(--selectbox-default-fg);
+
         }
 
         &:disabled {
-            @include themify {
-                background: themed("selectbox-disabled-bg") linear-gradient(0deg, themed("selectbox-disabled-bg") 0%, themed("selectbox-disabled-bg") 100%);
-                color: themed("selectbox-disabled-fg");
-            }
+
+            background: var(--selectbox-disabled-bg) linear-gradient(0deg, var(--selectbox-disabled-bg) 0%, var(--selectbox-disabled-bg) 100%);
+            color: var(--selectbox-disabled-fg);
+
 
             cursor: default;
         }
     }
 
     &:focus option:checked {
-        @include themify {
-            background: themed("selectbox-selected-bg") linear-gradient(0deg, themed("selectbox-selected-bg") 0%, themed("selectbox-selected-bg") 100%);
-            color: themed("selectbox-selected-fg");
-        }
+
+        background: var(--selectbox-selected-bg) linear-gradient(0deg, var(--selectbox-selected-bg) 0%, var(--selectbox-selected-bg) 100%);
+        color: var(--selectbox-selected-fg);
+
     }
 
     &:disabled {
         overflow: hidden;
 
         option {
-            @include themify {
-                background: themed("selectbox-disabled-bg") linear-gradient(0deg, themed("selectbox-disabled-bg") 0%, themed("selectbox-disabled-bg") 100%);
-                color: themed("selectbox-disabled-fg");
-            }
+
+            background: var(--selectbox-disabled-bg) linear-gradient(0deg, var(--selectbox-disabled-bg) 0%, var(--selectbox-disabled-bg) 100%);
+            color: var(--selectbox-disabled-fg);
+
 
             cursor: default;
         }
@@ -97,22 +97,22 @@ select {
     }
 
     &::-webkit-scrollbar-track {
-        @include themify {
-            background-color: themed("selectbox-scrollbar-bg-1");
-            background-image: repeating-linear-gradient(45deg, themed("selectbox-scrollbar-bg-2") 25%, transparent 25%, transparent 75%, themed("selectbox-scrollbar-bg-2") 75%, themed("selectbox-scrollbar-bg-2")), repeating-linear-gradient(45deg, themed("selectbox-scrollbar-bg-2") 25%, themed("selectbox-scrollbar-bg-1") 25%, themed("selectbox-scrollbar-bg-1") 75%, themed("selectbox-scrollbar-bg-2") 75%, themed("selectbox-scrollbar-bg-2"));
-        }
+
+        background-color: var(--selectbox-scrollbar-bg-1);
+        background-image: repeating-linear-gradient(45deg, var(--selectbox-scrollbar-bg-2) 25%, transparent 25%, transparent 75%, var(--selectbox-scrollbar-bg-2) 75%, var(--selectbox-scrollbar-bg-2)), repeating-linear-gradient(45deg, var(--selectbox-scrollbar-bg-2) 25%, var(--selectbox-scrollbar-bg-1) 25%, var(--selectbox-scrollbar-bg-1) 75%, var(--selectbox-scrollbar-bg-2) 75%, var(--selectbox-scrollbar-bg-2));
+
 
         opacity: 1;
         background-position: 0 0,
-        2px 2px;
+            2px 2px;
         background-size: 4px 4px;
     }
 
     &::-webkit-scrollbar-thumb {
-        @include themify {
-            background-color: themed("selectbox-scrollbar-thumb-bg");
-            border: themed("selectbox-scrollbar-thumb-border") solid 4px;
-        }
+
+        background-color: var(--selectbox-scrollbar-thumb-bg);
+        border: var(--selectbox-scrollbar-thumb-border) solid 4px;
+
     }
 
     &::-webkit-scrollbar-button:vertical {

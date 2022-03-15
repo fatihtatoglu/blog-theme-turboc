@@ -2,24 +2,24 @@
 .color-box.dialog-guide {
     pre {
         &.title {
-            @include themify {
-                background-color: themed("dialog-title-bg");
-                color: themed("dialog-title-fg");
-            }
+
+            background-color: var(--dialog-title-bg);
+            color: var(--dialog-title-fg);
+
         }
 
         &.text {
-            @include themify {
-                background-color: themed("dialog-text-bg");
-                color: themed("dialog-text-fg");
-            }
+
+            background-color: var(--dialog-text-bg);
+            color: var(--dialog-text-fg);
+
         }
 
         &.icon {
-            @include themify {
-                background-color: themed("dialog-icon-bg");
-                color: themed("dialog-icon-fg");
-            }
+
+            background-color: var(--dialog-icon-bg);
+            color: var(--dialog-icon-fg);
+
         }
     }
 }
@@ -38,14 +38,14 @@ div.dialog {
     display: none;
 
     div.dialog-box {
-        @include themify {
-            background-color: themed("dialog-text-bg");
-            color: themed("dialog-text-fg");
 
-            -webkit-box-shadow: 16px 16px 0px 0px themed("dialog-shadow");
-            -moz-box-shadow: 16px 16px 0px 0px themed("dialog-shadow");
-            box-shadow: 16px 16px 0px 0px themed("dialog-shadow");
-        }
+        background-color: var(--dialog-text-bg);
+        color: var(--dialog-text-fg);
+
+        -webkit-box-shadow: 16px 16px 0px 0px var(--dialog-shadow);
+        -moz-box-shadow: 16px 16px 0px 0px var(--dialog-shadow);
+        box-shadow: 16px 16px 0px 0px var(--dialog-shadow);
+
 
         position: relative;
 
@@ -57,12 +57,12 @@ div.dialog {
         width: $dialog-width;
 
         div.dialog-content {
-            @include themify {
-                background-color: themed("dialog-text-bg");
-                color: themed("dialog-text-fg");
 
-                border: 4px double themed("dialog-border");
-            }
+            background-color: var(--dialog-text-bg);
+            color: var(--dialog-text-fg);
+
+            border: 4px double var(--dialog-border);
+
 
             padding: 21px 17px;
 
@@ -82,33 +82,33 @@ div.dialog {
             main {
                 @extend .reset-dialog-content;
 
-                @include themify {
-                    background-color: themed("dialog-text-bg");
-                    color: themed("dialog-text-fg");
-                }
+
+                background-color: var(--dialog-text-bg);
+                color: var(--dialog-text-fg);
+
 
                 >p {
-                    @include themify {
-                        background-color: themed("dialog-text-bg");
-                        color: themed("dialog-text-fg");
-                    }
+
+                    background-color: var(--dialog-text-bg);
+                    color: var(--dialog-text-fg);
+
                 }
 
                 label,
                 label::first-letter {
-                    @include themify {
-                        background-color: themed("dialog-text-bg");
-                    }
+
+                    background-color: var(--dialog-text-bg);
+
                 }
             }
 
             footer {
                 @extend .reset-dialog-content;
 
-                @include themify {
-                    background-color: themed("dialog-text-bg");
-                    color: themed("dialog-text-fg");
-                }
+
+                background-color: var(--dialog-text-bg);
+                color: var(--dialog-text-fg);
+
 
                 text-align: center;
             }
@@ -127,10 +127,10 @@ div.dialog {
                 background-color: transparent;
 
                 >span {
-                    @include themify {
-                        background-color: themed("dialog-title-bg");
-                        color: themed("dialog-title-fg");
-                    }
+
+                    background-color: var(--dialog-title-bg);
+                    color: var(--dialog-title-fg);
+
 
                     line-height: 1;
                     text-transform: capitalize;

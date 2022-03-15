@@ -2,38 +2,29 @@
 .color-box.typo {
     pre {
         &.active {
-            @include themify {
-                background-color: themed("text-active-bg");
-                color: themed("text-active-fg");
-            }
+
+            background-color: var(--text-active-bg);
+            color: var(--text-active-fg);
         }
 
         &.selected {
-            @include themify {
-                background-color: themed("text-selected-bg");
-                color: themed("text-selected-fg");
-            }
+            background-color: var(--text-selected-bg);
+            color: var(--text-selected-fg);
         }
 
         &.keyword {
-            @include themify {
-                background-color: themed("text-keyword-active-bg");
-                color: themed("text-keyword-active-fg");
-            }
+            background-color: var(--text-keyword-active-bg);
+            color: var(--text-keyword-active-fg);
         }
 
         &.keyword-selected {
-            @include themify {
-                background-color: themed("text-keyword-selected-bg");
-                color: themed("text-keyword-selected-fg");
-            }
+            background-color: var(--text-keyword-selected-bg);
+            color: var(--text-keyword-selected-fg);
         }
 
         &.heading {
-            @include themify {
-                background-color: themed("text-heading-bg");
-                color: themed("text-heading-fg");
-            }
+            background-color: var(--text-heading-bg);
+            color: var(--text-heading-fg);
         }
     }
 }
@@ -41,10 +32,8 @@
 
 // Styles
 body {
-    @include themify {
-        background-color: themed("text-active-bg");
-        color: themed("text-active-fg");
-    }
+    background-color: var(--text-active-bg);
+    color: var(--text-active-fg);
 
     font-size: $text-size;
     font-weight: $text-font-weight;
@@ -56,11 +45,9 @@ h1,
 h2,
 h3,
 h4 {
-    @include themify {
-        background-color: themed("text-heading-bg");
-        color: themed("text-heading-fg");
-        border-bottom: themed("text-heading-border") solid 7px;
-    }
+    background-color: var(--text-heading-bg);
+    color: var(--text-heading-fg);
+    border-bottom: var(--text-heading-border) solid 7px;
 
     font-size: 16rem;
     font-weight: $text-bold-font-weight;
@@ -88,25 +75,19 @@ h1 {
 }
 
 h2 {
-    @include themify {
-        border-top: themed("text-heading-border") solid 10px;
-    }
+    border-top: var(--text-heading-border) solid 10px;
 }
 
 h4 {
-    @include themify {
-        border-top: themed("text-heading-border") solid 1px;
-        border-bottom: themed("text-heading-border") solid 1px;
-        border-left: themed("text-heading-border") solid 2px;
-        border-right: themed("text-heading-border") solid 2px;
-    }
+    border-top: var(--text-heading-border) solid 1px;
+    border-bottom: var(--text-heading-border) solid 1px;
+    border-left: var(--text-heading-border) solid 2px;
+    border-right: var(--text-heading-border) solid 2px;
 }
 
 p {
-    @include themify {
-        background-color: themed("text-active-bg");
-        color: themed("text-active-fg");
-    }
+    background-color: var(--text-active-bg);
+    color: var(--text-active-fg);
 
     font-size: 16rem;
     font-weight: $text-font-weight;
@@ -133,18 +114,14 @@ a {
 
     &:link,
     &:visited {
-        @include themify {
-            background-color: themed("text-keyword-active-bg");
-            color: themed("text-keyword-active-fg");
-        }
+        background-color: var(--text-keyword-active-bg);
+        color: var(--text-keyword-active-fg);
     }
 
     &:focus,
     &:active {
-        @include themify {
-            background-color: themed("text-keyword-selected-bg");
-            color: themed("text-keyword-selected-fg");
-        }
+        background-color: var(--text-keyword-selected-bg);
+        color: var(--text-keyword-selected-fg);
 
         outline: none;
     }
@@ -158,11 +135,9 @@ time {
 }
 
 blockquote {
-    @include themify {
-        background-color: themed("text-quotation-bg");
-        color: themed("text-quotation-fg");
-        border-left: 7px solid themed("text-quotation-border");
-    }
+    background-color: var(--text-quotation-bg);
+    color: var(--text-quotation-fg);
+    border-left: 7px solid var(--text-quotation-border);
 
     margin: 12px 8px;
     padding: 0px;
@@ -170,10 +145,8 @@ blockquote {
     display: block;
 
     p {
-        @include themify {
-            background-color: themed("text-quotation-bg");
-            color: themed("text-quotation-fg");
-        }
+        background-color: var(--text-quotation-bg);
+        color: var(--text-quotation-fg);
 
         font-style: italic;
 
@@ -183,15 +156,11 @@ blockquote {
 }
 
 ::-moz-selection {
-    @include themify {
-        background-color: themed("text-selected-bg");
-        color: themed("text-selected-fg");
-    }
+    background-color: var(--text-selected-bg);
+    color: var(--text-selected-fg);
 }
 
 ::selection {
-    @include themify {
-        background-color: themed("text-selected-bg");
-        color: themed("text-selected-fg");
-    }
+    background-color: var(--text-selected-bg);
+    color: var(--text-selected-fg);
 }

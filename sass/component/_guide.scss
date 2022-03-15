@@ -1,8 +1,6 @@
 .color-box {
-    @include themify {
-        background-color: themed("white");
-        color: themed("black");
-    }
+    background-color: var(--white);
+    color: var(--black);
 
     margin: 0px 10px 0px 10px;
     display: inline-block;

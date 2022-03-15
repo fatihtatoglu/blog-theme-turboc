@@ -1,44 +1,22 @@
-@mixin colorizeElement($background-color, $foreground-color) {
-    /* Background */
-    background-color: $background-color;
-
-    /* Foreground */
-    color: $foreground-color;
-}
+@use "sass:meta";
 
 @mixin addTheme ($themeName, $themeMap) {
 
+  :root[data-theme=#{$themeName}] {
+
     @each $key,
     $value in $themeMap {
-        $themes: map-merge($themes, ($themeName: $themeMap)) !global;
+      --#{$key}: #{meta.inspect($value)};
     }
-}
-
-@mixin themify($themes: $themes) {
-
-    @each $theme,
-    $map in $themes {
-        html[data-theme=#{$theme}] & {
-            $theme-map: () !global;
-
-            @each $key,
-            $submap in $map {
-                $value: map-get(map-get($themes, $theme), '#{$key}');
-                $theme-map: map-merge($theme-map, ($key: $value)) !global;
-            }
-
-            @content;
-            $theme-map: null !global;
-        }
-    }
+  }
 }
 
 @mixin firefox-only {
-    @at-root {
-      @-moz-document url-prefix() {
-        & {
-          @content;
-        }
+  @at-root {
+    @-moz-document url-prefix() {
+      & {
+        @content;
       }
     }
   }
+}

@@ -41,9 +41,9 @@ img {
 }
 
 hr {
-    @include themify {
-        border: 2px solid themed("$horizontal-line-border");
-    }
+
+    border: 2px solid var(--horizontal-line-border);
+
 
     margin: 5px auto;
 
@@ -51,9 +51,9 @@ hr {
 }
 
 .notification-box {
-    @include themify {
-        border: double 4px themed("message-box-border");
-    }
+
+    border: double 4px var(--message-box-border);
+
 
     font-weight: $text-bold-font-weight;
 
@@ -66,35 +66,34 @@ hr {
 div.info-box {
     @extend .notification-box;
 
-    @include themify {
-        background-color: themed("message-box-info-bg");
-        color: themed("message-box-info-fg");
-    }
+
+    background-color: var(--message-box-info-bg);
+    color: var(--message-box-info-fg);
+
 }
 
 div.warn-box {
     @extend .notification-box;
 
-    @include themify {
-        background-color: themed("message-box-warn-bg");
-        color: themed("message-box-warn-fg");
-    }
+
+    background-color: var(--message-box-warn-bg);
+    color: var(--message-box-warn-fg);
+
 }
 
 div.notice-box {
     @extend .notification-box;
 
-    @include themify {
-        background-color: themed("message-box-notice-bg");
-        color: themed("message-box-notice-fg");
-    }
+
+    background-color: var(--message-box-notice-bg);
+    color: var(--message-box-notice-fg);
+
 }
 
 div.error-box {
     @extend .notification-box;
 
-    @include themify {
-        background-color: themed("message-box-error-bg");
-        color: themed("message-box-error-fg");
-    }
+
+    background-color: var(--message-box-error-bg);
+    color: var(--message-box-error-fg);
 }

@@ -4,9 +4,6 @@
 @import "abstract/variable";
 
 // Themes 
-@import "theme/large-theme";
-@import "theme/small-theme";
-
 @import "theme/light_theme";
 @include addTheme("light", $theme-light);
 
