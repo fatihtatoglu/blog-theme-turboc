@@ -23,21 +23,6 @@ function renderMenu() {
                 {
                     "element-id": "lnkThemeDark",
                     "title": "Dark Theme"
-                },
-                {
-                    "role": "separator"
-                },
-                {
-                    "element-id": "lnkSmallTheme",
-                    "title": "Small Page Width"
-                },
-                {
-                    "element-id": "lnkMediumTheme",
-                    "title": "Medium Page Width"
-                },
-                {
-                    "element-id": "lnkLargeTheme",
-                    "title": "Large Page Width"
                 }
             ]
         },
@@ -197,30 +182,8 @@ function renderMenu() {
 
 function bindThemeButtons() {
     var $html = document.getElementsByTagName("html")[0];
-
-    var $lnkSmallTheme = document.getElementById("lnkSmallTheme");
-    var $lnkMediumTheme = document.getElementById("lnkMediumTheme");
-    var $lnkLargeTheme = document.getElementById("lnkLargeTheme");
     var $lnkThemeLight = document.getElementById("lnkThemeLight");
     var $lnkThemeDark = document.getElementById("lnkThemeDark");
-
-    $lnkSmallTheme.addEventListener("click", () => {
-        $html.setAttribute("data-width", "small");
-
-        window.localStorage.setItem("theme-width", "small");
-    });
-
-    $lnkMediumTheme.addEventListener("click", () => {
-        $html.setAttribute("data-width", "");
-
-        window.localStorage.setItem("theme-width", "");
-    });
-
-    $lnkLargeTheme.addEventListener("click", () => {
-        $html.setAttribute("data-width", "large");
-
-        window.localStorage.setItem("theme-width", "large");
-    });
 
     $lnkThemeLight.addEventListener("click", () => {
         $html.setAttribute("data-theme", "light");
@@ -238,16 +201,7 @@ function bindThemeButtons() {
 function loadSiteSettings() {
     // default
     var $html = document.getElementsByTagName("html")[0];
-    var themeWidth = window.localStorage.getItem("theme-width");
     var themeColor = window.localStorage.getItem("theme-color");
-
-    if (themeWidth) {
-        $html.setAttribute("data-width", themeWidth);
-    }
-    else {
-        $html.setAttribute("data-width", "");
-        window.localStorage.setItem("theme-width", "");
-    }
 
     if (themeColor) {
         $html.setAttribute("data-theme", themeColor);
