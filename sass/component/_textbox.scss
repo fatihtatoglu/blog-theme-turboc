@@ -2,40 +2,30 @@
 .color-box.textbox {
     pre {
         &.normal {
-
             background-color: var(--textbox-normal-bg);
             color: var(--textbox-normal-fg);
-
         }
 
         &.volatile {
-
             background-color: var(--textbox-volatile-bg);
             color: var(--textbox-volatile-fg);
-
         }
 
         &.selected {
-
             background-color: var(--textbox-selected-bg);
             color: var(--textbox-selected-fg);
-
         }
 
         &.disabled {
-
             background-color: var(--textbox-disabled-bg);
             color: var(--textbox-disabled-fg);
-
         }
     }
 }
 
 .text-field {
-
     background-color: var(--textbox-normal-bg);
     color: var(--textbox-normal-fg);
-
 
     font-weight: $text-bold-font-weight;
     line-height: 1.1;
@@ -49,44 +39,32 @@
     margin: 3px 0px;
 
     &:focus {
-
         background-color: var(--textbox-selected-bg);
         color: var(--textbox-selected-fg);
-
     }
 
     &::-moz-selection {
-
         background-color: var(--textbox-volatile-bg);
         color: var(--textbox-volatile-fg);
-
     }
 
     &::selection {
-
         background-color: var(--textbox-volatile-bg);
         color: var(--textbox-volatile-fg);
-
     }
 
     &:disabled {
-
         background-color: var(--textbox-disabled-bg);
         color: var(--textbox-disabled-fg);
 
-
         &::-moz-selection {
-
             background-color: var(--textbox-disabled-bg);
             color: var(--textbox-disabled-fg);
-
         }
 
         &::selection {
-
             background-color: var(--textbox-disabled-bg);
             color: var(--textbox-disabled-fg);
-
         }
     }
 }
@@ -114,9 +92,7 @@ input[type=number] {
 textarea {
     @extend .text-field;
 
-
     background-color: var(--textbox-scrollbar-arrow-bg);
-
 
     min-height: 150px;
 
@@ -128,10 +104,8 @@ textarea {
     }
 
     &::-webkit-scrollbar-track {
-
         background-color: var(--textbox-scrollbar-bg-2);
         background-image: repeating-linear-gradient(45deg, var(--textbox-scrollbar-bg-1) 25%, transparent 25%, transparent 75%, var(--textbox-scrollbar-bg-1) 75%, var(--textbox-scrollbar-bg-1)), repeating-linear-gradient(45deg, var(--textbox-scrollbar-bg-1) 25%, var(--textbox-scrollbar-bg-2) 25%, var(--textbox-scrollbar-bg-2) 75%, var(--textbox-scrollbar-bg-1) 75%, var(--textbox-scrollbar-bg-1));
-
 
         opacity: 1;
         background-position: 0 0,
@@ -140,10 +114,8 @@ textarea {
     }
 
     &::-webkit-scrollbar-thumb {
-
         background-color: var(--textbox-scrollbar-thumb-bg);
         border: var(--textbox-scrollbar-thumb-border) solid 4px;
-
     }
 
     &::-webkit-scrollbar-button {
@@ -152,9 +124,7 @@ textarea {
     }
 
     &::-webkit-scrollbar-corner {
-
         background-color: var(--textbox-scrollbar-arrow-bg);
-
     }
 
     &::-webkit-scrollbar-button:vertical:decrement {

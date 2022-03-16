@@ -2,24 +2,18 @@
 .color-box.dialog-guide {
     pre {
         &.title {
-
             background-color: var(--dialog-title-bg);
             color: var(--dialog-title-fg);
-
         }
 
         &.text {
-
             background-color: var(--dialog-text-bg);
             color: var(--dialog-text-fg);
-
         }
 
         &.icon {
-
             background-color: var(--dialog-icon-bg);
             color: var(--dialog-icon-fg);
-
         }
     }
 }
@@ -38,14 +32,12 @@ div.dialog {
     display: none;
 
     div.dialog-box {
-
         background-color: var(--dialog-text-bg);
         color: var(--dialog-text-fg);
 
         -webkit-box-shadow: 16px 16px 0px 0px var(--dialog-shadow);
         -moz-box-shadow: 16px 16px 0px 0px var(--dialog-shadow);
         box-shadow: 16px 16px 0px 0px var(--dialog-shadow);
-
 
         position: relative;
 
@@ -54,15 +46,13 @@ div.dialog {
 
         display: block;
 
-        width: $dialog-width;
+        width: var(--dialog-width);
 
         div.dialog-content {
-
             background-color: var(--dialog-text-bg);
             color: var(--dialog-text-fg);
 
             border: 4px double var(--dialog-border);
-
 
             padding: 21px 17px;
 
@@ -75,6 +65,12 @@ div.dialog {
                 padding: 0px;
             }
 
+            
+            input[type=checkbox]::after, 
+            input[type=radio]::after {
+                background-color: var(--dialog-text-bg);
+            }
+
             header {
                 @extend .reset-dialog-content;
             }
@@ -82,33 +78,25 @@ div.dialog {
             main {
                 @extend .reset-dialog-content;
 
-
                 background-color: var(--dialog-text-bg);
                 color: var(--dialog-text-fg);
 
-
                 >p {
-
                     background-color: var(--dialog-text-bg);
                     color: var(--dialog-text-fg);
-
                 }
 
                 label,
                 label::first-letter {
-
                     background-color: var(--dialog-text-bg);
-
                 }
             }
 
             footer {
                 @extend .reset-dialog-content;
 
-
                 background-color: var(--dialog-text-bg);
                 color: var(--dialog-text-fg);
-
 
                 text-align: center;
             }
@@ -127,10 +115,8 @@ div.dialog {
                 background-color: transparent;
 
                 >span {
-
                     background-color: var(--dialog-title-bg);
                     color: var(--dialog-title-fg);
-
 
                     line-height: 1;
                     text-transform: capitalize;
@@ -148,7 +134,7 @@ div.dialog {
 
     &.large {
         div.dialog-box {
-            width: $dialog-large-width;
+            width: var(--dialog-large-width);
         }
     }
 }

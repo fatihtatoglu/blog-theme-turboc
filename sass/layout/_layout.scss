@@ -29,7 +29,7 @@ header {
     color: var(--header-fg);
 
     height: $header-height;
-    width: $site-width;
+    width: var(--site-width);
 
     margin: $header-margin-top auto $header-margin-bottom auto;
 
@@ -64,7 +64,7 @@ footer {
     text-align: center;
 
     height: $footer-height;
-    width: $site-width;
+    width: var(--site-width);
 
     padding: 0px;
     margin: $footer-margin-top auto $footer-margin-bottom auto;
@@ -80,7 +80,7 @@ main {
     color: var(--text-active-fg);
 
     min-height: calc(100vh - #{$main-height});
-    width: $site-width;
+    width: var(--site-width);
 
     margin: 0px auto;
     padding: 7px 3px;

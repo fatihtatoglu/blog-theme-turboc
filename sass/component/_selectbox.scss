@@ -2,31 +2,23 @@
 .color-box.selectbox {
     pre {
         &.color-box.selectbox pre.active {
-
             background-color: var(--selectbox-active-bg);
             color: var(--selectbox-active-fg);
-
         }
 
         &.default {
-
             background-color: var(--selectbox-default-bg);
             color: var(--selectbox-default-fg);
-
         }
 
         &.selected {
-
             background-color: var(--selectbox-selected-bg);
             color: var(--selectbox-selected-fg);
-
         }
 
         &.disabled {
-
             background-color: var(--selectbox-disabled-bg);
             color: var(--selectbox-disabled-fg);
-
         }
     }
 }
@@ -36,19 +28,15 @@
 select {
     line-height: 1.1;
 
-
     background-color: var(--selectbox-scrollbar-arrow-bg);
-
 
     border: none;
 
     outline: none;
 
     option {
-
         background-color: var(--selectbox-active-bg);
         color: var(--selectbox-active-fg);
-
 
         font-weight: $text-bold-font-weight;
         line-height: 1.1;
@@ -56,37 +44,29 @@ select {
         cursor: pointer;
 
         &:checked {
-
             background: var(--selectbox-default-bg) linear-gradient(0deg, var(--selectbox-default-bg) 0%, var(--selectbox-default-bg) 100%);
             color: var(--selectbox-default-fg);
-
         }
 
         &:disabled {
-
             background: var(--selectbox-disabled-bg) linear-gradient(0deg, var(--selectbox-disabled-bg) 0%, var(--selectbox-disabled-bg) 100%);
             color: var(--selectbox-disabled-fg);
-
 
             cursor: default;
         }
     }
 
     &:focus option:checked {
-
         background: var(--selectbox-selected-bg) linear-gradient(0deg, var(--selectbox-selected-bg) 0%, var(--selectbox-selected-bg) 100%);
         color: var(--selectbox-selected-fg);
-
     }
 
     &:disabled {
         overflow: hidden;
 
         option {
-
             background: var(--selectbox-disabled-bg) linear-gradient(0deg, var(--selectbox-disabled-bg) 0%, var(--selectbox-disabled-bg) 100%);
             color: var(--selectbox-disabled-fg);
-
 
             cursor: default;
         }
@@ -97,10 +77,8 @@ select {
     }
 
     &::-webkit-scrollbar-track {
-
         background-color: var(--selectbox-scrollbar-bg-1);
         background-image: repeating-linear-gradient(45deg, var(--selectbox-scrollbar-bg-2) 25%, transparent 25%, transparent 75%, var(--selectbox-scrollbar-bg-2) 75%, var(--selectbox-scrollbar-bg-2)), repeating-linear-gradient(45deg, var(--selectbox-scrollbar-bg-2) 25%, var(--selectbox-scrollbar-bg-1) 25%, var(--selectbox-scrollbar-bg-1) 75%, var(--selectbox-scrollbar-bg-2) 75%, var(--selectbox-scrollbar-bg-2));
-
 
         opacity: 1;
         background-position: 0 0,
@@ -109,10 +87,8 @@ select {
     }
 
     &::-webkit-scrollbar-thumb {
-
         background-color: var(--selectbox-scrollbar-thumb-bg);
         border: var(--selectbox-scrollbar-thumb-border) solid 4px;
-
     }
 
     &::-webkit-scrollbar-button:vertical {

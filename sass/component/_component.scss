@@ -41,9 +41,7 @@ img {
 }
 
 hr {
-
     border: 2px solid var(--horizontal-line-border);
-
 
     margin: 5px auto;
 
@@ -51,9 +49,7 @@ hr {
 }
 
 .notification-box {
-
     border: double 4px var(--message-box-border);
-
 
     font-weight: $text-bold-font-weight;
 
@@ -66,33 +62,26 @@ hr {
 div.info-box {
     @extend .notification-box;
 
-
     background-color: var(--message-box-info-bg);
     color: var(--message-box-info-fg);
-
 }
 
 div.warn-box {
     @extend .notification-box;
 
-
     background-color: var(--message-box-warn-bg);
     color: var(--message-box-warn-fg);
-
 }
 
 div.notice-box {
     @extend .notification-box;
 
-
     background-color: var(--message-box-notice-bg);
     color: var(--message-box-notice-fg);
-
 }
 
 div.error-box {
     @extend .notification-box;
-
 
     background-color: var(--message-box-error-bg);
     color: var(--message-box-error-fg);

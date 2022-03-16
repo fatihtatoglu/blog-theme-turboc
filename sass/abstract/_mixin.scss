@@ -2,7 +2,7 @@
 
 @mixin addTheme ($themeName, $themeMap) {
 
-  :root[data-theme=#{$themeName}] {
+  :root.#{$themeName} {
 
     @each $key,
     $value in $themeMap {

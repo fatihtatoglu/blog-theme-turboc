@@ -1,0 +1,16 @@
+@use "sass:map";
+
+$theme-normal: (site-width: $site-width,
+    dialog-width: $site-width * 0.5,
+    dialog-large-width: $site-width * 0.75
+);
+
+$theme-narrow: (site-width: $site-width-small,
+    dialog-width: $site-width-small * 0.5,
+    dialog-large-width: $site-width-small * 0.75
+);
+
+$theme-wide: (site-width: $site-width-large,
+    dialog-width: $site-width-large * 0.5,
+    dialog-large-width: $site-width-large * 0.75
+);

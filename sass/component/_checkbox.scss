@@ -2,44 +2,32 @@
 .color-box.checkbox {
     pre {
         &.active {
-            
-                background-color: var(--checkbox-active-bg);
-                color: var(--checkbox-active-fg);
-            
+            background-color: var(--checkbox-active-bg);
+            color: var(--checkbox-active-fg);
 
             &::first-letter {
-                
-                    background-color: var(--checkbox-active-firstletter-bg);
-                    color: var(--checkbox-active-firstletter-fg);
-                
+                background-color: var(--checkbox-active-firstletter-bg);
+                color: var(--checkbox-active-firstletter-fg);
             }
         }
 
         &.selected {
-            
-                background-color: var(--checkbox-selected-bg);
-                color: var(--checkbox-selected-fg);
-            
+            background-color: var(--checkbox-selected-bg);
+            color: var(--checkbox-selected-fg);
 
             &::first-letter {
-                
-                    background-color: var(--checkbox-selected-firstletter-bg);
-                    color: var(--checkbox-selected-firstletter-fg);
-                
+                background-color: var(--checkbox-selected-firstletter-bg);
+                color: var(--checkbox-selected-firstletter-fg);
             }
         }
 
         &.disabled {
-            
-                background-color: var(--checkbox-disabled-bg);
-                color: var(--checkbox-disabled-fg);
-            
+            background-color: var(--checkbox-disabled-bg);
+            color: var(--checkbox-disabled-fg);
 
             &::first-letter {
-                
-                    background-color: var(--checkbox-disabled-bg);
-                    color: var(--checkbox-disabled-fg);
-                
+                background-color: var(--checkbox-disabled-bg);
+                color: var(--checkbox-disabled-fg);
             }
         }
     }
@@ -54,10 +42,8 @@ input[type=radio] {
     width: 30px;
 
     &::after {
-        
-            background-color: var(--checkbox-active-bg);
-            color: var(--checkbox-active-fg);
-        
+        background-color: var(--checkbox-active-bg);
+        color: var(--checkbox-active-fg);
 
         font-weight: $text-bold-font-weight;
         line-height: 1.1;
@@ -71,10 +57,8 @@ input[type=radio] {
     }
 
     +label {
-        
-            background-color: var(--checkbox-active-bg);
-            color: var(--checkbox-active-fg);
-        
+        background-color: var(--checkbox-active-bg);
+        color: var(--checkbox-active-fg);
 
         line-height: 1.1;
         font-weight: $text-bold-font-weight;
@@ -88,10 +72,8 @@ input[type=radio] {
         cursor: pointer;
 
         &[for]::first-letter {
-            
-                background-color: var(--checkbox-active-firstletter-bg);
-                color: var(--checkbox-active-firstletter-fg);
-            
+            background-color: var(--checkbox-active-firstletter-bg);
+            color: var(--checkbox-active-firstletter-fg);
         }
     }
 }
@@ -124,10 +106,8 @@ input[type=checkbox]:focus+label,
 input[type=radio]+label:active,
 input[type=radio]:active+label,
 input[type=radio]:focus+label {
-    
-        background-color: var(--checkbox-selected-bg);
-        color: var(--checkbox-selected-fg);
-    
+    background-color: var(--checkbox-selected-bg);
+    color: var(--checkbox-selected-fg);
 }
 
 input[type=checkbox]+label:active::first-letter,
@@ -136,20 +116,16 @@ input[type=checkbox]:focus+label::first-letter,
 input[type=radio]+label:active::first-letter,
 input[type=radio]:active+label::first-letter,
 input[type=radio]:focus+label::first-letter {
-   
-        background-color: var(--checkbox-selected-firstletter-bg);
-        color: var(--checkbox-selected-firstletter-fg);
-    
+    background-color: var(--checkbox-selected-firstletter-bg);
+    color: var(--checkbox-selected-firstletter-fg);
 }
 
 input[type=checkbox]:active::after,
 input[type=checkbox]:focus::after,
 input[type=radio]:active::after,
 input[type=radio]:focus::after {
-    
-        background-color: var(--checkbox-selected-bg);
-        color: var(--checkbox-selected-fg);
-    
+    background-color: var(--checkbox-selected-bg);
+    color: var(--checkbox-selected-fg);
 }
 
 input[type=checkbox]:disabled,
@@ -160,10 +136,8 @@ input[type=radio]:disabled,
 input[type=radio]:disabled::after,
 input[type=radio]:disabled+label,
 input[type=radio]:disabled+label::first-letter {
-    
-        background-color: var(--checkbox-disabled-bg);
-        color: var(--checkbox-disabled-fg);
-    
+    background-color: var(--checkbox-disabled-bg);
+    color: var(--checkbox-disabled-fg);
 
     font-weight: $text-bold-font-weight;
     cursor: default;

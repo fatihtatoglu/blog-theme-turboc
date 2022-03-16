@@ -27,10 +27,8 @@ div.field-group {
     }
 
     label {
-
         background-color: var(--form-label-bg);
         color: var(--form-label-fg);
-
 
         font-weight: $text-bold-font-weight;
         line-height: 1;
@@ -38,18 +36,14 @@ div.field-group {
         margin: 0px;
 
         &::first-letter {
-
             background-color: var(--form-label-firstletter-bg);
             color: var(--form-label-firstletter-fg);
-
         }
     }
 
     *:not(label):focus+label {
-
         background-color: var(--form-label-focus-bg);
         color: var(--form-label-focus-fg);
-
     }
 }
 
