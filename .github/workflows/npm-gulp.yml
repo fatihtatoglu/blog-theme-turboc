@@ -31,7 +31,7 @@ jobs:
     - name: Publish Artifact
       uses: actions/upload-artifact@v2
       with:
-        name: blog-theme-turboc.zip
+        name: blog-theme-turboc
         path: ${{ github.workspace }}/publish/
     
     - name: Publish GitHub Pages
