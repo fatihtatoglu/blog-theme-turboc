@@ -1,10 +1,17 @@
+const themeColors = ["green", "black"];
+const themeSizes = ["normal", "narrow", "wide"];
+
+const defaultThemeColor = "green";
+const defaultThemeSize = "normal";
+
 document.addEventListener('DOMContentLoaded', () => {
 
     loadSiteSettings();
 
     renderMenu();
+    renderThemeDialog();
 
-    bindThemeButtons();
+    bindMenuButtons();
 
     openDialog();
 });
@@ -17,27 +24,8 @@ function renderMenu() {
             "title": "-",
             "children": [
                 {
-                    "element-id": "lnkThemeLight",
-                    "title": "Light Theme"
-                },
-                {
-                    "element-id": "lnkThemeDark",
-                    "title": "Dark Theme"
-                },
-                {
-                    "role": "separator"
-                },
-                {
-                    "element-id": "lnkSmallTheme",
-                    "title": "Small Page Width"
-                },
-                {
-                    "element-id": "lnkMediumTheme",
-                    "title": "Medium Page Width"
-                },
-                {
-                    "element-id": "lnkLargeTheme",
-                    "title": "Large Page Width"
+                    "element-id": "btnTheme",
+                    "title": "Theme Options"
                 }
             ]
         },
@@ -195,66 +183,40 @@ function renderMenu() {
     });
 }
 
-function bindThemeButtons() {
-    var $html = document.getElementsByTagName("html")[0];
+function bindMenuButtons() {
+    var $btnTheme = document.getElementById("btnTheme");
+    var $pnlThemeDialog = document.getElementById("pnlThemeDialog");
 
-    var $lnkSmallTheme = document.getElementById("lnkSmallTheme");
-    var $lnkMediumTheme = document.getElementById("lnkMediumTheme");
-    var $lnkLargeTheme = document.getElementById("lnkLargeTheme");
-    var $lnkThemeLight = document.getElementById("lnkThemeLight");
-    var $lnkThemeDark = document.getElementById("lnkThemeDark");
-
-    $lnkSmallTheme.addEventListener("click", () => {
-        $html.setAttribute("data-width", "small");
-
-        window.localStorage.setItem("theme-width", "small");
+    $btnTheme.addEventListener("click", function () {
+        if ($pnlThemeDialog) {
+            $pnlThemeDialog.style.display = "block";
+        }
     });
 
-    $lnkMediumTheme.addEventListener("click", () => {
-        $html.setAttribute("data-width", "");
-
-        window.localStorage.setItem("theme-width", "");
-    });
-
-    $lnkLargeTheme.addEventListener("click", () => {
-        $html.setAttribute("data-width", "large");
-
-        window.localStorage.setItem("theme-width", "large");
-    });
-
-    $lnkThemeLight.addEventListener("click", () => {
-        $html.setAttribute("data-theme", "light");
-
-        window.localStorage.setItem("theme-color", "light");
-    });
-
-    $lnkThemeDark.addEventListener("click", () => {
-        $html.setAttribute("data-theme", "dark");
-
-        window.localStorage.setItem("theme-color", "dark");
+    window.addEventListener("click", function (e) {
+        if (e.target == $pnlThemeDialog) {
+            $pnlThemeDialog.style.display = "none";
+        }
     });
 }
 
 function loadSiteSettings() {
-    // default
     var $html = document.getElementsByTagName("html")[0];
-    var themeWidth = window.localStorage.getItem("theme-width");
     var themeColor = window.localStorage.getItem("theme-color");
+    var themeSize = window.localStorage.getItem("theme-size");
 
-    if (themeWidth) {
-        $html.setAttribute("data-width", themeWidth);
-    }
-    else {
-        $html.setAttribute("data-width", "");
-        window.localStorage.setItem("theme-width", "");
-    }
+    $html.className = "";
 
     if (themeColor) {
-        $html.setAttribute("data-theme", themeColor);
+        $html.classList.add(themeColor);
+        $html.classList.add(themeSize);
     }
     else {
-        $html.setAttribute("data-theme", "light");
-        window.localStorage.setItem("theme-color", "light");
+        $html.classList.add(defaultThemeColor);
+        $html.classList.add(defaultThemeSize);
+
+        window.localStorage.setItem("theme-color", defaultThemeColor);
+        window.localStorage.setItem("theme-size", defaultThemeSize);
     }
 }
 
@@ -296,5 +258,70 @@ function openDialog() {
         if (e.target == $pnlFormDialog) {
             $pnlFormDialog.style.display = "none";
         }
+    });
+}
+
+function renderThemeDialog() {
+
+    $body = document.getElementsByTagName("body")[0];
+    var template = `<div id="pnlThemeDialog" class="dialog">
+    <div class="dialog-box">
+        <div class="dialog-content">
+            <header><span>Theme Options</span></header>
+            <main>
+            <table style="margin: auto;">
+                <thead><th style="width: 150px;">Colors</th><th style="width: 150px;">Sizes</th></thead>
+                <tbody>
+                    <tr>
+                        <td style="vertical-align: top;">
+                        {{#color}}
+                            <input id="rbColor{{.}}" name="color" type="radio" value="{{.}}" />
+                            <label for="rbColor{{.}}">{{.}}</label>
+                            <br />
+                        {{/color}}
+                        </td>
+                        <td style="vertical-align: top;">
+                        {{#size}}
+                            <input id="rbColor{{.}}" name="size" type="radio"  value="{{.}}" />
+                            <label for="rbColor{{.}}">{{.}}</label>
+                            <br />
+                        {{/size}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            </main>
+            <footer>
+                <button id="btnThemeDialogOK" class="default" accesskey="o"><u>O</u>K</button>
+            </footer></div></div></div>`;
+
+    var data = {
+        color: themeColors,
+        size: themeSizes
+    };
+
+    var output = Mustache.render(template, data);
+    var div = document.createElement("div");
+    div.innerHTML = output;
+
+    var dialog = div.childNodes[0];
+    $body.append(dialog);
+
+    var $btnThemeDialogOK = document.getElementById("btnThemeDialogOK");
+    $btnThemeDialogOK.addEventListener("click", function () {
+        var selectedElements = dialog.querySelectorAll("input[type=radio]:checked");
+        selectedElements.forEach(function (item) {
+            if (item.name === "color") {
+                window.localStorage.setItem("theme-color", item.value);
+            }
+            else if (item.name === "size") {
+                window.localStorage.setItem("theme-size", item.value);
+            }
+        });
+
+        loadSiteSettings();
+
+        dialog.style.display = "none";
     });
 }

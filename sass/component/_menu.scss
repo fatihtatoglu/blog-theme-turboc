@@ -2,44 +2,32 @@
 .color-box.menu {
     pre {
         &.normal {
-            @include themify {
-                background-color: themed("menu-normal-bg");
-                color: themed("menu-normal-fg");
-            }
+            background-color: var(--menu-normal-bg);
+            color: var(--menu-normal-fg);
 
             &.firstletter {
-                @include themify {
-                    background-color: themed("menu-normal-firstletter-bg");
-                    color: themed("menu-normal-firstletter-fg");
-                }
+                background-color: var(--menu-normal-firstletter-bg);
+                color: var(--menu-normal-firstletter-fg);
             }
         }
 
         &.selected {
-            @include themify {
-                background-color: themed("menu-selected-bg");
-                color: themed("menu-selected-fg");
-            }
+            background-color: var(--menu-selected-bg);
+            color: var(--menu-selected-fg);
 
             &.firstletter {
-                @include themify {
-                    background-color: themed("menu-selected-firstletter-bg");
-                    color: themed("menu-selected-firstletter-fg");
-                }
+                background-color: var(--menu-selected-firstletter-bg);
+                color: var(--menu-selected-firstletter-fg);
             }
         }
 
         &.disabled {
-            @include themify {
-                background-color: themed("menu-disabled-bg");
-                color: themed("menu-disabled-fg");
-            }
+            background-color: var(--menu-disabled-bg);
+            color: var(--menu-disabled-fg);
 
             &.selected {
-                @include themify {
-                    background-color: themed("menu-disabled-selected-bg");
-                    color: themed("menu-disabled-selected-fg");
-                }
+                background-color: var(--menu-disabled-selected-bg);
+                color: var(--menu-disabled-selected-fg);
             }
         }
     }
@@ -48,11 +36,9 @@
 
 // Styles
 nav {
-    @include themify {
-        background-color: themed("menu-bg");
-    }
+    background-color: var(--menu-bg);
 
-    width: $site-width;
+    width: var(--site-width);
 
     margin: 0px auto;
 
@@ -76,10 +62,8 @@ nav {
             a:link,
             a:visited,
             a:hover {
-                @include themify {
-                    background-color: themed("menu-normal-bg");
-                    color: themed("menu-normal-fg");
-                }
+                background-color: var(--menu-normal-bg);
+                color: var(--menu-normal-fg);
 
                 font-weight: $text-bold-font-weight;
 
@@ -88,26 +72,20 @@ nav {
                 display: block;
 
                 &::first-letter {
-                    @include themify {
-                        background-color: themed("menu-normal-firstletter-bg");
-                        color: themed("menu-normal-firstletter-fg");
-                    }
+                    background-color: var(--menu-normal-firstletter-bg);
+                    color: var(--menu-normal-firstletter-fg);
                 }
             }
 
             a:focus,
             a:active,
             a:hover {
-                @include themify {
-                    background-color: themed("menu-selected-bg");
-                    color: themed("menu-selected-fg");
-                }
+                background-color: var(--menu-selected-bg);
+                color: var(--menu-selected-fg);
 
                 &::first-letter {
-                    @include themify {
-                        background-color: themed("menu-selected-firstletter-bg");
-                        color: themed("menu-selected-firstletter-fg");
-                    }
+                    background-color: var(--menu-selected-firstletter-bg);
+                    color: var(--menu-selected-firstletter-fg);
                 }
             }
 
@@ -119,10 +97,8 @@ nav {
                 a:link::first-letter,
                 a:visited::first-letter,
                 a:hover::first-letter {
-                    @include themify {
-                        background-color: themed("menu-disabled-bg");
-                        color: themed("menu-disabled-fg");
-                    }
+                    background-color: var(--menu-disabled-bg);
+                    color: var(--menu-disabled-fg);
 
                     cursor: default;
                 }
@@ -133,10 +109,8 @@ nav {
                 a:focus::first-letter,
                 a:active::first-letter,
                 a:hover::first-letter {
-                    @include themify {
-                        background-color: themed("menu-disabled-selected-bg");
-                        color: themed("menu-disabled-selected-fg");
-                    }
+                    background-color: var(--menu-disabled-selected-bg);
+                    color: var(--menu-disabled-selected-fg);
 
                     cursor: default;
                 }
@@ -144,9 +118,7 @@ nav {
 
             div.sub-menu {
 
-                @include themify {
-                    background-color: themed("menu-bg");
-                }
+                background-color: var(--menu-bg);
 
                 margin: 0px;
                 padding: 7px 11px;
@@ -161,9 +133,7 @@ nav {
                     padding-bottom: 7px;
                     padding-top: 8px;
 
-                    @include themify {
-                        border: 2px solid themed("menu-border");
-                    }
+                    border: 2px solid var(--menu-border);
 
                     border-top-width: 1px;
                     border-bottom-width: 1px;
@@ -178,9 +148,7 @@ nav {
 
                             margin: 7px 0px 8px 0px;
 
-                            @include themify {
-                                border-bottom: 1px solid themed("menu-border");
-                            }
+                            border-bottom: 1px solid var(--menu-border);
                         }
 
                         a {

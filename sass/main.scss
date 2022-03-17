@@ -1,17 +1,19 @@
 // Abstract 
-@import "abstract/variable";
 @import "abstract/function";
 @import "abstract/mixin";
+@import "abstract/variable";
 
 // Themes 
-@import "theme/large-theme";
-@import "theme/small-theme";
+@import "theme/theme-green";
+@include addTheme("green", $theme-green);
 
-@import "theme/light_theme";
-@include addTheme("light", $theme-light);
+@import "theme/theme-black";
+@include addTheme("black", $theme-black);
 
-@import "theme/dark-theme";
-@include addTheme("dark", $theme-dark);
+@import "theme/theme-size";
+@include addTheme("normal", $theme-normal);
+@include addTheme("narrow", $theme-narrow);
+@include addTheme("wide", $theme-wide);
 
 // Base 
 @import "base/reset";

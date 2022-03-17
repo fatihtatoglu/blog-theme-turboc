@@ -27,10 +27,8 @@ div.field-group {
     }
 
     label {
-        @include themify {
-            background-color: themed("form-label-bg");
-            color: themed("form-label-fg");
-        }
+        background-color: var(--form-label-bg);
+        color: var(--form-label-fg);
 
         font-weight: $text-bold-font-weight;
         line-height: 1;
@@ -38,18 +36,14 @@ div.field-group {
         margin: 0px;
 
         &::first-letter {
-            @include themify {
-                background-color: themed("form-label-firstletter-bg");
-                color: themed("form-label-firstletter-fg");
-            }
+            background-color: var(--form-label-firstletter-bg);
+            color: var(--form-label-firstletter-fg);
         }
     }
 
     *:not(label):focus+label {
-        @include themify {
-            background-color: themed("form-label-focus-bg");
-            color: themed("form-label-focus-fg");
-        }
+        background-color: var(--form-label-focus-bg);
+        color: var(--form-label-focus-fg);
     }
 }
 

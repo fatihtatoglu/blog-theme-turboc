@@ -1,7 +1,13 @@
+@use "sass:math";
+
+
+// Site Width
 $site-width: 900px;
 $site-width-large: 1024px;
 $site-width-small: 640px;
 
+
+// Colors
 $black: rgba(0, 0, 0, 1);
 $blue: rgba(0, 0, 169, 1);
 $green: rgba(0, 168, 0, 1);
@@ -19,7 +25,32 @@ $light-purple: rgba(254, 86, 254, 1);
 $light-yellow: rgba(254, 255, 85, 1);
 $bright-white: rgba(255, 255, 255, 1);
 
+
+// Shadows
 $shadow-black: rgba(0, 0, 0, 0.75);
 $shadow-white: rgba(255, 255, 255, 0.75);
 
+
+// Typography
+$font-family : 'Roboto Mono',
+monospace;
+$text-font-weight: 400;
+$text-bold-font-weight: 700;
+$text-line-height: 1.5;
+$text-size: 16rem;
+
+
+// Layout
+$header-height: 70px;
+$header-margin-top: 20px;
+$header-margin-bottom: 0px;
+$nav-height: stripUnit($text-size) * $text-line-height;
+$footer-height: 50px;
+$footer-margin-top: 15px;
+$footer-margin-bottom: 10px;
+$footer-credits-margin-top: math.div(stripUnit($footer-height) - (stripUnit($text-size) * $text-line-height), 2);
+$main-height: $header-margin-top+$header-height+$header-margin-bottom+$nav-height+$footer-margin-top+$footer-height+$footer-margin-bottom;
+
+
+// Themes
 $themes: ();

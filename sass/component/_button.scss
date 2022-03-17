@@ -2,52 +2,38 @@
 .color-box.button {
     pre {
         &.selected {
-            @include themify {
-                background-color: themed("button-selected-bg");
-                color: themed("button-selected-fg");
-            }
+            background-color: var(--button-selected-bg);
+            color: var(--button-selected-fg);
 
             &::first-letter {
-                @include themify {
-                    background-color: themed("button-selected-letter-bg");
-                    color: themed("button-selected-letter-fg");
-                }
+                background-color: var(--button-selected-letter-bg);
+                color: var(--button-selected-letter-fg);
             }
         }
 
         &.default {
-            @include themify {
-                background-color: themed("button-default-bg");
-                color: themed("button-default-fg");
-            }
+            background-color: var(--button-default-bg);
+            color: var(--button-default-fg);
 
             &::first-letter {
-                @include themify {
-                    background-color: themed("button-default-letter-bg");
-                    color: themed("button-default-letter-fg");
-                }
+                background-color: var(--button-default-letter-bg);
+                color: var(--button-default-letter-fg);
             }
         }
 
         &.active {
-            @include themify {
-                background-color: themed("button-active-bg");
-                color: themed("button-active-fg");
-            }
+            background-color: var(--button-active-bg);
+            color: var(--button-active-fg);
 
             &::first-letter {
-                @include themify {
-                    background-color: themed("button-active-letter-bg");
-                    color: themed("button-active-letter-fg");
-                }
+                background-color: var(--button-active-letter-bg);
+                color: var(--button-active-letter-fg);
             }
         }
 
         &.disabled {
-            @include themify {
-                background-color: themed("button-disabled-bg");
-                color: themed("button-disabled-fg");
-            }
+            background-color: var(--button-disabled-bg);
+            color: var(--button-disabled-fg);
         }
     }
 }
@@ -56,14 +42,12 @@
 // Styles
 button,
 a.tc-btn {
-    @include themify {
-        background-color: themed("button-active-bg");
-        color: themed("button-active-fg");
+    background-color: var(--button-active-bg);
+    color: var(--button-active-fg);
 
-        -webkit-box-shadow: 10px 10px 0px 0px themed("button-shadow");
-        -moz-box-shadow: 10px 10px 0px 0px themed("button-shadow");
-        box-shadow: 10px 10px 0px 0px themed("button-shadow");
-    }
+    -webkit-box-shadow: 10px 10px 0px 0px var(--button-shadow);
+    -moz-box-shadow: 10px 10px 0px 0px var(--button-shadow);
+    box-shadow: 10px 10px 0px 0px var(--button-shadow);
 
     font-weight: $text-bold-font-weight;
     line-height: 1;
@@ -76,9 +60,7 @@ a.tc-btn {
 
 a.tc-btn,
 a.tc-btn:link {
-    @include themify {
-        color: themed("button-active-fg");
-    }
+    color: var(--button-active-fg);
 
     display: inline-block;
 
@@ -90,10 +72,8 @@ a.tc-btn:link {
 a.tc-btn:active,
 a.tc-btn:link:active,
 a.tc-btn:visited:active {
-    @include themify {
-        background-color: themed("button-selected-bg");
-        color: themed("button-selected-fg");
-    }
+    background-color: var(--button-selected-bg);
+    color: var(--button-selected-fg);
 }
 
 button:active,
@@ -101,19 +81,15 @@ a.tc-btn:active {
     margin-left: 20px;
     margin-right: 0px;
 
-    @include themify {
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        box-shadow: none;
-    }
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 }
 
 button:disabled,
 a.tc-btn.disabled {
-    @include themify {
-        background-color: themed("button-disabled-bg");
-        color: themed("button-disabled-fg");
-    }
+    background-color: var(--button-disabled-bg);
+    color: var(--button-disabled-fg);
 
     cursor: default;
 }
@@ -124,18 +100,14 @@ a.tc-btn.disabled {
 
 button.default,
 a.tc-btn.default {
-    @include themify {
-        background-color: themed("button-default-bg");
-        color: themed("button-default-fg");
-    }
+    background-color: var(--button-default-bg);
+    color: var(--button-default-fg);
 }
 
 button:focus,
 a.tc-btn:focus {
-    @include themify {
-        background-color: themed("button-selected-bg");
-        color: themed("button-selected-fg");
-    }
+    background-color: var(--button-selected-bg);
+    color: var(--button-selected-fg);
 }
 
 button:focus-visible,
@@ -150,8 +122,6 @@ a.tc-btn u {
 
 button[accesskey] u,
 a.tc-btn[accesskey] u {
-    @include themify {
-        background-color: themed("button-default-letter-bg");
-        color: themed("button-default-letter-fg");
-    }
+    background-color: var(--button-default-letter-bg);
+    color: var(--button-default-letter-fg);
 }

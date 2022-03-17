@@ -1,28 +1,9 @@
-@use "sass:math";
-
-// Variables
-$header-height: 70px;
-$header-margin-top: 20px;
-$header-margin-bottom: 0px;
-
-$nav-height: stripUnit($text-size) * $text-line-height;
-
-$footer-height: 50px;
-$footer-margin-top: 15px;
-$footer-margin-bottom: 10px;
-
-$footer-credits-margin-top: math.div(stripUnit($footer-height) - (stripUnit($text-size) * $text-line-height), 2);
-
-$main-height: $header-margin-top+$header-height+$header-margin-bottom+$nav-height+$footer-margin-top+$footer-height+$footer-margin-bottom;
-
 // Guidances
 .color-box.layout {
     pre {
         &.header {
-            @include themify {
-                background-color: themed("$header-bg");
-                color: themed("header-fg");
-            }
+            background-color: var(--header-bg);
+            color: var(--header-fg);
         }
     }
 }
@@ -30,31 +11,25 @@ $main-height: $header-margin-top+$header-height+$header-margin-bottom+$nav-heigh
 
 // Styles
 * {
-    @include themify {
-    cursor: url(themed("cursor")), auto !important;
-    }
+    cursor: var(--cursor), auto !important;
 }
 
 body {
-    @include themify {
-        background-color: themed("body-bg");
-        background-image: radial-gradient(circle, themed("body-bg-pattern") 25%, transparent 10%),
-            radial-gradient(circle, themed("body-bg-pattern") 25%, transparent 10%);
-    }
+    background-color: var(--body-bg);
+    background-image: radial-gradient(circle, var(--body-bg-pattern) 25%, transparent 10%),
+        radial-gradient(circle, var(--body-bg-pattern) 25%, transparent 10%);
 
     background-size: 6px 6px;
     background-position: 0 0,
-    3px 3px;
+        3px 3px;
 }
 
 header {
-    @include themify {
-        background-color: themed("header-bg");
-        color: themed("header-fg");
-    }
+    background-color: var(--header-bg);
+    color: var(--header-fg);
 
     height: $header-height;
-    width: $site-width;
+    width: var(--site-width);
 
     margin: $header-margin-top auto $header-margin-bottom auto;
 
@@ -63,11 +38,9 @@ header {
     display: block;
 
     span.site-name {
-        @include themify {
-            background-color: themed("text-heading-bg");
-            color: themed("text-heading-fg");
-            border-bottom: themed("text-heading-border") solid 7px;
-        }
+        background-color: var(--text-heading-bg);
+        color: var(--text-heading-fg);
+        border-bottom: var(--text-heading-border) solid 7px;
 
         font-size: 16rem;
         font-weight: $text-bold-font-weight;
@@ -85,15 +58,13 @@ header {
 }
 
 footer {
-    @include themify {
-        background-color: themed("footer-bg");
-        color: themed("footer-fg");
-    }
+    background-color: var(--footer-bg);
+    color: var(--footer-fg);
 
     text-align: center;
 
     height: $footer-height;
-    width: $site-width;
+    width: var(--site-width);
 
     padding: 0px;
     margin: $footer-margin-top auto $footer-margin-bottom auto;
@@ -105,29 +76,22 @@ footer {
 }
 
 main {
-    @include themify {
-        background-color: themed("main-bg");
-        color: themed("text-active-fg");
-    }
+    background-color: var(--main-bg);
+    color: var(--text-active-fg);
 
     min-height: calc(100vh - #{$main-height});
-    width: $site-width;
+    width: var(--site-width);
 
     margin: 0px auto;
     padding: 7px 3px;
 }
 
 article {
-    @include themify {
-        background-color: themed("article-bg");
-        color: themed("article-fg");
-        border: 4px double themed("article-header-border");
-    }
+    background-color: var(--article-bg);
+    color: var(--article-fg);
+    border: 4px double var(--article-header-border);
 
     position: relative;
-
-    border-left-width: 2px;
-    border-right-width: 2px;
 
     min-height: 150px;
 
@@ -137,9 +101,7 @@ article {
         line-height: 1;
         text-align: center;
 
-        @include themify {
-            background-color: transparent;
-        }
+        background-color: transparent;
 
         width: 100%;
         height: inherit;
@@ -153,11 +115,9 @@ article {
         left: 0px;
 
         >h1 {
-            @include themify {
-                background-color: themed("article-bg");
-                color: themed("article-header-fg");
-                border: none;
-            }
+            background-color: var(--article-bg);
+            color: var(--article-header-fg);
+            border: none;
 
             line-height: 1;
             text-transform: capitalize;
@@ -170,10 +130,8 @@ article {
     }
 
     >footer {
-        @include themify {
-            background-color: themed("article-bg");
-            color: themed("text-active-fg");
-        }
+        background-color: var(--article-bg);
+        color: var(--text-active-fg);
 
         text-align: center;
 

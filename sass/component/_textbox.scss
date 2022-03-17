@@ -2,40 +2,30 @@
 .color-box.textbox {
     pre {
         &.normal {
-            @include themify {
-                background-color: themed("textbox-normal-bg");
-                color: themed("textbox-normal-fg)");
-            }
+            background-color: var(--textbox-normal-bg);
+            color: var(--textbox-normal-fg);
         }
 
         &.volatile {
-            @include themify {
-                background-color: themed("textbox-volatile-bg");
-                color: themed("textbox-volatile-fg");
-            }
+            background-color: var(--textbox-volatile-bg);
+            color: var(--textbox-volatile-fg);
         }
 
         &.selected {
-            @include themify {
-                background-color: themed("textbox-selected-bg");
-                color: themed("textbox-selected-fg");
-            }
+            background-color: var(--textbox-selected-bg);
+            color: var(--textbox-selected-fg);
         }
 
         &.disabled {
-            @include themify {
-                background-color: themed("textbox-disabled-bg");
-                color: themed("textbox-disabled-fg");
-            }
+            background-color: var(--textbox-disabled-bg);
+            color: var(--textbox-disabled-fg);
         }
     }
 }
 
 .text-field {
-    @include themify {
-        background-color: themed("textbox-normal-bg");
-        color: themed("textbox-normal-fg");
-    }
+    background-color: var(--textbox-normal-bg);
+    color: var(--textbox-normal-fg);
 
     font-weight: $text-bold-font-weight;
     line-height: 1.1;
@@ -49,44 +39,32 @@
     margin: 3px 0px;
 
     &:focus {
-        @include themify {
-            background-color: themed("textbox-selected-bg");
-            color: themed("textbox-selected-fg");
-        }
+        background-color: var(--textbox-selected-bg);
+        color: var(--textbox-selected-fg);
     }
 
     &::-moz-selection {
-        @include themify {
-            background-color: themed("textbox-volatile-bg");
-            color: themed("textbox-volatile-fg");
-        }
+        background-color: var(--textbox-volatile-bg);
+        color: var(--textbox-volatile-fg);
     }
 
     &::selection {
-        @include themify {
-            background-color: themed("textbox-volatile-bg");
-            color: themed("textbox-volatile-fg");
-        }
+        background-color: var(--textbox-volatile-bg);
+        color: var(--textbox-volatile-fg);
     }
 
     &:disabled {
-        @include themify {
-            background-color: themed("textbox-disabled-bg");
-            color: themed("textbox-disabled-fg");
-        }
+        background-color: var(--textbox-disabled-bg);
+        color: var(--textbox-disabled-fg);
 
         &::-moz-selection {
-            @include themify {
-                background-color: themed("textbox-disabled-bg");
-                color: themed("textbox-disabled-fg");
-            }
+            background-color: var(--textbox-disabled-bg);
+            color: var(--textbox-disabled-fg);
         }
 
         &::selection {
-            @include themify {
-                background-color: themed("textbox-disabled-bg");
-                color: themed("textbox-disabled-fg");
-            }
+            background-color: var(--textbox-disabled-bg);
+            color: var(--textbox-disabled-fg);
         }
     }
 }
@@ -114,9 +92,7 @@ input[type=number] {
 textarea {
     @extend .text-field;
 
-    @include themify {
-        background-color: themed("textbox-scrollbar-arrow-bg");
-    }
+    background-color: var(--textbox-scrollbar-arrow-bg);
 
     min-height: 150px;
 
@@ -128,22 +104,18 @@ textarea {
     }
 
     &::-webkit-scrollbar-track {
-        @include themify {
-            background-color: themed("textbox-scrollbar-bg-2");
-            background-image: repeating-linear-gradient(45deg, themed("textbox-scrollbar-bg-1") 25%, transparent 25%, transparent 75%, themed("textbox-scrollbar-bg-1") 75%, themed("textbox-scrollbar-bg-1")), repeating-linear-gradient(45deg, themed("textbox-scrollbar-bg-1") 25%, themed("textbox-scrollbar-bg-2") 25%, themed("textbox-scrollbar-bg-2") 75%, themed("textbox-scrollbar-bg-1") 75%, themed("textbox-scrollbar-bg-1"));
-        }
+        background-color: var(--textbox-scrollbar-bg-2);
+        background-image: repeating-linear-gradient(45deg, var(--textbox-scrollbar-bg-1) 25%, transparent 25%, transparent 75%, var(--textbox-scrollbar-bg-1) 75%, var(--textbox-scrollbar-bg-1)), repeating-linear-gradient(45deg, var(--textbox-scrollbar-bg-1) 25%, var(--textbox-scrollbar-bg-2) 25%, var(--textbox-scrollbar-bg-2) 75%, var(--textbox-scrollbar-bg-1) 75%, var(--textbox-scrollbar-bg-1));
 
         opacity: 1;
         background-position: 0 0,
-        2px 2px;
+            2px 2px;
         background-size: 4px 4px;
     }
 
     &::-webkit-scrollbar-thumb {
-        @include themify {
-            background-color: themed("textbox-scrollbar-thumb-bg");
-            border: themed("textbox-scrollbar-thumb-border") solid 4px;
-        }
+        background-color: var(--textbox-scrollbar-thumb-bg);
+        border: var(--textbox-scrollbar-thumb-border) solid 4px;
     }
 
     &::-webkit-scrollbar-button {
@@ -152,9 +124,7 @@ textarea {
     }
 
     &::-webkit-scrollbar-corner {
-        @include themify {
-            background-color: themed("textbox-scrollbar-arrow-bg");
-        }
+        background-color: var(--textbox-scrollbar-arrow-bg);
     }
 
     &::-webkit-scrollbar-button:vertical:decrement {
