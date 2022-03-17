@@ -11,9 +11,9 @@
 @include addTheme("black", $theme-black);
 
 @import "theme/theme-size";
-@include addTheme("normal", $theme-normal);
-@include addTheme("narrow", $theme-narrow);
-@include addTheme("wide", $theme-wide);
+// @include addTheme("normal", $theme-normal);
+// @include addTheme("narrow", $theme-narrow);
+// @include addTheme("wide", $theme-wide);
 
 // Base 
 @import "base/reset";

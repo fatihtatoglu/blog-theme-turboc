@@ -1,16 +1,134 @@
-@use "sass:map";
+// @use "sass:map";
 
-$theme-normal: (site-width: $site-width,
-    dialog-width: $site-width * 0.5,
-    dialog-large-width: $site-width * 0.75
-);
+// $theme-normal: (site-width: $site-width,
+//     dialog-width: $site-width * 0.5,
+//     dialog-large-width: $site-width * 0.75
+// );
 
-$theme-narrow: (site-width: $site-width-small,
-    dialog-width: $site-width-small * 0.5,
-    dialog-large-width: $site-width-small * 0.75
-);
+// $theme-narrow: (site-width: $site-width-small,
+//     dialog-width: $site-width-small * 0.5,
+//     dialog-large-width: $site-width-small * 0.75
+// );
 
-$theme-wide: (site-width: $site-width-large,
-    dialog-width: $site-width-large * 0.5,
-    dialog-large-width: $site-width-large * 0.75
-);
+// $theme-wide: (site-width: $site-width-large,
+//     dialog-width: $site-width-large * 0.5,
+//     dialog-large-width: $site-width-large * 0.75
+// );
+
+
+$dialog-width: $site-width-micro * 0.5;
+$dialog-large-width: $site-width-micro * 0.75;
+
+:root {
+    --site-width: #{$site-width-micro};
+    --dialog-width: #{$dialog-width};
+    --dialog-large-width: #{$dialog-large-width};
+}
+
+header,
+footer,
+main,
+nav {
+    width: var(--site-width);
+}
+
+main>article::after {
+    content: "< 576px micro";
+    display: block;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    main>article::after {
+        content: "576px";
+    }
+
+    $dialog-width: $site-width-mini * 0.5;
+    $dialog-large-width: $site-width-mini * 0.75;
+
+    :root {
+        --site-width: #{$site-width-mini};
+        --dialog-width: #{$dialog-width};
+        --dialog-large-width: #{$dialog-large-width};
+    }
+
+    header,
+    footer,
+    main,
+    nav {
+        width: var(--site-width);
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    main>article::after {
+        content: "768px";
+    }
+
+    $dialog-width: $site-width-narrow * 0.5;
+    $dialog-large-width: $site-width-narrow * 0.75;
+
+    :root {
+        --site-width: #{$site-width-narrow};
+        --dialog-width: #{$dialog-width};
+        --dialog-large-width: #{$dialog-large-width};
+    }
+
+    header,
+    footer,
+    main,
+    nav {
+        width: var(--site-width);
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    main>article::after {
+        content: "992px";
+    }
+
+    $dialog-width: $site-width * 0.5;
+    $dialog-large-width: $site-width * 0.75;
+
+    :root {
+        --site-width: #{$site-width};
+        --dialog-width: #{$dialog-width};
+        --dialog-large-width: #{$dialog-large-width};
+    }
+
+    header,
+    footer,
+    main,
+    nav {
+        width: var(--site-width);
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+    main>article::after {
+        content: "1200px";
+    }
+
+    $dialog-width: $site-width-wide * 0.5;
+    $dialog-large-width: $site-width-wide * 0.75;
+
+    :root {
+        --site-width: #{$site-width-wide};
+        --dialog-width: #{$dialog-width};
+        --dialog-large-width: #{$dialog-large-width};
+    }
+
+    header,
+    footer,
+    main,
+    nav {
+        width: var(--site-width);
+    }
+}
