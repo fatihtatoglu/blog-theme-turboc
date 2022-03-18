@@ -1,8 +1,6 @@
 const themeColors = ["green", "black"];
-const themeSizes = ["normal", "narrow", "wide"];
 
 const defaultThemeColor = "green";
-const defaultThemeSize = "normal";
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -230,20 +228,16 @@ function bindMenuButtons() {
 function loadSiteSettings() {
     var $html = document.getElementsByTagName("html")[0];
     var themeColor = window.localStorage.getItem("theme-color");
-    var themeSize = window.localStorage.getItem("theme-size");
 
     $html.className = "";
 
     if (themeColor) {
         $html.classList.add(themeColor);
-        $html.classList.add(themeSize);
     }
     else {
         $html.classList.add(defaultThemeColor);
-        $html.classList.add(defaultThemeSize);
 
         window.localStorage.setItem("theme-color", defaultThemeColor);
-        window.localStorage.setItem("theme-size", defaultThemeSize);
     }
 }
 
@@ -297,7 +291,7 @@ function renderThemeDialog() {
             <header><span>Theme Options</span></header>
             <main>
             <table style="margin: auto;">
-                <thead><th style="width: 150px;">Colors</th><th style="width: 150px;">Sizes</th></thead>
+                <thead><th style="width: 150px;">Colors</th></thead>
                 <tbody>
                     <tr>
                         <td style="vertical-align: top;">
@@ -306,13 +300,6 @@ function renderThemeDialog() {
                             <label for="rbColor{{.}}">{{.}}</label>
                             <br />
                         {{/color}}
-                        </td>
-                        <td style="vertical-align: top;">
-                        {{#size}}
-                            <input id="rbColor{{.}}" name="size" type="radio"  value="{{.}}" />
-                            <label for="rbColor{{.}}">{{.}}</label>
-                            <br />
-                        {{/size}}
                         </td>
                     </tr>
                 </tbody>
@@ -324,8 +311,7 @@ function renderThemeDialog() {
             </footer></div></div></div>`;
 
     var data = {
-        color: themeColors,
-        size: themeSizes
+        color: themeColors
     };
 
     var output = Mustache.render(template, data);
@@ -341,9 +327,6 @@ function renderThemeDialog() {
         selectedElements.forEach(function (item) {
             if (item.name === "color") {
                 window.localStorage.setItem("theme-color", item.value);
-            }
-            else if (item.name === "size") {
-                window.localStorage.setItem("theme-size", item.value);
             }
         });
 
