@@ -1,16 +1,239 @@
-@use "sass:map";
+@use "sass:math";
 
-$theme-normal: (site-width: $site-width,
-    dialog-width: $site-width * 0.5,
-    dialog-large-width: $site-width * 0.75
-);
+// Extra small devices (portrait phones, less than 576px)
+$dialog-width: $site-width-micro * 0.70;
+$dialog-large-width: $site-width-micro * 0.90;
 
-$theme-narrow: (site-width: $site-width-small,
-    dialog-width: $site-width-small * 0.5,
-    dialog-large-width: $site-width-small * 0.75
-);
+$header-margin-top: 0px;
+$header-height: 45px;
+$header-margin-bottom: 0px;
 
-$theme-wide: (site-width: $site-width-large,
-    dialog-width: $site-width-large * 0.5,
-    dialog-large-width: $site-width-large * 0.75
-);
+$footer-margin-top: 0px;
+$footer-height: 50px;
+$footer-margin-bottom: 0px;
+$footer-credits-margin-top: pixel(math.div(stripUnit($footer-height) - (stripUnit($text-size) * $text-line-height), 2));
+
+$nav-height: stripUnit($text-size) * $text-line-height;
+
+$main-height: $header-margin-top+$header-height+$header-margin-bottom+$nav-height+$footer-margin-top+$footer-height+$footer-margin-bottom;
+
+:root {
+    --site-width: #{$site-width-micro};
+
+    --dialog-width: #{$dialog-width};
+    --dialog-large-width: #{$dialog-large-width};
+
+    --header-height: #{$header-height};
+    --header-margin-top: #{$header-margin-top};
+    --header-margin-bottom: #{$header-margin-bottom};
+    --footer-height: #{$footer-height};
+    --footer-margin-top: #{$footer-margin-top};
+    --footer-margin-bottom: #{$footer-margin-bottom};
+    --footer-credits-margin-top: #{$footer-credits-margin-top};
+    --nav-height: #{$nav-height};
+    --main-height: #{$main-height};
+}
+
+header,
+footer,
+main,
+nav {
+    width: var(--site-width);
+}
+
+header {
+    span.site-name {
+        font-size: 24rem;
+
+        border-bottom: 0px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+nav {
+    padding: 3px 0px;
+
+    span.menu-button {
+        display: block;
+    }
+
+    >ul {
+        display: none;
+        width: 100%;
+
+        >li {
+            display: block;
+
+            div.sub-menu {
+                position: relative;
+
+                >ul {
+                    >li {
+                        a {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+main>article::after {
+    content: "< 576px micro";
+    display: block;
+    margin: 10px;
+    padding: 10px;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    main>article::after {
+        content: "576px";
+    }
+
+    $dialog-width: $site-width-mini * 0.5;
+    $dialog-large-width: $site-width-mini * 0.75;
+
+    $header-margin-top: 20px;
+    $header-height: 70px;
+    $header-margin-bottom: 0px;
+
+    $footer-margin-top: 15px;
+    $footer-height: 50px;
+    $footer-margin-bottom: 10px;
+    $footer-credits-margin-top: pixel(math.div(stripUnit($footer-height) - (stripUnit($text-size) * $text-line-height), 2));
+
+    $nav-height: stripUnit($text-size) * $text-line-height;
+
+    $main-height: $header-margin-top+$header-height+$header-margin-bottom+$nav-height+$footer-margin-top+$footer-height+$footer-margin-bottom;
+
+    :root {
+        --site-width: #{$site-width-mini};
+
+        --dialog-width: #{$dialog-width};
+        --dialog-large-width: #{$dialog-large-width};
+
+        --header-height: #{$header-height};
+        --header-margin-top: #{$header-margin-top};
+        --header-margin-bottom: #{$header-margin-bottom};
+        --footer-height: #{$footer-height};
+        --footer-margin-top: #{$footer-margin-top};
+        --footer-margin-bottom: #{$footer-margin-bottom};
+        --footer-credits-margin-top: #{$footer-credits-margin-top};
+        --nav-height: #{$nav-height};
+        --main-height: #{$main-height};
+    }
+
+    header,
+    footer,
+    main,
+    nav {
+        width: var(--site-width);
+    }
+
+    header {
+        span.site-name {
+            font-size: 16rem;
+
+            border-bottom: var(--text-heading-border) solid 7px;
+            margin: 12px 8px;
+        }
+    }
+
+    nav {
+        padding: 0px;
+
+        span.menu-button {
+            display: none;
+        }
+
+        >ul {
+            display: table !important;
+            width: inherit;
+
+            >li {
+                display: inline-block;
+
+                div.sub-menu {
+                    position: absolute;
+                }
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    main>article::after {
+        content: "768px";
+    }
+
+    $dialog-width: $site-width-narrow * 0.5;
+    $dialog-large-width: $site-width-narrow * 0.75;
+
+    :root {
+        --site-width: #{$site-width-narrow};
+
+        --dialog-width: #{$dialog-width};
+        --dialog-large-width: #{$dialog-large-width};
+    }
+
+    header,
+    footer,
+    main,
+    nav {
+        width: var(--site-width);
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    main>article::after {
+        content: "992px";
+    }
+
+    $dialog-width: $site-width * 0.5;
+    $dialog-large-width: $site-width * 0.75;
+
+    :root {
+        --site-width: #{$site-width};
+
+        --dialog-width: #{$dialog-width};
+        --dialog-large-width: #{$dialog-large-width};
+    }
+
+    header,
+    footer,
+    main,
+    nav {
+        width: var(--site-width);
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+    main>article::after {
+        content: "1200px";
+    }
+
+    $dialog-width: $site-width-wide * 0.5;
+    $dialog-large-width: $site-width-wide * 0.75;
+
+    :root {
+        --site-width: #{$site-width-wide};
+
+        --dialog-width: #{$dialog-width};
+        --dialog-large-width: #{$dialog-large-width};
+    }
+
+    header,
+    footer,
+    main,
+    nav {
+        width: var(--site-width);
+    }
+}

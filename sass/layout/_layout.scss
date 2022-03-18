@@ -16,22 +16,18 @@
 
 body {
     background-color: var(--body-bg);
-    background-image: radial-gradient(circle, var(--body-bg-pattern) 25%, transparent 10%),
-        radial-gradient(circle, var(--body-bg-pattern) 25%, transparent 10%);
-
+    background-image: radial-gradient(circle, var(--body-bg-pattern) 25%, transparent 10%), radial-gradient(circle, var(--body-bg-pattern) 25%, transparent 10%);
     background-size: 6px 6px;
-    background-position: 0 0,
-        3px 3px;
+    background-position: 0 0, 3px 3px;
 }
 
 header {
     background-color: var(--header-bg);
     color: var(--header-fg);
 
-    height: $header-height;
-    width: var(--site-width);
+    height: var(--header-height);
 
-    margin: $header-margin-top auto $header-margin-bottom auto;
+    margin: var(--header-margin-top) auto var(--header-margin-bottom) auto;
 
     padding: 5px 10px;
 
@@ -40,15 +36,12 @@ header {
     span.site-name {
         background-color: var(--text-heading-bg);
         color: var(--text-heading-fg);
-        border-bottom: var(--text-heading-border) solid 7px;
 
-        font-size: 16rem;
         font-weight: $text-bold-font-weight;
         line-height: 1.2;
 
         text-transform: uppercase;
 
-        margin: 12px 8px;
         padding: 3px 8px;
 
         display: table;
@@ -63,15 +56,14 @@ footer {
 
     text-align: center;
 
-    height: $footer-height;
-    width: var(--site-width);
+    height: var(--footer-height);
 
     padding: 0px;
-    margin: $footer-margin-top auto $footer-margin-bottom auto;
+    margin: var(--footer-margin-top) auto var(--footer-margin-bottom) auto;
 
     span.credits {
         display: inline-block;
-        margin: pixel($footer-credits-margin-top) 0px;
+        margin: var(--footer-credits-margin-top) 0px;
     }
 }
 
@@ -79,11 +71,10 @@ main {
     background-color: var(--main-bg);
     color: var(--text-active-fg);
 
-    min-height: calc(100vh - #{$main-height});
-    width: var(--site-width);
+    min-height: calc(100vh - var(--main-height));
 
     margin: 0px auto;
-    padding: 7px 3px;
+    padding: 15px 3px 7px 3px;
 }
 
 article {
@@ -120,7 +111,7 @@ article {
             border: none;
 
             line-height: 1;
-            text-transform: capitalize;
+            text-transform: uppercase;
 
             padding: 0px 8px;
             margin: 0px;

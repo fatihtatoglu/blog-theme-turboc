@@ -1,8 +1,6 @@
-const themeColors = ["green", "black"];
-const themeSizes = ["normal", "narrow", "wide"];
+const themeColors = ["aqua", "black", "blue"];
 
-const defaultThemeColor = "green";
-const defaultThemeSize = "normal";
+const defaultThemeColor = "aqua";
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -107,7 +105,9 @@ function renderMenu() {
         }
     ];
 
-    var menuTemplate = `<ul>
+    var menuTemplate = `
+    <span class="menu-button">▼</span>
+    <ul>
     {{#menuItems}}
         {{#disabled}}
         <li class="disabled">
@@ -162,24 +162,49 @@ function renderMenu() {
     var output = Mustache.render(menuTemplate, data);
     $navigation.innerHTML = output;
 
-    var menuitems = document.querySelectorAll("nav>ul>li");
+    var menu = document.querySelector("nav>ul");
+    var menuitems = menu.querySelectorAll("nav>ul>li");
+
+    var toggler = document.querySelector("nav>span.menu-button");
+
+    function hideAllSubMenus() {
+        var submenus = menu.querySelectorAll("nav>ul>li div.sub-menu");
+        submenus.forEach(sm => {
+            sm.style.display = "none";
+        });
+    }
+
     menuitems.forEach((item) => {
 
         var subMenu = item.querySelector("div.sub-menu");
-        if (subMenu) {
-            item.addEventListener("mouseover", () => {
-                subMenu.style.display = "block";
-            });
-
-            item.addEventListener("mouseleave", () => {
-                subMenu.style.display = "none";
-            });
-
-            subMenu.addEventListener("click", () => {
-                subMenu.style.display = "none";
-            });
+        if (!subMenu) {
+            return;
         }
 
+        // set initial state
+        subMenu.style.display = "none";
+
+        item.addEventListener("click", () => {
+            if (subMenu.style.display === "none") {
+
+                hideAllSubMenus();
+
+                subMenu.style.display = "block";
+            } else {
+                subMenu.style.display = "none";
+            }
+        });
+    });
+
+    toggler.addEventListener("click", () => {
+        if (menu.style.display === "table") {
+            hideAllSubMenus();
+
+            menu.style.display = "none";
+        }
+        else {
+            menu.style.display = "table";
+        }
     });
 }
 
@@ -203,20 +228,16 @@ function bindMenuButtons() {
 function loadSiteSettings() {
     var $html = document.getElementsByTagName("html")[0];
     var themeColor = window.localStorage.getItem("theme-color");
-    var themeSize = window.localStorage.getItem("theme-size");
 
     $html.className = "";
 
     if (themeColor) {
         $html.classList.add(themeColor);
-        $html.classList.add(themeSize);
     }
     else {
         $html.classList.add(defaultThemeColor);
-        $html.classList.add(defaultThemeSize);
 
         window.localStorage.setItem("theme-color", defaultThemeColor);
-        window.localStorage.setItem("theme-size", defaultThemeSize);
     }
 }
 
@@ -270,7 +291,7 @@ function renderThemeDialog() {
             <header><span>Theme Options</span></header>
             <main>
             <table style="margin: auto;">
-                <thead><th style="width: 150px;">Colors</th><th style="width: 150px;">Sizes</th></thead>
+                <thead><th style="width: 150px;">Colors</th></thead>
                 <tbody>
                     <tr>
                         <td style="vertical-align: top;">
@@ -279,13 +300,6 @@ function renderThemeDialog() {
                             <label for="rbColor{{.}}">{{.}}</label>
                             <br />
                         {{/color}}
-                        </td>
-                        <td style="vertical-align: top;">
-                        {{#size}}
-                            <input id="rbColor{{.}}" name="size" type="radio"  value="{{.}}" />
-                            <label for="rbColor{{.}}">{{.}}</label>
-                            <br />
-                        {{/size}}
                         </td>
                     </tr>
                 </tbody>
@@ -297,8 +311,7 @@ function renderThemeDialog() {
             </footer></div></div></div>`;
 
     var data = {
-        color: themeColors,
-        size: themeSizes
+        color: themeColors
     };
 
     var output = Mustache.render(template, data);
@@ -314,9 +327,6 @@ function renderThemeDialog() {
         selectedElements.forEach(function (item) {
             if (item.name === "color") {
                 window.localStorage.setItem("theme-color", item.value);
-            }
-            else if (item.name === "size") {
-                window.localStorage.setItem("theme-size", item.value);
             }
         });
 

@@ -74,6 +74,7 @@ $theme-black: (text-active-bg: $black,
     menu-disabled-fg: $gray,
     menu-disabled-selected-bg: $black,
     menu-disabled-selected-fg: $gray,
+    menu-toggle-button-fg: $bright-white,
 
     selectbox-active-bg: $black,
     selectbox-active-fg: $bright-white,
@@ -105,6 +106,11 @@ $theme-black: (text-active-bg: $black,
     textbox-scrollbar-arrow-bg: $gray,
     textbox-scrollbar-arrow-fg: $aqua,
 
+    scrollbar-vertical-decrement: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAYAAABmBXS+AAAAAXNSR0IArs4c6QAAAD1JREFUKFNjZEAHq5b/ZwiLZEQWRuEwgBTAAJJCEhUhm4JmGsIkgoqwKUAyDWISUYowwgFVANV3OBQTpQgA9UIVC8Bjp68AAAAASUVORK5CYII=),
+    scrollbar-vertical-increment: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAYAAABmBXS+AAAAAXNSR0IArs4c6QAAAD9JREFUKFNjZACBVcv/g2lsICySkZF4RbhMC4sEGwIxiWhF6AqhpqCaRLQimEIkUzBNwhEKCIfjDChk3+FRBAD1QhULt999SAAAAABJRU5ErkJggg==),
+    scrollbar-horizontal-decrement: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAD1JREFUKFNjZMAGVi3/zxAWyYgshcIBS4AUgQBehTBFeBUiK8KpEF0R5SbCvEeUG9EVEwweWBARpRBLJAAADBEbC/NtWlUAAAAASUVORK5CYII=),
+    scrollbar-horizontal-increment: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAADpJREFUKFNjZEAGq5b/ZwiLZEQRg3JQBUEKQQCLYuwKsSjGrRBNMX6FSIqpYCKahyjwNVHhiC2koWIAJBEbCzHyaSkAAAAASUVORK5CYII=),
+
     form-label-bg: $black,
     form-label-fg: $white,
     form-label-firstletter-bg: $black,
@@ -124,5 +130,5 @@ $theme-black: (text-active-bg: $black,
     article-header-fg: $bright-white,
     article-header-border: $bright-white,
 
-    cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAQCAQAAACBg/b2AAAAEUlEQVR42mP8X8+AAhhHtgAAZPsX8Ul6iWsAAAAASUVORK5CYII=1")
+    cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAQCAQAAACBg/b2AAAAEUlEQVR42mP8X8+AAhhHtgAAZPsX8Ul6iWsAAAAASUVORK5CYII=")
 );
