@@ -4,16 +4,16 @@
 @import "abstract/variable";
 
 // Themes 
-@import "theme/theme-green";
-@include addTheme("green", $theme-green);
+@import "theme/theme-aqua";
+@include addTheme("aqua", $theme-aqua);
 
 @import "theme/theme-black";
 @include addTheme("black", $theme-black);
 
+@import "theme/theme-blue";
+@include addTheme("blue", $theme-blue);
+
 @import "theme/theme-size";
-// @include addTheme("normal", $theme-normal);
-// @include addTheme("narrow", $theme-narrow);
-// @include addTheme("wide", $theme-wide);
 
 // Base 
 @import "base/reset";

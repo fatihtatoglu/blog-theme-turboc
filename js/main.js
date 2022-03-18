@@ -1,6 +1,6 @@
-const themeColors = ["green", "black"];
+const themeColors = ["aqua", "black", "blue"];
 
-const defaultThemeColor = "green";
+const defaultThemeColor = "aqua";
 
 document.addEventListener('DOMContentLoaded', () => {
 

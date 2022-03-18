@@ -136,6 +136,7 @@ time {
 blockquote {
     background-color: var(--text-quotation-bg);
     color: var(--text-quotation-fg);
+    border: 4px double var(--text-quotation-border);
     border-left: 7px solid var(--text-quotation-border);
 
     margin: 12px 8px;

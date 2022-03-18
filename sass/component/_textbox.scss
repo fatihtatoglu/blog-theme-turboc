@@ -128,7 +128,7 @@ textarea {
     }
 
     &::-webkit-scrollbar-button:vertical:decrement {
-        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAYAAABmBXS+AAAAAXNSR0IArs4c6QAAAD1JREFUKFNjZEAHq5b/ZwiLZEQWRuEwgBTAAJJCEhUhm4JmGsIkgoqwKUAyDWISUYowwgFVANV3OBQTpQgA9UIVC8Bjp68AAAAASUVORK5CYII=);
+        background: var(--scrollbar-vertical-decrement);
         background-repeat: no-repeat;
         background-position-x: 4px;
         background-position-y: 2px;
@@ -136,7 +136,7 @@ textarea {
     }
 
     &::-webkit-scrollbar-button:vertical:increment {
-        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAYAAABmBXS+AAAAAXNSR0IArs4c6QAAAD9JREFUKFNjZACBVcv/g2lsICySkZF4RbhMC4sEGwIxiWhF6AqhpqCaRLQimEIkUzBNwhEKCIfjDChk3+FRBAD1QhULt999SAAAAABJRU5ErkJggg==);
+        background: var(--scrollbar-vertical-increment);
         background-repeat: no-repeat;
         background-position-x: 4px;
         background-position-y: 3px;
@@ -144,7 +144,7 @@ textarea {
     }
 
     &::-webkit-scrollbar-button:horizontal:decrement {
-        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAD1JREFUKFNjZMAGVi3/zxAWyYgshcIBS4AUgQBehTBFeBUiK8KpEF0R5SbCvEeUG9EVEwweWBARpRBLJAAADBEbC/NtWlUAAAAASUVORK5CYII=);
+        background: var(--scrollbar-horizontal-decrement);
         background-repeat: no-repeat;
         background-position-x: 1px;
         background-position-y: 1px;
@@ -154,7 +154,7 @@ textarea {
     }
 
     &::-webkit-scrollbar-button:horizontal:increment {
-        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAADpJREFUKFNjZEAGq5b/ZwiLZEQRg3JQBUEKQQCLYuwKsSjGrRBNMX6FSIqpYCKahyjwNVHhiC2koWIAJBEbCzHyaSkAAAAASUVORK5CYII=);
+        background: var(--scrollbar-horizontal-increment);
         background-repeat: no-repeat;
         background-position-x: 0px;
         background-position-y: 1px;
