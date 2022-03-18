@@ -41,18 +41,5 @@ $text-bold-font-weight: 700;
 $text-line-height: 1.5;
 $text-size: 16rem;
 
-
-// Layout
-$header-height: 70px;
-$header-margin-top: 20px;
-$header-margin-bottom: 0px;
-$nav-height: stripUnit($text-size) * $text-line-height;
-$footer-height: 50px;
-$footer-margin-top: 15px;
-$footer-margin-bottom: 10px;
-$footer-credits-margin-top: math.div(stripUnit($footer-height) - (stripUnit($text-size) * $text-line-height), 2);
-$main-height: $header-margin-top+$header-height+$header-margin-bottom+$nav-height+$footer-margin-top+$footer-height+$footer-margin-bottom;
-
-
 // Themes
 $themes: ();

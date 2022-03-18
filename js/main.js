@@ -107,7 +107,9 @@ function renderMenu() {
         }
     ];
 
-    var menuTemplate = `<ul>
+    var menuTemplate = `
+    <span class="menu-button">▼</span>
+    <ul>
     {{#menuItems}}
         {{#disabled}}
         <li class="disabled">
@@ -162,24 +164,49 @@ function renderMenu() {
     var output = Mustache.render(menuTemplate, data);
     $navigation.innerHTML = output;
 
-    var menuitems = document.querySelectorAll("nav>ul>li");
+    var menu = document.querySelector("nav>ul");
+    var menuitems = menu.querySelectorAll("nav>ul>li");
+
+    var toggler = document.querySelector("nav>span.menu-button");
+
+    function hideAllSubMenus() {
+        var submenus = menu.querySelectorAll("nav>ul>li div.sub-menu");
+        submenus.forEach(sm => {
+            sm.style.display = "none";
+        });
+    }
+
     menuitems.forEach((item) => {
 
         var subMenu = item.querySelector("div.sub-menu");
-        if (subMenu) {
-            item.addEventListener("mouseover", () => {
-                subMenu.style.display = "block";
-            });
-
-            item.addEventListener("mouseleave", () => {
-                subMenu.style.display = "none";
-            });
-
-            subMenu.addEventListener("click", () => {
-                subMenu.style.display = "none";
-            });
+        if (!subMenu) {
+            return;
         }
 
+        // set initial state
+        subMenu.style.display = "none";
+
+        item.addEventListener("click", () => {
+            if (subMenu.style.display === "none") {
+
+                hideAllSubMenus();
+
+                subMenu.style.display = "block";
+            } else {
+                subMenu.style.display = "none";
+            }
+        });
+    });
+
+    toggler.addEventListener("click", () => {
+        if (menu.style.display === "table") {
+            hideAllSubMenus();
+
+            menu.style.display = "none";
+        }
+        else {
+            menu.style.display = "table";
+        }
     });
 }
 
