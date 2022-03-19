@@ -1,4 +1,4 @@
-const themeColors = ["aqua", "black", "blue"];
+const themeColors = ["aqua", "black", "blue", "white"];
 
 const defaultThemeColor = "aqua";
 

@@ -13,6 +13,9 @@
 @import "theme/theme-blue";
 @include addTheme("blue", $theme-blue);
 
+@import "theme/theme-white";
+@include addTheme("white", $theme-white);
+
 @import "theme/theme-size";
 
 // Base 
