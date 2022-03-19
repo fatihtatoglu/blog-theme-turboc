@@ -19,3 +19,4 @@ This document contains cited and inspired resource links.
 15. [Web Design - Accessibility](https://www.w3.org/standards/webdesign/accessibility)
 16. [Blink Cursor Sample](https://codepen.io/amit_merchant/pen/qBjvvzL)
 17. [How to Host Your Static Webpages on GitHub Pages](https://www.pluralsight.com/guides/how-to-host-your-static-webpages-on-github-pages)
+18. [PNG to Base64 Converter](https://onlinepngtools.com/convert-png-to-base64)
