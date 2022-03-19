@@ -65,6 +65,10 @@ function renderMenu() {
                     "role": "separator"
                 },
                 {
+                    "url": "table.html",
+                    "title": "Table"
+                },
+                {
                     "url": "form.html",
                     "title": "Form"
                 },
@@ -294,7 +298,7 @@ function renderThemeDialog() {
                 <thead><th style="width: 150px;">Colors</th></thead>
                 <tbody>
                     <tr>
-                        <td style="vertical-align: top;">
+                        <td style="text-align: left; padding-left: 25%;">
                         {{#color}}
                             <input id="rbColor{{.}}" name="color" type="radio" value="{{.}}" />
                             <label for="rbColor{{.}}">{{.}}</label>

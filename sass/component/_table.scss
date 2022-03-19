@@ -1,0 +1,55 @@
+table {
+
+    background-color: transparent;
+
+    border: 2px solid var(--table-border);
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+
+    border-spacing: 0px;
+    border-collapse: collapse;
+
+    margin: 0px auto;
+
+    thead {
+
+        tr {
+
+            border-bottom: 4px double var(--table-border);
+
+            th {
+
+                border-right: 2px solid var(--table-border);
+
+                padding: 11px;
+                padding-bottom: 8px;
+
+                vertical-align: middle;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            td {
+                border-right: 2px solid var(--table-border);
+
+                padding: 0px 3px;
+
+                vertical-align: baseline;
+            }
+
+            &:first-child {
+                td {
+                    padding-top: 11px;
+                }
+            }
+
+            &:last-child {
+                td {
+                    padding-bottom: 11px;
+                }
+            }
+        }
+    }
+}
