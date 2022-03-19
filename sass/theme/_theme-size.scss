@@ -42,6 +42,9 @@ nav {
 }
 
 header {
+
+    height: auto;
+
     span.site-name {
         font-size: 24rem;
 
@@ -135,6 +138,9 @@ main>article::after {
     }
 
     header {
+
+        height: var(--header-height);
+
         span.site-name {
             font-size: 16rem;
 

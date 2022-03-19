@@ -59,7 +59,7 @@ function renderMenu() {
                 },
                 {
                     "url": "checkbox.html",
-                    "title": "Checkbox"
+                    "title": "Checkbox & Radio Button"
                 },
                 {
                     "role": "separator"
