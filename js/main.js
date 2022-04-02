@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function renderMenu() {
-    var $navigation = document.getElementById("navigation");
+    let $navigation = document.getElementById("navigation");
 
-    var menuJson = [
+    let menuJson = [
         {
             "title": "-",
             "children": [
@@ -109,7 +109,7 @@ function renderMenu() {
         }
     ];
 
-    var menuTemplate = `
+    let menuTemplate = `
     <span class="menu-button">▼</span>
     <ul>
     {{#menuItems}}
@@ -146,7 +146,7 @@ function renderMenu() {
     {{/menuItems}}
     </ul>`;
 
-    var data = {
+    let data = {
         menuItems: menuJson,
         "separator": function () {
             return this.role === "separator";
@@ -156,23 +156,23 @@ function renderMenu() {
         },
         "url": function () {
             if (this.url) {
-                return this.url;
+                return this.url.toString();
             }
 
             return "javascript:;";
         }
     };
 
-    var output = Mustache.render(menuTemplate, data);
+    let output = Mustache.render(menuTemplate, data);
     $navigation.innerHTML = output;
 
-    var menu = document.querySelector("nav>ul");
-    var menuitems = menu.querySelectorAll("nav>ul>li");
+    let menu = document.querySelector("nav>ul");
+    let menuitems = menu.querySelectorAll("nav>ul>li");
 
-    var toggler = document.querySelector("nav>span.menu-button");
+    let toggler = document.querySelector("nav>span.menu-button");
 
     function hideAllSubMenus() {
-        var submenus = menu.querySelectorAll("nav>ul>li div.sub-menu");
+        let submenus = menu.querySelectorAll("nav>ul>li div.sub-menu");
         submenus.forEach(sm => {
             sm.style.display = "none";
         });
@@ -180,7 +180,7 @@ function renderMenu() {
 
     menuitems.forEach((item) => {
 
-        var subMenu = item.querySelector("div.sub-menu");
+        let subMenu = item.querySelector("div.sub-menu");
         if (!subMenu) {
             return;
         }
@@ -267,9 +267,7 @@ function openDialog() {
     }
 
     var $pnlFormDialog = document.getElementById("pnlFormDialog");
-    var $btnSubmit = document.getElementById("btnSubmit");
     var $btnCancel = document.getElementById("btnCancel");
-    var $btnHelp = document.getElementById("btnHelp");
 
     $btnOpenFormDialog.addEventListener("click", () => {
         $pnlFormDialog.style.display = "block";
@@ -288,7 +286,7 @@ function openDialog() {
 
 function renderThemeDialog() {
 
-    $body = document.getElementsByTagName("body")[0];
+    let $body = document.getElementsByTagName("body")[0];
     var template = `<div id="pnlThemeDialog" class="dialog">
     <div class="dialog-box">
         <div class="dialog-content">

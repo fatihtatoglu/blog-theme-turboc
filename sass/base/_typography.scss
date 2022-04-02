@@ -94,19 +94,12 @@ p {
     margin: 10px 0px;
 }
 
-b,
 strong {
     font-weight: $text-bold-font-weight;
 }
 
-i,
 em {
     font-style: italic;
-}
-
-strong,
-em {
-    text-decoration: underline;
 }
 
 a {

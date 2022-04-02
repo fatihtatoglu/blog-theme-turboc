@@ -8,11 +8,11 @@ When I have started programming, my first IDE was Turbo C. With helpful document
 - [Turbo C++](https://en.wikipedia.org/wiki/Turbo_C%2B%2B)
 
 ![Publish Test Project](https://github.com/fatihtatoglu/blog-theme-turboc/actions/workflows/npm-gulp.yml/badge.svg
-) [![HitCount](https://hits.dwyl.com/fatihtatoglu/blog-theme-turboc.svg?style=flat-square&show=unique)](http://hits.dwyl.com/fatihtatoglu/blog-theme-turboc) ![GitHub top language](https://img.shields.io/github/languages/top/fatihtatoglu/blog-theme-turboc) ![GitHub](https://img.shields.io/github/license/fatihtatoglu/blog-theme-turboc)
+) [![HitCount](https://hits.dwyl.com/fatihtatoglu/blog-theme-turboc.svg?style=flat&show=unique)](http://hits.dwyl.com/fatihtatoglu/blog-theme-turboc) ![GitHub top language](https://img.shields.io/github/languages/top/fatihtatoglu/blog-theme-turboc) ![GitHub](https://img.shields.io/github/license/fatihtatoglu/blog-theme-turboc)
 
 While developing this theme I have also used following technologies.
 
-![sass](docs/sass.png "sass") ![normalize.css](docs/normalize.png "normalize.css") ![gulp](docs/gulp.png "gulp") ![mustache](docs/mustache.png "mustache") ![nodejs](docs/nodejs.png "nodejs") ![github actions](docs/actions.png "github actions")
+![SASS](docs/sass.png "SASS") ![normalize.css](docs/normalize.png "normalize.css") ![Gulp](docs/gulp.png "Gulp") ![mustache](docs/mustache.png "mustache") ![NodeJS](docs/nodejs.png "NodeJS") ![GitHub Actions](docs/actions.png "GitHub Actions") ![SonarCloud](docs/sonarcloud.png "SonarCloud")
 
 ## For Demo
 
