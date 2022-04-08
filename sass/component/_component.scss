@@ -13,11 +13,6 @@ ul {
         &::before {
             content: "";
             display: inline-block;
-            margin-left: -8px;
-
-            @include firefox-only {
-                margin-left: 0px;
-            }
         }
     }
 }
