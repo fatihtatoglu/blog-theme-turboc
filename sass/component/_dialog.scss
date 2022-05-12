@@ -75,35 +75,7 @@ div.dialog {
 
             >header {
                 @extend .reset-dialog-content;
-            }
 
-            main {
-                @extend .reset-dialog-content;
-
-                background-color: var(--dialog-text-bg);
-                color: var(--dialog-text-fg);
-
-                >p {
-                    background-color: var(--dialog-text-bg);
-                    color: var(--dialog-text-fg);
-                }
-
-                label,
-                label::first-letter {
-                    background-color: var(--dialog-text-bg);
-                }
-            }
-
-            footer {
-                @extend .reset-dialog-content;
-
-                background-color: var(--dialog-text-bg);
-                color: var(--dialog-text-fg);
-
-                text-align: center;
-            }
-
-            >header {
                 display: inline;
                 position: absolute;
                 top: 0px;
@@ -163,6 +135,32 @@ div.dialog {
                         content: "]";
                     }
                 }
+            }
+
+            main {
+                @extend .reset-dialog-content;
+
+                background-color: var(--dialog-text-bg);
+                color: var(--dialog-text-fg);
+
+                >p {
+                    background-color: var(--dialog-text-bg);
+                    color: var(--dialog-text-fg);
+                }
+
+                label,
+                label::first-letter {
+                    background-color: var(--dialog-text-bg);
+                }
+            }
+
+            footer {
+                @extend .reset-dialog-content;
+
+                background-color: var(--dialog-text-bg);
+                color: var(--dialog-text-fg);
+
+                text-align: center;
             }
         }
     }
