@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     bindMenuButtons();
 
     openDialog();
+
+    dialogCloseButton();
 });
 
 function renderMenu() {
@@ -290,7 +292,7 @@ function renderThemeDialog() {
     var template = `<div id="pnlThemeDialog" class="dialog">
     <div class="dialog-box">
         <div class="dialog-content">
-            <header><span>Theme Options</span></header>
+            <header><button>■</button><span>Theme Options</span></header>
             <main>
             <table style="margin: auto;">
                 <thead><th style="width: 150px;">Colors</th></thead>
@@ -335,5 +337,15 @@ function renderThemeDialog() {
         loadSiteSettings();
 
         dialog.style.display = "none";
+    });
+}
+
+function dialogCloseButton() {
+    let dialogs = document.querySelectorAll("div.dialog");
+    dialogs.forEach((item) => {
+        let closeButton = item.querySelector("div.dialog-box div.dialog-content header button");
+        closeButton.addEventListener("click", () => {
+            item.style.display = "none";
+        });
     });
 }

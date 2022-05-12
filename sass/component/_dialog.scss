@@ -67,14 +67,42 @@ div.dialog {
                 padding: 0px;
             }
 
-            
-            input[type=checkbox]::after, 
+
+            input[type=checkbox]::after,
             input[type=radio]::after {
                 background-color: var(--dialog-text-bg);
             }
 
             header {
                 @extend .reset-dialog-content;
+
+                button {
+                    box-shadow: none;
+                    background-color: var(--dialog-icon-bg);
+                    color: var(--dialog-icon-fg);
+                    position: absolute;
+                    padding: 0px;
+                    margin: 0px;
+                    left: 17px;
+                    min-width: inherit;
+                    font-size: 12px;
+                    top: 2px;
+
+                    &::before,
+                    &::after {
+                        color: var(--dialog-title-fg);
+                        background-color: var(--dialog-title-bg);
+                        font-size: 16px;
+                    }
+
+                    &::before {
+                        content: "[";
+                    }
+
+                    &::after {
+                        content: "]";
+                    }
+                }
             }
 
             main {
