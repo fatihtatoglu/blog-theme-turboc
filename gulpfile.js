@@ -90,6 +90,16 @@ function copySEO() {
         .pipe(dest("publish/"));
 }
 
+function copyAssets(){
+    return src(["./images/**/*"], {base: "./"})
+    .pipe(dest("publish/"));
+}
+
+function copyFavicon(){
+    return src(["./images/favicon/favicon.ico"])
+    .pipe(dest("publish"));
+}
+
 exports.default = series(
     cleanAll,
     parallel(
@@ -100,5 +110,7 @@ exports.default = series(
     html,
     setPublishDate,
     changeMustachePath,
-    copySEO
+    copySEO,
+    copyAssets,
+    copyFavicon
 );

@@ -31,6 +31,13 @@ npm install
 gulp
 ```
 
+## For Local Testing
+
+```bash
+npm install --global http-server
+http-server ./publish -a localhost -d false -c-1
+```
+
 ## Support
 
 For supporting me, you can add an issue for bug cases or new feature requests.
