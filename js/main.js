@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     openDialog();
 
     dialogCloseButton();
+    articleHeaderButton();
 });
 
 function renderMenu() {
@@ -347,5 +348,15 @@ function dialogCloseButton() {
         closeButton.addEventListener("click", () => {
             item.style.display = "none";
         });
+    });
+}
+
+function articleHeaderButton() {
+    let articleButton = document.querySelector("article > header > button");
+    articleButton.addEventListener("click", () => {
+        var $pnlThemeDialog = document.getElementById("pnlThemeDialog");
+        if ($pnlThemeDialog) {
+            $pnlThemeDialog.style.display = "block";
+        }
     });
 }

@@ -73,10 +73,10 @@ div.dialog {
                 background-color: var(--dialog-text-bg);
             }
 
-            header {
+            >header {
                 @extend .reset-dialog-content;
 
-                button {
+                >button {
                     box-shadow: none;
                     background-color: var(--dialog-icon-bg);
                     color: var(--dialog-icon-fg);
@@ -87,6 +87,11 @@ div.dialog {
                     min-width: inherit;
                     font-size: 12px;
                     top: 2px;
+
+                    &:focus {
+                        background-color: var(--dialog-icon-bg);
+                        color: var(--dialog-icon-fg);
+                    }
 
                     &::before,
                     &::after {
