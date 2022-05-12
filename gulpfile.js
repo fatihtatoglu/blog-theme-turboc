@@ -10,7 +10,7 @@ const replace = require("gulp-replace");
 const versionNumber = require("gulp-version-number");
 
 function cleanAll() {
-    return src(["css/", "publish/"], { allowEmpty: true })
+    return src(["css/", "publish/", "dist/"], { allowEmpty: true })
         .pipe(clean({ force: true }));
 }
 
@@ -90,14 +90,25 @@ function copySEO() {
         .pipe(dest("publish/"));
 }
 
-function copyAssets(){
-    return src(["./images/**/*"], {base: "./"})
-    .pipe(dest("publish/"));
+function copyAssets() {
+    return src(["./images/**/*"], { base: "./" })
+        .pipe(dest("publish/"));
 }
 
-function copyFavicon(){
+function copyFavicon() {
     return src(["./images/favicon/favicon.ico"])
-    .pipe(dest("publish"));
+        .pipe(dest("publish"));
+}
+
+function preparePackage() {
+    return src(["LICENSE", "./docs/*.png"], { base: "./" })
+        .pipe(dest("dist"));
+}
+
+function copyArtifacts() {
+    return src(["./docs/package.json", "./publish/css/main.css", "./docs/README.md"])
+        .pipe(replace("/*# sourceMappingURL=main.css.map */", ""))
+        .pipe(dest("dist"));
 }
 
 exports.default = series(
@@ -112,5 +123,6 @@ exports.default = series(
     changeMustachePath,
     copySEO,
     copyAssets,
-    copyFavicon
+    copyFavicon,
+    parallel(preparePackage, copyArtifacts)
 );

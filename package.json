@@ -1,19 +1,19 @@
 {
-  "name": "blog",
+  "name": "blog-theme-turboc",
   "version": "1.0.0",
-  "description": "Simple retro style blog.",
+  "description": "Turbo C/C++ Web Theme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fatihtatoglu/blog.git"
+    "url": "https://github.com/fatihtatoglu/blog-theme-turboc.git"
   },
   "contributors": [
     "Fatih Tatoğlu <https://github.com/fatihtatoglu>"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fatihtatoglu/blog/issues"
+    "url": "https://github.com/fatihtatoglu/blog-theme-turboc/issues"
   },
-  "homepage": "https://github.com/fatihtatoglu/blog#readme",
+  "homepage": "https://github.com/fatihtatoglu/blog-theme-turboc#readme",
   "devDependencies": {
     "clean-css": "^5.2.4",
     "glob-parent": "^6.0.2",

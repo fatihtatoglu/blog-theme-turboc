@@ -1,0 +1,11 @@
+{
+  "name": "turboc_blog_theme.css",
+  "version": "4.0.1",
+  "description": "Turbo C/C++ Web Theme",
+  "main": "main.css",
+  "style": "main.css",
+  "repository": "https://github.com/fatihtatoglu/blog-theme-turboc",
+  "license": "MIT",
+  "bugs": "https://github.com/fatihtatoglu/blog-theme-turboc/issues",
+  "homepage": "https://github.com/fatihtatoglu/blog-theme-turboc#readme"
+}
