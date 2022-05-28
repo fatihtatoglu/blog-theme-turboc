@@ -111,6 +111,35 @@
                 ultrices et nibh.
             </p>
 
+            <pre>
+                <code>
+ #!/bin/bash
+ ###### CONFIG
+ ACCEPTED_HOSTS="/root/.hag_accepted.conf"
+ BE_VERBOSE=false
+ 
+ if [ "$UID" -ne 0 ]
+ then
+  echo "Superuser rights required"
+  exit 2
+ fi
+ 
+ genApacheConf(){
+  echo -e "# Host ${HOME_DIR}$1/$2 :"
+ }
+ 
+ echo '"quoted"' | tr -d \" > text.txt
+                </code>
+            </pre>
+
+            <pre>
+                <code>
+> sudo su
+$ yum install gcc openssl-devel readline-devel systemd-devel make pcre-devel net-tools kernel-headers url libnl3-devel net-snmp-devel -y
+$ yum update -y
+                </code>
+            </pre>
+
         </article>
 
     </main>

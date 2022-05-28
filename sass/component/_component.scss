@@ -79,3 +79,80 @@ div.error-box {
     background-color: var(--message-box-error-bg);
     color: var(--message-box-error-fg);
 }
+
+pre code {
+    display: block;
+    overflow-x: auto;
+
+    border: none;
+
+    outline: none;
+
+    margin: 0px 8px;
+    
+    &::-webkit-scrollbar {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    &::-webkit-scrollbar {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: var(--textbox-scrollbar-bg-2);
+        background-image: repeating-linear-gradient(45deg, var(--textbox-scrollbar-bg-1) 25%, transparent 25%, transparent 75%, var(--textbox-scrollbar-bg-1) 75%, var(--textbox-scrollbar-bg-1)), repeating-linear-gradient(45deg, var(--textbox-scrollbar-bg-1) 25%, var(--textbox-scrollbar-bg-2) 25%, var(--textbox-scrollbar-bg-2) 75%, var(--textbox-scrollbar-bg-1) 75%, var(--textbox-scrollbar-bg-1));
+        opacity: 1;
+        background-position: 0 0, 2px 2px;
+        background-size: 4px 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--textbox-scrollbar-thumb-bg);
+        border: var(--textbox-scrollbar-thumb-border) solid 4px;
+    }
+
+    &::-webkit-scrollbar-button {
+        height: 16px;
+        width: 16px;
+    }
+
+    &::-webkit-scrollbar-corner {
+        background-color: var(--textbox-scrollbar-arrow-bg);
+    }
+
+    &::-webkit-scrollbar-button:vertical:decrement {
+        background: var(--scrollbar-vertical-decrement);
+        background-repeat: no-repeat;
+        background-position-x: 4px;
+        background-position-y: 2px;
+        background-size: 8px 16px;
+    }
+
+    &::-webkit-scrollbar-button:vertical:increment {
+        background: var(--scrollbar-vertical-increment);
+        background-repeat: no-repeat;
+        background-position-x: 4px;
+        background-position-y: 3px;
+        background-size: 8px 16px;
+    }
+
+    &::-webkit-scrollbar-button:horizontal:decrement {
+        background: var(--scrollbar-horizontal-decrement);
+        background-repeat: no-repeat;
+        background-position-x: 1px;
+        background-position-y: 1px;
+        background-size: 12px 16px;
+        width: 12rem;
+    }
+
+    &::-webkit-scrollbar-button:horizontal:increment {
+        background: var(--scrollbar-horizontal-increment);
+        background-repeat: no-repeat;
+        background-position-x: 0px;
+        background-position-y: 1px;
+        background-size: 12px 16px;
+        width: 12rem;
+    }
+}
