@@ -1,5 +1,5 @@
+const themeName = "turboc";
 const themeColors = ["aqua", "black", "blue", "white"];
-
 const defaultThemeColor = "aqua";
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -239,11 +239,14 @@ function loadSiteSettings() {
     $html.className = "";
 
     if (themeColor) {
+        $html.classList.add(themeName);
         $html.classList.add(themeColor);
     }
     else {
+        $html.classList.add(themeName);
         $html.classList.add(defaultThemeColor);
 
+        window.localStorage.setItem("theme-name", themeName);
         window.localStorage.setItem("theme-color", defaultThemeColor);
     }
 }
