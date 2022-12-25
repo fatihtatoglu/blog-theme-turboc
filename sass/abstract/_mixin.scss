@@ -1,8 +1,8 @@
 @use "sass:meta";
 
-@mixin addTheme ($themeName, $themeMap) {
+@mixin addTheme ($themeName, $themeColor, $themeMap) {
 
-  :root.#{$themeName} {
+  :root.#{$themeName}.#{$themeColor} {
 
     @each $key,
     $value in $themeMap {

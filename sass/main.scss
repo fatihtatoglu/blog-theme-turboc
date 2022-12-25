@@ -5,16 +5,16 @@
 
 // Themes 
 @import "theme/theme-aqua";
-@include addTheme("aqua", $theme-aqua);
+@include addTheme("turboc", "aqua", $theme-aqua);
 
 @import "theme/theme-black";
-@include addTheme("black", $theme-black);
+@include addTheme("turboc", "black", $theme-black);
 
 @import "theme/theme-blue";
-@include addTheme("blue", $theme-blue);
+@include addTheme("turboc", "blue", $theme-blue);
 
 @import "theme/theme-white";
-@include addTheme("white", $theme-white);
+@include addTheme("turboc", "white", $theme-white);
 
 @import "theme/theme-size";
 
